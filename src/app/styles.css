@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    background-color: black;
+    color: white;
+  }
+
+  @font-face {
+    font-family: 'Atlas Typewriter';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/AtlasTypewriter-Regular-Web.woff2') format('woff2'), url('/fonts/AtlasTypewriter-Regular-Web.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Martina Plantijn';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/fonts/martina-plantijn-light.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Martina Plantijn';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/martina-plantijn-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Martina Plantijn';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/fonts/martina-plantijn-medium.woff2') format('woff2');
+  }
+}
