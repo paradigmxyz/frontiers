@@ -1,5 +1,6 @@
+import { Slot } from '@radix-ui/react-slot'
 import { type VariantProps, cva } from 'class-variance-authority'
-import { createElement, type PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
 
 const textVariants = cva(['leading-snug', 'capsize'], {
   variants: {
@@ -27,21 +28,24 @@ const textVariants = cva(['leading-snug', 'capsize'], {
 
 type TextProps = PropsWithChildren<
   {
-    as?: React.ElementType | undefined
+    asChild?: boolean | undefined
     className?: string | undefined
   } & VariantProps<typeof textVariants>
 >
 
 export function Text({
-  as = 'div',
+  asChild,
   className,
   fontFamily = 'default',
   size = '16',
-  weight,
+  weight = '300',
   ...props
 }: TextProps) {
-  return createElement(as, {
-    className: textVariants({ className, fontFamily, size, weight }),
-    ...props,
-  })
+  const Comp = asChild ? Slot : 'div'
+  return (
+    <Comp
+      className={textVariants({ className, fontFamily, size, weight })}
+      {...props}
+    />
+  )
 }

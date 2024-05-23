@@ -19,8 +19,8 @@ export function HeroSection() {
             <div className="absolute min-[400px]:hidden top-[-72px] left-0">
               <ByParadigm />
             </div>
-            <Text as="h1" size="160" weight="500">
-              Frontiers
+            <Text asChild size="160" weight="500">
+              <h1>Frontiers</h1>
             </Text>
           </div>
         </div>
@@ -50,9 +50,11 @@ export function HeroSection() {
         <div className="h-[20px]" />
         <div className="z-[1] flex mx-auto max-w-[325px] w-full gap-[32px] mobile:hidden">
           <div>
-            <Text as="p" fontFamily="typewriter" size="11">
-              A two-day event focused on high-performance, bleeding edge crypto
-              infrastructure.
+            <Text asChild fontFamily="typewriter" size="11">
+              <p>
+                A two-day event focused on high-performance, bleeding edge
+                crypto infrastructure.
+              </p>
             </Text>
           </div>
           <div>
@@ -116,10 +118,12 @@ export function HeroSection() {
             </WithCursor>
           </div>
           <div className="absolute top-[120px] left-[100px] max-tablet:top-[80px] max-tablet:left-[40px] max-w-[300px]">
-            <Text as="p" fontFamily="typewriter" size="12" weight="300">
-              A two-day event focused on high-performance, bleeding edge crypto
-              infrastructure. By open source engineers, for open source
-              engineers.
+            <Text asChild fontFamily="typewriter" size="12" weight="300">
+              <p>
+                A two-day event focused on high-performance, bleeding edge
+                crypto infrastructure. By open source engineers, for open source
+                engineers.
+              </p>
             </Text>
           </div>
           <WithCursor cursor="pulse-crosshair">

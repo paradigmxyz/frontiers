@@ -1,40 +1,42 @@
 import clsx from 'clsx'
-import Image from 'next/image'
-import type { ReactElement } from 'react'
 
-import { Button } from '~/ui/Button'
 import { Text } from '~/ui/Text'
-import { WithCursor } from '~/ui/WithCursor'
 
 export function ToTheBuildersSection() {
   return (
     <section className="flex flex-col py-20 w-full">
       <div className="flex flex-col gap-[40px] max-mobile:gap-[24px] w-[55%] mx-auto max-tablet:w-[60%] max-mobile:w-full">
-        <Text as="h2" fontFamily="typewriter" size="28">
-          To the builders —
+        <Text asChild fontFamily="typewriter" size="28">
+          <h2>To the builders —</h2>
         </Text>
 
         <div className="text-[16px] max-mobile:text-[15px] flex flex-col gap-[32px] max-mobile:gap-[16px]">
-          <Text as="p" weight="400">
-            Join us for two days dedicated to open source immersion.
+          <Text asChild>
+            <p>Join us for two days dedicated to open source immersion.</p>
           </Text>
-          <Text as="p" weight="400">
-            For the past six years, Paradigm has been developing open source
-            software meant to support developers in their day-to-day work. Our
-            projects cover a wide range, from the lowest level types and
-            encoding schemes to smart contract testing, node operations, and the
-            highest level frontend abstractions.
+          <Text asChild>
+            <p>
+              For the past six years, Paradigm has been developing open source
+              software meant to support developers in their day-to-day work. Our
+              projects cover a wide range, from the lowest level types and
+              encoding schemes to smart contract testing, node operations, and
+              the highest level frontend abstractions.
+            </p>
           </Text>
-          <Text as="p" weight="400">
-            As we aim to advance the frontiers of full stack software in crypto,
-            we also aspire to grow a community of thousands of open source
-            contributors. Together, we want to push the limits of what is
-            possible in crypto as an industry and make it more accessible to new
-            developers.
+          <Text asChild>
+            <p>
+              As we aim to advance the frontiers of full stack software in
+              crypto, we also aspire to grow a community of thousands of open
+              source contributors. Together, we want to push the limits of what
+              is possible in crypto as an industry and make it more accessible
+              to new developers.
+            </p>
           </Text>
-          <Text as="p" weight="400">
-            This is just the beginning of an exciting journey, and we invite you
-            to be a part of it in-person at Frontiers.
+          <Text asChild>
+            <p>
+              This is just the beginning of an exciting journey, and we invite
+              you to be a part of it in-person at Frontiers.
+            </p>
           </Text>
         </div>
 
