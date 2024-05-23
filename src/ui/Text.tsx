@@ -1,7 +1,7 @@
 import { type VariantProps, cva } from 'class-variance-authority'
 import type { PropsWithChildren } from 'react'
 
-const textVariants = cva(['leading-none', 'capsize'], {
+const textVariants = cva(['leading-snug', 'capsize'], {
   variants: {
     fontFamily: {
       default: 'font-sans',
