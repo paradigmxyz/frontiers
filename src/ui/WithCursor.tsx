@@ -12,7 +12,7 @@ import {
 import './WithCursor.css'
 
 type WithCursorProps = PropsWithChildren<{
-  cursor: 'pulse-crosshair' | 'external'
+  cursor: 'box' | 'pulse-crosshair' | 'external'
 }>
 
 export function WithCursor({ children, cursor }: WithCursorProps) {
@@ -23,6 +23,7 @@ export function WithCursor({ children, cursor }: WithCursorProps) {
   return (
     <>
       <Cursor x={x} y={y}>
+        {cursor === 'box' && <Box />}
         {cursor === 'pulse-crosshair' && <PulseCrosshair />}
         {cursor === 'external' && <External />}
       </Cursor>
@@ -59,6 +60,10 @@ function Cursor({
       {children}
     </div>
   )
+}
+
+function Box() {
+  return <div className="w-[18px] h-[18px] mix-blend-exclusion" />
 }
 
 function PulseCrosshair() {

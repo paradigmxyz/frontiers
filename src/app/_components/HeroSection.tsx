@@ -66,12 +66,16 @@ export function HeroSection() {
 
         {/* Mountain Background + CTA (Tablet/Desktop) */}
         <div className="absolute flex flex-col items-center top-[72px] max-tablet:top-[172px] max-mobile:hidden">
-          <Image
-            src="/images/mountain.svg"
-            alt="Matrix-style mountains in the background"
-            width="1196"
-            height="384"
-          />
+          <WithCursor cursor="box">
+            <Image
+              draggable="false"
+              src="/images/mountain.svg"
+              alt="Matrix-style mountains in the background"
+              width="1196"
+              height="384"
+            />
+          </WithCursor>
+
           <div className="absolute top-[50%] right-[50%] max-tablet:top-[40%] max-[858px]:hidden">
             <WithCursor cursor="external">
               <ProjectFlag
@@ -137,6 +141,7 @@ export function HeroSection() {
         <div className="absolute flex flex-col items-center w-max top-[180px] left-[-450px] max-[520px]:left-[-550px] mobile:hidden">
           <Image
             src="/images/mountain.svg"
+            draggable="false"
             alt="Matrix-style mountains in the background"
             width="1500"
             height="500"
