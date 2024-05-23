@@ -4,7 +4,7 @@ import type { ReactElement } from 'react'
 
 import { Button } from '~/ui/Button'
 import { Text } from '~/ui/Text'
-import { WithCursor } from '../../ui/WithCursor'
+import { WithCursor } from '~/ui/WithCursor'
 
 export function HeroSection() {
   return (

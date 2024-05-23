@@ -1,5 +1,6 @@
 'use client'
 
+import clsx from 'clsx'
 import {
   type PropsWithChildren,
   type ReactNode,
@@ -9,7 +10,6 @@ import {
 } from 'react'
 
 import './WithCursor.css'
-import clsx from 'clsx'
 
 type WithCursorProps = PropsWithChildren<{
   cursor: 'pulse-crosshair' | 'external'
