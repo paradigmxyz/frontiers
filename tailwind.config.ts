@@ -3,9 +3,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 import type { Config } from 'tailwindcss/types/config'
 
 const config: Config = {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   plugins: [capsize],
 
   // NOTE: It may be tempting to add theme tokens adhocly, but please

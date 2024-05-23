@@ -1,0 +1,17 @@
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    top: -2px;
+    left: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+  }
+  
+  100% {
+    opacity: 0;
+    top: -14px;
+    left: -14px;
+    height: calc(100% + 28px);
+    width: calc(100% + 28px);
+  }
+}
