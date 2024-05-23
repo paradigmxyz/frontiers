@@ -1,10 +1,12 @@
 import Image from 'next/image'
-import { Text } from '../../ui/Text'
-import { WithCursor } from '../../ui/WithCursor'
+
+import { Section } from '~/ui/Section'
+import { Text } from '~/ui/Text'
+import { WithCursor } from '~/ui/WithCursor'
 
 export function SpeakersSection() {
   return (
-    <section className="max-w-[890px] mx-auto flex items-center flex-col gap-[48px]">
+    <Section className="max-w-[890px] mx-auto flex items-center flex-col gap-[48px]">
       <Text fontFamily="typewriter" size="28">
         <h2>SPEAKERS</h2>
       </Text>
@@ -77,7 +79,7 @@ export function SpeakersSection() {
       <Text className="text-darkGray italic" size="24">
         More speakers to be announced...
       </Text>
-    </section>
+    </Section>
   )
 }
 

@@ -9,10 +9,8 @@ export default function Home() {
       <HeroSection />
       <ToTheBuildersSection />
       <PerspectiveBackground />
-      <div className="relative z-[1]">{/* <AgendaSection /> */}</div>
-      <div className="relative z-[1]">
-        <SpeakersSection />
-      </div>
+      {/* <AgendaSection /> */}
+      <SpeakersSection />
     </div>
   )
 }

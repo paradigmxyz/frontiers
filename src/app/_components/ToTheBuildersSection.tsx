@@ -1,10 +1,11 @@
 import clsx from 'clsx'
 
+import { Section } from '~/ui/Section'
 import { Text } from '~/ui/Text'
 
 export function ToTheBuildersSection() {
   return (
-    <section className="flex flex-col py-48 max-tablet:py-24 max-mobile:py-20 w-full">
+    <Section className="flex flex-col py-48 max-tablet:py-24 max-mobile:py-20 w-full">
       <div className="flex flex-col gap-[40px] max-mobile:gap-[24px] w-[55%] mx-auto max-tablet:w-[60%] max-mobile:w-full">
         <Text asChild fontFamily="typewriter" size="28">
           <h2>To the builders —</h2>
@@ -63,7 +64,7 @@ export function ToTheBuildersSection() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
 

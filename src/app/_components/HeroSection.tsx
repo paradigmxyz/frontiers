@@ -3,12 +3,13 @@ import Image from 'next/image'
 import type { ReactElement } from 'react'
 
 import { Button } from '~/ui/Button'
+import { Section } from '~/ui/Section'
 import { Text } from '~/ui/Text'
 import { WithCursor } from '~/ui/WithCursor'
 
 export function HeroSection() {
   return (
-    <section className="min-h-[500px] max-mobile:min-h-[650px]">
+    <Section className="min-h-[500px] max-mobile:min-h-[650px]">
       <div className="relative flex flex-col gap-[32px] max-mobile:gap-[16px]">
         {/* Title */}
         <div className="flex items-center flex-col z-[1] mix-blend-exclusion">
@@ -158,7 +159,7 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
 
