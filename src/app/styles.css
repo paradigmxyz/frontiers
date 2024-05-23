@@ -3,9 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    color-scheme: dark;
+  }
+
   html, body {
     background-color: black;
     color: white;
+  }
+
+  html {
+    scrollbar-color: theme(colors.darkGray) transparent;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
   }
 
   @font-face {

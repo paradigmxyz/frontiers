@@ -1,5 +1,5 @@
 import { type VariantProps, cva } from 'class-variance-authority'
-import type { PropsWithChildren } from 'react'
+import { createElement, type PropsWithChildren } from 'react'
 
 const textVariants = cva(['leading-snug', 'capsize'], {
   variants: {
@@ -11,8 +11,10 @@ const textVariants = cva(['leading-snug', 'capsize'], {
       '9': 'text-[9px]',
       '11': 'text-[11px]',
       '12': 'text-[12px]',
+      '14': 'text-[14px]',
       '16': 'text-[16px] max-tablet:text-[14px]',
       '24': 'text-[24px] max-tablet:text-[20px]',
+      '28': 'text-[28px] max-tablet:text-[20px]',
       '160': 'text-[160px] max-tablet:text-[140px] max-mobile:text-[80px]',
     },
     weight: {
@@ -24,23 +26,22 @@ const textVariants = cva(['leading-snug', 'capsize'], {
 })
 
 type TextProps = PropsWithChildren<
-  { className?: string | undefined } & VariantProps<typeof textVariants>
+  {
+    as?: React.ElementType | undefined
+    className?: string | undefined
+  } & VariantProps<typeof textVariants>
 >
 
 export function Text({
-  children,
+  as = 'div',
   className,
   fontFamily = 'default',
   size = '16',
   weight,
   ...props
 }: TextProps) {
-  return (
-    <div
-      {...props}
-      className={textVariants({ className, fontFamily, size, weight })}
-    >
-      {children}
-    </div>
-  )
+  return createElement(as, {
+    className: textVariants({ className, fontFamily, size, weight }),
+    ...props,
+  })
 }

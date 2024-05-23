@@ -8,7 +8,7 @@ import { WithCursor } from '~/ui/WithCursor'
 
 export function HeroSection() {
   return (
-    <div>
+    <section className="min-h-[700px]">
       <div className="relative flex flex-col gap-[32px] max-mobile:gap-[16px]">
         {/* Title */}
         <div className="flex items-center flex-col z-[1] mix-blend-exclusion">
@@ -19,7 +19,7 @@ export function HeroSection() {
             <div className="absolute min-[400px]:hidden top-[-72px] left-0">
               <ByParadigm />
             </div>
-            <Text size="160" weight="500">
+            <Text as="h1" size="160" weight="500">
               Frontiers
             </Text>
           </div>
@@ -50,7 +50,7 @@ export function HeroSection() {
         <div className="h-[20px]" />
         <div className="z-[1] flex mx-auto max-w-[325px] w-full gap-[32px] mobile:hidden">
           <div>
-            <Text fontFamily="typewriter" size="11">
+            <Text as="p" fontFamily="typewriter" size="11">
               A two-day event focused on high-performance, bleeding edge crypto
               infrastructure.
             </Text>
@@ -116,7 +116,7 @@ export function HeroSection() {
             </WithCursor>
           </div>
           <div className="absolute top-[120px] left-[100px] max-tablet:top-[80px] max-tablet:left-[40px] max-w-[300px]">
-            <Text fontFamily="typewriter" size="12" weight="300">
+            <Text as="p" fontFamily="typewriter" size="12" weight="300">
               A two-day event focused on high-performance, bleeding edge crypto
               infrastructure. By open source engineers, for open source
               engineers.
@@ -149,7 +149,7 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
