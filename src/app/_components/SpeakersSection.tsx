@@ -4,7 +4,7 @@ import { WithCursor } from '../../ui/WithCursor'
 
 export function SpeakersSection() {
   return (
-    <div className="max-w-[890px] mx-auto flex items-center flex-col gap-[48px]">
+    <section className="max-w-[890px] mx-auto flex items-center flex-col gap-[48px]">
       <Text fontFamily="typewriter" size="28">
         <h2>SPEAKERS</h2>
       </Text>
@@ -77,7 +77,7 @@ export function SpeakersSection() {
       <Text className="text-darkGray italic" size="24">
         More speakers to be announced...
       </Text>
-    </div>
+    </section>
   )
 }
 
