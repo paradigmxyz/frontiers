@@ -8,7 +8,7 @@ import { WithCursor } from '~/ui/WithCursor'
 
 export function HeroSection() {
   return (
-    <section className="min-h-[700px]">
+    <section className="min-h-[500px] max-mobile:min-h-[650px]">
       <div className="relative flex flex-col gap-[32px] max-mobile:gap-[16px]">
         {/* Title */}
         <div className="flex items-center flex-col z-[1] mix-blend-exclusion">
@@ -68,7 +68,7 @@ export function HeroSection() {
         <div className="absolute flex flex-col items-center top-[72px] max-tablet:top-[172px] max-mobile:hidden">
           <Image
             src="/images/mountain.svg"
-            alt="Mountains"
+            alt="Matrix-style mountains in the background"
             width="1196"
             height="384"
           />
@@ -137,7 +137,7 @@ export function HeroSection() {
         <div className="absolute flex flex-col items-center w-max top-[180px] left-[-450px] max-[520px]:left-[-550px] mobile:hidden">
           <Image
             src="/images/mountain.svg"
-            alt="Mountains"
+            alt="Matrix-style mountains in the background"
             width="1500"
             height="500"
           />
