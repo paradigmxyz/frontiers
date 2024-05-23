@@ -8,6 +8,8 @@ const textVariants = cva(['leading-snug', 'capsize'], {
       typewriter: 'font-typewriter',
     },
     size: {
+      '9': 'text-[9px]',
+      '11': 'text-[11px]',
       '12': 'text-[12px]',
       '16': 'text-[16px] max-tablet:text-[14px]',
       '24': 'text-[24px] max-tablet:text-[20px]',

@@ -9,25 +9,15 @@ import { WithCursor } from '../../ui/WithCursor'
 export function HeroSection() {
   return (
     <div>
-      <div className="relative flex flex-col gap-[32px]">
+      <div className="relative flex flex-col gap-[32px] max-mobile:gap-[16px]">
         {/* Title */}
         <div className="flex items-center flex-col z-[1] mix-blend-exclusion">
           <div className="inline-flex justify-center w-fit relative">
-            <div className="absolute flex justify-center top-[-32px] right-[-8px] max-mobile:hidden">
-              <Text
-                className="flex justify-center items-center"
-                size="12"
-                fontFamily="typewriter"
-              >
-                BY
-              </Text>
-              <Image
-                alt="Paradigm Logo"
-                className="h-[60px] ml-[-8px]"
-                src="/images/paradigm-transparent.svg"
-                width="153"
-                height="60"
-              />
+            <div className="absolute top-[-32px] right-[-8px] max-mobile:top-[-16px] max-mobile:right-[-40px] max-[400px]:hidden">
+              <ByParadigm />
+            </div>
+            <div className="absolute min-[400px]:hidden top-[-72px] left-0">
+              <ByParadigm />
             </div>
             <Text size="160" weight="500">
               Frontiers
@@ -35,7 +25,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Tagline */}
+        {/* Tagline (Tablet/Desktop) */}
         <div className="z-[1] relative flex justify-center gap-[12px] text-center max-mobile:hidden">
           <Text size="24" weight="300">
             August 16-17, 2024
@@ -48,7 +38,31 @@ export function HeroSection() {
           </Text>
         </div>
 
-        {/* Mountain Background + CTA */}
+        {/* Tagline (Mobile) */}
+        <div className="z-[1] flex justify-between mx-auto max-w-[325px] w-full gap-[32px] mobile:hidden">
+          <div>
+            <Text weight="300">August 16-17, 2024</Text>
+          </div>
+          <div>
+            <Text weight="300">San Francisco, CA</Text>
+          </div>
+        </div>
+        <div className="h-[20px]" />
+        <div className="z-[1] flex mx-auto max-w-[325px] w-full gap-[32px] mobile:hidden">
+          <div>
+            <Text fontFamily="typewriter" size="11">
+              A two-day event focused on high-performance, bleeding edge crypto
+              infrastructure.
+            </Text>
+          </div>
+          <div>
+            <Text fontFamily="typewriter" size="11">
+              By open source engineers, for open source engineers.
+            </Text>
+          </div>
+        </div>
+
+        {/* Mountain Background + CTA (Tablet/Desktop) */}
         <div className="absolute flex flex-col items-center top-[72px] max-tablet:top-[172px] max-mobile:hidden">
           <Image
             src="/images/mountain.svg"
@@ -114,7 +128,48 @@ export function HeroSection() {
             </Button>
           </WithCursor>
         </div>
+
+        {/* Mountain Background + CTA (Mobile) */}
+        <div className="absolute flex flex-col items-center w-max top-[180px] left-[-450px] max-[520px]:left-[-550px] mobile:hidden">
+          <Image
+            src="/images/mountain.svg"
+            alt="Mountains"
+            width="1500"
+            height="500"
+          />
+        </div>
+        <div className="mobile:hidden">
+          <div className="h-[280px]" />
+          <div className="max-w-[350px] mx-auto w-full">
+            <WithCursor cursor="pulse-crosshair">
+              <Button className="w-full" height="60">
+                Apply to attend
+              </Button>
+            </WithCursor>
+          </div>
+        </div>
       </div>
+    </div>
+  )
+}
+
+function ByParadigm() {
+  return (
+    <div className="flex justify-center">
+      <Text
+        className="flex justify-center items-center max-mobile:text-[9px] max-[400px]:text-[12px]"
+        size="12"
+        fontFamily="typewriter"
+      >
+        BY
+      </Text>
+      <Image
+        alt="Paradigm Logo"
+        className="h-[60px] ml-[-8px] max-mobile:h-[32px] max-mobile:ml-[-30px] max-[400px]:h-[50px] max-[400px]:ml-[-16px]"
+        src="/images/paradigm-transparent.svg"
+        width="153"
+        height="60"
+      />
     </div>
   )
 }

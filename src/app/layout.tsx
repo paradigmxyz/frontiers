@@ -10,7 +10,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body>
-        <div>
+        <div className="selection:bg-paradigmGreen selection:text-black">
           <main className="py-[100px] px-[24px] min-h-screen mx-auto max-w-screen-desktop overflow-x-hidden">
             {children}
           </main>
