@@ -17,7 +17,7 @@ export function ToTheBuildersSection() {
           </Text>
           <Text asChild>
             <p>
-              For the past six years, Paradigm has been developing open source
+              For the past years, Paradigm has been developing open source
               software meant to support developers in their day-to-day work. Our
               projects cover a wide range, from the lowest level types and
               encoding schemes to smart contract testing, node operations, and
@@ -36,7 +36,7 @@ export function ToTheBuildersSection() {
           <Text asChild>
             <p>
               This is just the beginning of an exciting journey, and we invite
-              you to be a part of it in-person at Frontiers.
+              you to be a part of it in-person at Frontiers 2024, in San Francisco.
             </p>
           </Text>
         </div>
