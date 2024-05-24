@@ -1,6 +1,4 @@
 {
-  "name": "frontiers2",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,8 +14,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-intersection-observer": "^9.10.2",
-    "tailwindcss-capsize": "^3.0.5",
-    "waku": "0.20.2"
+    "tailwindcss-capsize": "^3.0.5"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.7.3",
