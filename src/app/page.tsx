@@ -1,5 +1,7 @@
-import { Button } from '../ui/Button'
-import { WithCursor } from '../ui/WithCursor'
+import { Button } from '~/ui/Button'
+import { WithCursor } from '~/ui/WithCursor'
+
+import { Footer } from './_components/Footer'
 import { HeroSection } from './_components/HeroSection'
 import { PerspectiveBackground } from './_components/PerspectiveBackground'
 import { PreReadsSection } from './_components/PreReadsSection'
@@ -22,6 +24,8 @@ export default function Home() {
           </Button>
         </WithCursor>
       </div>
+      <div className="h-[300px] max-mobile:h-[100px]" />
+      <Footer />
     </div>
   )
 }

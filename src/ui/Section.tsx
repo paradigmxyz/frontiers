@@ -6,6 +6,6 @@ export function Section({
   className,
 }: PropsWithChildren<{ className?: string | undefined }>) {
   return (
-    <section className={clsx('relative z-[1]', className)}>{children}</section>
+    <section className={clsx('relative z-10', className)}>{children}</section>
   )
 }
