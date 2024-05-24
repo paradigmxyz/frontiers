@@ -35,7 +35,7 @@ export function TopNav() {
     <WithCursor cursor="box">
       <div className="fixed top-0 z-50 p-[20px] animate-[0.3s_nav-enter_ease] w-full">
         <div className="relative px-[32px] max-mobile:px-[20px] h-[72px] max-mobile:h-[56px]">
-          <div className="bg-[#000000] bg-opacity-60 backdrop-blur-lg border border-white border-opacity-20 absolute left-0 top-0 right-0 bottom-0 rounded-[40px] z-0" />
+          <div className="bg-black bg-opacity-90 border border-white border-opacity-20 absolute left-0 top-0 right-0 bottom-0 rounded-[40px] z-0" />
           <div className="relative z-[1] flex items-center justify-between w-full h-full">
             <div className="flex max-mobile:hidden">
               <Text

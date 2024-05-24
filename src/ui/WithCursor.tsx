@@ -51,7 +51,7 @@ function Cursor({
   if (x === 0 && y === 0) return null
   return (
     <div
-      className="fixed bg-white mix-blend-exclusion pointer-events-none cursor-none z-[9999]"
+      className="fixed bg-white mix-blend-exclusion pointer-events-none cursor-none z-[9999] max-mobile:hidden"
       style={{
         left: `${x}px`,
         top: `${y}px`,
