@@ -7,9 +7,10 @@ import {
   useContext,
   useState,
 } from 'react'
-import { Button } from '../../ui/Button'
-import { Text } from '../../ui/Text'
-import { WithCursor } from '../../ui/WithCursor'
+
+import { Button } from '~/ui/Button'
+import { Text } from '~/ui/Text'
+import { WithCursor } from '~/ui/WithCursor'
 
 import './TopNav.css'
 
