@@ -25,11 +25,14 @@ const buttonVariants = cva(
 )
 
 type ButtonProps = ComponentProps<'button'> &
-  VariantProps<typeof buttonVariants>
+  VariantProps<typeof buttonVariants> & {
+    frame?: boolean | undefined
+  }
 
 export function Button({
   children,
   className,
+  frame = false,
   height = '50',
   type = 'button',
   ...props
@@ -40,9 +43,9 @@ export function Button({
       className={buttonVariants({ className, height })}
       type={type}
     >
-      <TopLeftCorner />
+      {frame && <TopLeftCorner />}
       {children}
-      <BottomRightCorner />
+      {frame && <BottomRightCorner />}
     </button>
   )
 }
