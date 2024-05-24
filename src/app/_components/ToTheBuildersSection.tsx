@@ -36,7 +36,8 @@ export function ToTheBuildersSection() {
           <Text asChild>
             <p>
               This is just the beginning of an exciting journey, and we invite
-              you to be a part of it in-person at Frontiers 2024, in San Francisco.
+              you to be a part of it in-person at Frontiers 2024, in San
+              Francisco.
             </p>
           </Text>
         </div>

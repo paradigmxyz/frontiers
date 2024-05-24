@@ -43,6 +43,20 @@ const config: Config = {
         unitsPerEm: 1000,
       },
     },
+    keyframes: {
+      'accordion-down': {
+        from: { height: '0' },
+        to: { height: 'var(--radix-accordion-content-height)' },
+      },
+      'accordion-up': {
+        from: { height: 'var(--radix-accordion-content-height)' },
+        to: { height: '0' },
+      },
+    },
+    animation: {
+      'accordion-down': 'accordion-down 20ms cubic-bezier(0.77, 0, 0.175, 1)',
+      'accordion-up': 'accordion-up 20ms cubic-bezier(0.77, 0, 0.175, 1)',
+    },
     screens: {
       mobile: '720px',
       tablet: '1024px',

@@ -1,6 +1,7 @@
 import { Button } from '~/ui/Button'
 import { WithCursor } from '~/ui/WithCursor'
 
+import { FaqsSection } from './_components/FaqsSection'
 import { Footer } from './_components/Footer'
 import { HeroSection } from './_components/HeroSection'
 import { PerspectiveBackground } from './_components/PerspectiveBackground'
@@ -15,7 +16,9 @@ export default function Home() {
       <ToTheBuildersSection />
       <PerspectiveBackground />
       {/* <AgendaSection /> */}
+      <div className="h-[900px]" />
       <SpeakersSection />
+      <FaqsSection />
       <PreReadsSection />
       <div className="max-w-screen-mobile mx-auto">
         <WithCursor cursor="pulse-crosshair">

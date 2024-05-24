@@ -5,7 +5,7 @@ import { WithCursor } from '~/ui/WithCursor'
 
 export function PreReadsSection() {
   return (
-    <Section className="max-w-screen-mobile mx-auto py-24 flex items-center flex-col gap-[48px]">
+    <Section className="max-w-screen-mobile mx-auto py-24 max-tablet:py-12 flex items-center flex-col gap-[48px]">
       <Text fontFamily="typewriter" size="28">
         <h2>PRE-READs</h2>
       </Text>
