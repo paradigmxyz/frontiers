@@ -22,7 +22,7 @@ export default function Home() {
       <PreReadsSection />
       <div className="max-w-screen-mobile mx-auto">
         <WithCursor cursor="pulse-crosshair">
-          <Button className="w-full" height="60">
+          <Button frame className="w-full" height="60">
             Apply to attend
           </Button>
         </WithCursor>

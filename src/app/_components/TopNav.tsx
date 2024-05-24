@@ -66,7 +66,7 @@ export function TopNav() {
             </div>
             <div className="-mr-[18px] max-mobile:hidden">
               <WithCursor cursor="pulse-crosshair">
-                <Button>APPLY TO ATTEND</Button>
+                <Button>Apply to attend</Button>
               </WithCursor>
             </div>
             <button className="mobile:hidden" type="button">
