@@ -1,5 +1,5 @@
 import { Slot } from '@radix-ui/react-slot'
-import { type VariantProps, cva } from 'class-variance-authority'
+import { type VariantProps, cva } from 'cva'
 import type { PropsWithChildren } from 'react'
 
 const textVariants = cva(['leading-snug', 'capsize'], {

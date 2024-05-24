@@ -1,6 +1,6 @@
 'use client'
 
-import { type VariantProps, cva } from 'class-variance-authority'
+import { type VariantProps, cva } from 'cva'
 import { type ComponentProps, useState } from 'react'
 
 const buttonVariants = cva(
