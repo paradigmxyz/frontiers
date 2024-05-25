@@ -6,6 +6,9 @@ import { TopNav } from './_components/TopNav'
 
 export const metadata: Metadata = {
   title: 'Frontiers',
+  description:
+    'A two-day event focused on high-performance, bleeding edge crypto infrastructure.',
+  icons: [{ rel: 'icon', url: '/images/favicon.png' }],
 }
 
 export default function RootLayout({ children }: PropsWithChildren) {
