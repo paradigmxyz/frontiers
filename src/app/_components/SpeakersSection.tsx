@@ -1,15 +1,13 @@
 import Image from 'next/image'
 
-import { Section } from '~/ui/Section'
+import { Section, SectionHeading } from '~/ui/Section'
 import { Text } from '~/ui/Text'
 import { WithCursor } from '~/ui/WithCursor'
 
 export function SpeakersSection() {
   return (
     <Section className="max-w-[890px] mx-auto flex items-center flex-col gap-[48px]">
-      <Text fontFamily="typewriter" size="28">
-        <h2>SPEAKERS</h2>
-      </Text>
+      <SectionHeading id="speakers">SPEAKERS</SectionHeading>
       <div className="flex flex-wrap justify-center gap-[30px] max-[420px]:gap-[48px]">
         <Speaker
           image="/images/gk.png"

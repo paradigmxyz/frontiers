@@ -96,19 +96,29 @@ export function TopNav() {
         <Dialog.Content className="bg-black p-[32px] bg-opacity-90 border border-white border-opacity-20 animate-[0.1s_nav-enter_ease] rounded-[40px]">
           <nav className="flex flex-col items-center gap-8">
             <Text asChild fontFamily="typewriter" size="24">
-              <a href="#manifesto">MANIFESTO</a>
+              <Dialog.Close asChild>
+                <a href="#manifesto">MANIFESTO</a>
+              </Dialog.Close>
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
-              <a href="#agenda">AGENDA</a>
+              <Dialog.Close asChild>
+                <a href="#agenda">AGENDA</a>
+              </Dialog.Close>
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
-              <a href="#speakers">SPEAKERS</a>
+              <Dialog.Close asChild>
+                <a href="#speakers">SPEAKERS</a>
+              </Dialog.Close>
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
-              <a href="#faqs">FAQs</a>
+              <Dialog.Close asChild>
+                <a href="#faqs">FAQs</a>
+              </Dialog.Close>
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
-              <a href="#pre-reads">PRE-READs</a>
+              <Dialog.Close asChild>
+                <a href="#pre-reads">PRE-READs</a>
+              </Dialog.Close>
             </Text>
             <Button className="w-full">Apply to attend</Button>
           </nav>

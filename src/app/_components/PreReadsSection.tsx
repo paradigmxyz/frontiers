@@ -1,14 +1,12 @@
 import type { ReactElement } from 'react'
-import { Section } from '~/ui/Section'
+import { Section, SectionHeading } from '~/ui/Section'
 import { Text } from '~/ui/Text'
 import { WithCursor } from '~/ui/WithCursor'
 
 export function PreReadsSection() {
   return (
     <Section className="max-w-screen-mobile mx-auto py-24 max-tablet:py-12 flex items-center flex-col gap-[48px]">
-      <Text fontFamily="typewriter" size="28">
-        <h2>PRE-READs</h2>
-      </Text>
+      <SectionHeading id="pre-reads">PRE-READs</SectionHeading>
       <WithCursor cursor="external">
         <div className="flex flex-col bg-black border border-b-0 border-[#333333] w-full">
           <Article

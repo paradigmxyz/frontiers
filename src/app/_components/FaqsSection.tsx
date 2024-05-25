@@ -3,15 +3,13 @@
 import * as Accordion from '@radix-ui/react-accordion'
 import type { ReactNode } from 'react'
 
-import { Section } from '~/ui/Section'
+import { Section, SectionHeading } from '~/ui/Section'
 import { Text } from '~/ui/Text'
 
 export function FaqsSection() {
   return (
     <Section className="max-w-screen-mobile mx-auto py-40 max-tablet:py-24 flex items-center flex-col gap-[48px]">
-      <Text fontFamily="typewriter" size="28">
-        <h2>FAQs</h2>
-      </Text>
+      <SectionHeading id="faqs">FAQs</SectionHeading>
       <Accordion.Root className="bg-black w-full" type="multiple">
         <AccordionItem
           title="How much does an in-person ticket cost?"
