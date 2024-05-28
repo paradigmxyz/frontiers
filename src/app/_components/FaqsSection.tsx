@@ -12,9 +12,19 @@ export function FaqsSection() {
       <SectionHeading id="faqs">FAQs</SectionHeading>
       <Accordion.Root className="bg-black w-full" type="multiple">
         <AccordionItem
+          title="Is the event in-person or online as well?"
+          content="The event will be held in-person in San Francisco."
+          value="1"
+        />
+        <AccordionItem
           title="How much does an in-person ticket cost?"
           content="The event is free upon acceptance."
           value="1"
+        />
+        <AccordionItem
+          title="How do I get selected for in-person attendance?"
+          content="TODO"
+          value="2"
         />
         <AccordionItem
           title="How do I get selected for in-person attendance?"
