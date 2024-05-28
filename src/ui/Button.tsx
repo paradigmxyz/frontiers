@@ -1,11 +1,15 @@
 'use client'
 
+import { Slot } from '@radix-ui/react-slot'
 import { type VariantProps, cva } from 'cva'
-import { type ComponentProps, useState } from 'react'
+import type { ComponentProps } from 'react'
 
 const buttonVariants = cva(
   [
     'bg-paradigmGreen',
+    'flex',
+    'justify-center',
+    'items-center',
     'text-black',
     'px-[24px]',
     'rounded-[400px]',
@@ -26,10 +30,12 @@ const buttonVariants = cva(
 
 type ButtonProps = ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
+    asChild?: boolean | undefined
     frame?: boolean | undefined
   }
 
 export function Button({
+  asChild,
   children,
   className,
   frame = false,
@@ -37,16 +43,25 @@ export function Button({
   type = 'button',
   ...props
 }: ButtonProps) {
+  const Comp = asChild ? Slot : 'button'
   return (
-    <button
-      {...props}
-      className={buttonVariants({ className, height })}
-      type={type}
-    >
+    <div className={buttonVariants({ className, height })}>
       {frame && <TopLeftCorner />}
-      {children}
+      <Comp
+        {...props}
+        className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center"
+        type={type}
+      >
+        {children}
+      </Comp>
+      <div
+        className={`before:content-['${
+          // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+          (children as any).props.children.replaceAll(' ', '_')
+        }'] opacity-0`}
+      />
       {frame && <BottomRightCorner />}
-    </button>
+    </div>
   )
 }
 

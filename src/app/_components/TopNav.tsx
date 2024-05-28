@@ -69,7 +69,11 @@ export function TopNav() {
               </div>
               <div className="-mr-[18px] max-mobile:hidden">
                 <WithCursor cursor="pulse-crosshair">
-                  <Button>Apply to attend</Button>
+                  <Button asChild>
+                    <a href="https://events.paradigm.xyz/frontiersregistration">
+                      Apply to attend
+                    </a>
+                  </Button>
                 </WithCursor>
               </div>
               <Dialog.Trigger className="mobile:hidden">
@@ -120,7 +124,11 @@ export function TopNav() {
                 <a href="#pre-reads">PRE-READs</a>
               </Dialog.Close>
             </Text>
-            <Button className="w-full">Apply to attend</Button>
+            <Button asChild className="w-full">
+              <a href="https://events.paradigm.xyz/frontiersregistration">
+                Apply to attend
+              </a>
+            </Button>
           </nav>
         </Dialog.Content>
       </div>

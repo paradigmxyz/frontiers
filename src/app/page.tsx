@@ -22,8 +22,10 @@ export default function Home() {
       <PreReadsSection />
       <div className="max-w-screen-mobile mx-auto">
         <WithCursor cursor="pulse-crosshair">
-          <Button frame className="w-full" height="60">
-            Apply to attend
+          <Button asChild frame className="w-full" height="60">
+            <a href="https://events.paradigm.xyz/frontiersregistration">
+              Apply to attend
+            </a>
           </Button>
         </WithCursor>
       </div>

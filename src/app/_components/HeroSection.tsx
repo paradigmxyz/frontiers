@@ -141,8 +141,10 @@ export function HeroSection() {
               </Text>
             </div>
             <WithCursor cursor="pulse-crosshair">
-              <Button frame className="w-[50%] mt-[-36px]" height="60">
-                Apply to attend
+              <Button asChild frame className="w-[50%] mt-[-36px]" height="60">
+                <a href="https://events.paradigm.xyz/frontiersregistration">
+                  Apply to attend
+                </a>
               </Button>
             </WithCursor>
           </div>
@@ -161,8 +163,10 @@ export function HeroSection() {
             <div className="h-[280px]" />
             <div className="max-w-[350px] mx-auto w-full">
               <WithCursor cursor="pulse-crosshair">
-                <Button frame className="w-full" height="60">
-                  Apply to attend
+                <Button asChild frame className="w-full" height="60">
+                  <a href="https://events.paradigm.xyz/frontiersregistration">
+                    Apply to attend
+                  </a>
                 </Button>
               </WithCursor>
             </div>
