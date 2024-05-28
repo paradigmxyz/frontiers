@@ -54,8 +54,8 @@ const config: Config = {
       },
     },
     animation: {
-      'accordion-down': 'accordion-down 20ms cubic-bezier(0.77, 0, 0.175, 1)',
-      'accordion-up': 'accordion-up 20ms cubic-bezier(0.77, 0, 0.175, 1)',
+      'accordion-down': 'accordion-down 50ms cubic-bezier(0.77, 0, 0.175, 1)',
+      'accordion-up': 'accordion-up 50ms cubic-bezier(0.77, 0, 0.175, 1)',
     },
     screens: {
       mobile: '720px',

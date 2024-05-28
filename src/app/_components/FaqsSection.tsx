@@ -6,43 +6,50 @@ import type { ReactNode } from 'react'
 import { Section, SectionHeading } from '~/ui/Section'
 import { Text } from '~/ui/Text'
 
+const faqs = [
+  {
+    title: 'Is the event in-person or online as well?',
+    content: 'The event will be held in-person in San Francisco.',
+  },
+  {
+    title: 'How much does an in-person ticket cost?',
+    content: 'The event is free upon acceptance.',
+  },
+  {
+    title: 'How do I get selected for in-person attendance?',
+    content: 'TODO',
+  },
+  {
+    title: 'Can I give a talk?',
+    content: 'TODO',
+  },
+  {
+    title: 'Do you cover travel?',
+    content: 'TODO',
+  },
+  {
+    title: 'Is there a hotel recommendation?',
+    content: 'TODO',
+  },
+  {
+    title: 'Who can I contact if I have additional questions?',
+    content: 'TODO',
+  },
+]
+
 export function FaqsSection() {
   return (
     <Section className="max-w-screen-mobile mx-auto py-40 max-tablet:py-24 flex items-center flex-col gap-[48px]">
       <SectionHeading id="faqs">FAQs</SectionHeading>
       <Accordion.Root className="bg-black w-full" type="multiple">
-        <AccordionItem
-          title="Is the event in-person or online as well?"
-          content="The event will be held in-person in San Francisco."
-          value="1"
-        />
-        <AccordionItem
-          title="How much does an in-person ticket cost?"
-          content="The event is free upon acceptance."
-          value="1"
-        />
-        <AccordionItem
-          title="How do I get selected for in-person attendance?"
-          content="TODO"
-          value="2"
-        />
-        <AccordionItem
-          title="How do I get selected for in-person attendance?"
-          content="TODO"
-          value="2"
-        />
-        <AccordionItem title="Can I give a talk?" content="TODO" value="3" />
-        <AccordionItem title="Do you cover travel?" content="TODO" value="4" />
-        <AccordionItem
-          title="Is there a hotel recommendation?"
-          content="TODO"
-          value="5"
-        />
-        <AccordionItem
-          title="Who can I contact if I have additional questions?"
-          content="TODO"
-          value="6"
-        />
+        {faqs.map((faq, index) => (
+          <AccordionItem
+            key={faq.title}
+            title={faq.title}
+            content={faq.content}
+            value={index.toString()}
+          />
+        ))}
       </Accordion.Root>
     </Section>
   )
@@ -80,7 +87,7 @@ function AccordionItem({
 function PlusIcon() {
   return (
     <svg
-      className="min-w-[24px] transition-all ease-in-out duration-[20ms]"
+      className="min-w-[24px] transition-all ease-in-out duration-[50ms]"
       aria-hidden="true"
       width="24"
       height="24"
