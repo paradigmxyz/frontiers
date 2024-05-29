@@ -17,6 +17,10 @@
     scrollbar-width: thin;
     scrollbar-gutter: stable;
   }
+  
+  a, button {
+    cursor: none;
+  }
 
   @font-face {
     font-family: 'Atlas Typewriter';

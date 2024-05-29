@@ -57,7 +57,9 @@ export function Button({
       <div
         className={`before:content-['${
           // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-          (children as any).props.children.replaceAll(' ', '_')
+          (children as any).props.children
+            .toLowerCase()
+            .replaceAll(' ', '_')
         }'] opacity-0`}
       />
       {frame && <BottomRightCorner />}

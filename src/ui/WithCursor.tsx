@@ -1,53 +1,91 @@
 'use client'
 
+import * as Portal from '@radix-ui/react-portal'
 import clsx from 'clsx'
 import {
   type PropsWithChildren,
   type ReactNode,
   cloneElement,
+  createContext,
   isValidElement,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
   useState,
 } from 'react'
 
 import './WithCursor.css'
+
+const CursorContext = createContext<
+  [active: boolean, setActive: (_: boolean) => void]
+>([false, () => {}])
 
 type WithCursorProps = PropsWithChildren<{
   cursor: 'box' | 'pulse-crosshair' | 'external'
 }>
 
 export function WithCursor({ children, cursor }: WithCursorProps) {
+  const [active, setActive] = useState(true)
+  const [mounted, setMounted] = useState(false)
   const [x, setX] = useState(0)
   const [y, setY] = useState(0)
 
+  const [parentActive, setParentActive] = useContext(CursorContext)
+
+  useEffect(() => setMounted(true), [])
+
+  const onMouseEnter = useCallback(
+    () => setParentActive(false),
+    [setParentActive],
+  )
+  const onMouseMove = useCallback((event: MouseEvent) => {
+    setX(event.clientX)
+    setY(event.clientY)
+  }, [])
+  const onMouseLeave = useCallback(() => {
+    setParentActive(true)
+    setX(0)
+    setY(0)
+  }, [setParentActive])
+
+  const child = useMemo(
+    () =>
+      isValidElement(children)
+        ? cloneElement(children, {
+            // @ts-expect-error
+            className: clsx('cursor-none', children.props.className),
+            onMouseEnter,
+            onMouseMove,
+            onMouseLeave,
+          })
+        : null,
+    [children, onMouseEnter, onMouseMove, onMouseLeave],
+  )
+
   if (!isValidElement(children)) return null
   return (
-    <>
-      <Cursor x={x} y={y}>
-        {cursor === 'box' && <Box />}
-        {cursor === 'pulse-crosshair' && <PulseCrosshair />}
-        {cursor === 'external' && <External />}
-      </Cursor>
-      {cloneElement(children, {
-        // @ts-expect-error
-        className: clsx('cursor-none', children.props.className),
-        onMouseMove: (event: MouseEvent) => {
-          setX(event.clientX)
-          setY(event.clientY)
-        },
-        onMouseLeave: () => {
-          setX(0)
-          setY(0)
-        },
-      })}
-    </>
+    <CursorContext.Provider value={[active, setActive]}>
+      {mounted && (
+        <Portal.Root>
+          <Cursor active={active && !parentActive} x={x} y={y}>
+            {cursor === 'box' && <Box />}
+            {cursor === 'pulse-crosshair' && <PulseCrosshair />}
+            {cursor === 'external' && <External />}
+          </Cursor>
+        </Portal.Root>
+      )}
+      {child}
+    </CursorContext.Provider>
   )
 }
 
 function Cursor({
+  active,
   children,
   x,
   y,
-}: { children: ReactNode; x: number; y: number }) {
+}: { active: boolean; children: ReactNode; x: number; y: number }) {
   if (x === 0 && y === 0) return null
   return (
     <div
@@ -55,6 +93,7 @@ function Cursor({
       style={{
         left: `${x}px`,
         top: `${y}px`,
+        visibility: active ? 'visible' : 'hidden',
       }}
     >
       {children}

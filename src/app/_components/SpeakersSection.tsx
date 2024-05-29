@@ -94,8 +94,8 @@ function Speaker({
 }) {
   return (
     <div className="flex flex-col gap-[16px] w-[200px] max-mobile:w-[168px] max-[320px]:w-full">
-      <a href={profile.link} target="_blank" rel="noopener noreferrer">
-        <WithCursor cursor="external">
+      <WithCursor cursor="external">
+        <a href={profile.link} target="_blank" rel="noopener noreferrer">
           <div className="w-[200px] h-[200px] max-mobile:w-[168px] max-mobile:h-[168px] max-[320px]:w-full max-[320px]:h-auto bg-darkGray relative">
             <Image
               className="object-cover w-full h-full"
@@ -110,8 +110,8 @@ function Speaker({
               </Text>
             </div>
           </div>
-        </WithCursor>
-      </a>
+        </a>
+      </WithCursor>
       <Text size="24">{name}</Text>
       <div className="flex gap-2">
         {projects?.map((project) => (
@@ -130,14 +130,14 @@ function ProjectTag({
   link: string
 }) {
   return (
-    <a href={link} target="_blank" rel="noreferrer noopener">
-      <WithCursor cursor="external">
+    <WithCursor cursor="external">
+      <a href={link} target="_blank" rel="noreferrer noopener">
         <div className="w-fit px-[4px] py-[6px] bg-violet">
           <Text fontFamily="typewriter" size="12">
             {name}
           </Text>
         </div>
-      </WithCursor>
-    </a>
+      </a>
+    </WithCursor>
   )
 }

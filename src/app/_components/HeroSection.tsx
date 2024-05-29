@@ -2,7 +2,7 @@
 
 import clsx from 'clsx'
 import Image from 'next/image'
-import { type ReactElement, useContext, useEffect, useRef } from 'react'
+import { type ReactElement, useContext, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 import { Button } from '~/ui/Button'
@@ -76,15 +76,13 @@ export function HeroSection() {
 
           {/* Mountain Background + CTA (Tablet/Desktop) */}
           <div className="absolute flex flex-col items-center top-[72px] max-tablet:top-[172px] max-mobile:hidden">
-            <WithCursor cursor="box">
-              <Image
-                draggable="false"
-                src="/images/mountain.svg"
-                alt="Matrix-style mountains in the background"
-                width="1196"
-                height="384"
-              />
-            </WithCursor>
+            <Image
+              draggable="false"
+              src="/images/mountain.svg"
+              alt="Matrix-style mountains in the background"
+              width="1196"
+              height="384"
+            />
 
             <div className="absolute top-[50%] right-[50%] max-tablet:top-[40%] max-[858px]:hidden">
               <WithCursor cursor="external">
@@ -142,7 +140,10 @@ export function HeroSection() {
             </div>
             <WithCursor cursor="pulse-crosshair">
               <Button asChild frame className="w-[50%] mt-[-36px]" height="60">
-                <a href="https://events.paradigm.xyz/frontiersregistration">
+                <a
+                  className="cursor-none"
+                  href="https://events.paradigm.xyz/frontiersregistration"
+                >
                   Apply to attend
                 </a>
               </Button>
@@ -164,7 +165,10 @@ export function HeroSection() {
             <div className="max-w-[350px] mx-auto w-full">
               <WithCursor cursor="pulse-crosshair">
                 <Button asChild frame className="w-full" height="60">
-                  <a href="https://events.paradigm.xyz/frontiersregistration">
+                  <a
+                    className="cursor-none"
+                    href="https://events.paradigm.xyz/frontiersregistration"
+                  >
                     Apply to attend
                   </a>
                 </Button>
