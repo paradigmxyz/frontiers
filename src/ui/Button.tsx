@@ -47,21 +47,9 @@ export function Button({
   return (
     <div className={buttonVariants({ className, height })}>
       {frame && <TopLeftCorner />}
-      <Comp
-        {...props}
-        className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center"
-        type={type}
-      >
+      <Comp {...props} type={type}>
         {children}
       </Comp>
-      <div
-        className={`before:content-['${
-          // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-          (children as any).props.children
-            .toLowerCase()
-            .replaceAll(' ', '_')
-        }'] opacity-0`}
-      />
       {frame && <BottomRightCorner />}
     </div>
   )

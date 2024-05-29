@@ -86,47 +86,65 @@ export function HeroSection() {
 
             <div className="absolute top-[50%] right-[50%] max-tablet:top-[40%] max-[858px]:hidden">
               <WithCursor cursor="external">
-                <ProjectFlag
-                  anchor="right"
-                  image={
-                    <Image
-                      alt="Alloy"
-                      src="/images/alloy.svg"
-                      height="48"
-                      width="48"
-                    />
-                  }
-                />
+                <a
+                  href="https://github.com/alloy-rs/alloy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ProjectFlag
+                    anchor="right"
+                    image={
+                      <Image
+                        alt="Alloy"
+                        src="/images/alloy.svg"
+                        height="40"
+                        width="40"
+                      />
+                    }
+                  />
+                </a>
               </WithCursor>
             </div>
-            <div className="absolute top-[30%] right-[40%] max-tablet:top-[20%] max-[858px]:hidden">
+            <div className="absolute top-[33%] right-[38%] max-tablet:top-[20%] max-[858px]:hidden">
               <WithCursor cursor="external">
-                <ProjectFlag
-                  anchor="top"
-                  image={
-                    <Image
-                      alt="Reth"
-                      src="/images/reth.png"
-                      height="48"
-                      width="48"
-                    />
-                  }
-                />
+                <a
+                  href="https://github.com/paradigmxyz/reth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ProjectFlag
+                    anchor="top"
+                    image={
+                      <Image
+                        alt="Reth"
+                        src="/images/reth.png"
+                        height="40"
+                        width="40"
+                      />
+                    }
+                  />
+                </a>
               </WithCursor>
             </div>
             <div className="absolute top-[55%] right-[30%] max-tablet:top-[45%] max-[858px]:hidden">
               <WithCursor cursor="external">
-                <ProjectFlag
-                  anchor="bottom"
-                  image={
-                    <Image
-                      alt="Reth"
-                      src="/images/foundry.svg"
-                      height="48"
-                      width="48"
-                    />
-                  }
-                />
+                <a
+                  href="https://github.com/foundry-rs/foundry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ProjectFlag
+                    anchor="bottom"
+                    image={
+                      <Image
+                        alt="Reth"
+                        src="/images/foundry.svg"
+                        height="40"
+                        width="40"
+                      />
+                    }
+                  />
+                </a>
               </WithCursor>
             </div>
             <div className="absolute top-[120px] left-[100px] max-tablet:top-[80px] max-tablet:left-[40px] max-w-[300px]">
@@ -218,7 +236,9 @@ function ProjectFlag({
           <div className="bg-white w-[6px] h-[6px]" />
         </div>
       )}
-      <div className="bg-black p-[8px] w-[64px] h-[64px]">{image}</div>
+      <div className="bg-black flex items-center justify-center w-[56px] h-[56px]">
+        {image}
+      </div>
       {(anchor === 'right' || anchor === 'bottom') && (
         <div className="bg-black flex items-center justify-center w-[16px] h-[16px]">
           <div className="bg-white w-[6px] h-[6px]" />
