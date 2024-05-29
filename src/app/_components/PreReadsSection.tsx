@@ -13,25 +13,25 @@ export function PreReadsSection() {
             icon={<Icon1 />}
             title="Reth Execution Extensions"
             description="Published on May 3, 2024 by @gakonst"
-            link="#"
+            link="https://www.paradigm.xyz/2024/05/reth-exex"
           />
           <Article
             icon={<Icon2 />}
             title="Reth’s path to 1 gigagas per second, and beyond"
             description="Published on April 24, 2024 by @gakonst"
-            link="#"
+            link="https://www.paradigm.xyz/2024/04/reth-perf"
           />
           <Article
             icon={<Icon3 />}
             title="Reth AlphaNet"
             description="Published on April 16, 2024 by @gakonst"
-            link="#"
+            link="https://www.paradigm.xyz/2024/04/reth-alphanet"
           />
           <Article
             icon={<Icon4 />}
             title="Announcing Reth Beta"
             description="Published on March 11, 2024 by @gakonst"
-            link="#"
+            link="https://www.paradigm.xyz/2024/03/reth-beta"
           />
         </div>
       </WithCursor>

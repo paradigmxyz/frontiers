@@ -54,7 +54,7 @@ export function ToTheBuildersSection() {
                   'max-w-[127px] max-mobile:max-w-[280px]',
                   'pt-4',
                   feature.color === 'paradigmGreen' && 'text-paradigmGreen',
-                  feature.color === 'violet' && 'text-violet',
+                  feature.color === 'violet' && 'text-[#F429D5]',
                 )}
               >
                 {feature.name}

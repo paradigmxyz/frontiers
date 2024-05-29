@@ -158,10 +158,7 @@ export function HeroSection() {
             </div>
             <WithCursor cursor="pulse-crosshair">
               <Button asChild frame className="w-[50%] mt-[-36px]" height="60">
-                <a
-                  className="cursor-none"
-                  href="https://events.paradigm.xyz/frontiersregistration"
-                >
+                <a href="https://events.paradigm.xyz/frontiersregistration">
                   Apply to attend
                 </a>
               </Button>

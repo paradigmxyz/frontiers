@@ -1,6 +1,6 @@
 'use client'
 
-import { Slot } from '@radix-ui/react-slot'
+import { Slot, Slottable } from '@radix-ui/react-slot'
 import { type VariantProps, cva } from 'cva'
 import type { ComponentProps } from 'react'
 
@@ -45,13 +45,15 @@ export function Button({
 }: ButtonProps) {
   const Comp = asChild ? Slot : 'button'
   return (
-    <div className={buttonVariants({ className, height })}>
+    <Comp
+      {...props}
+      className={buttonVariants({ className, height })}
+      type={type}
+    >
       {frame && <TopLeftCorner />}
-      <Comp {...props} type={type}>
-        {children}
-      </Comp>
+      <Slottable>{children}</Slottable>
       {frame && <BottomRightCorner />}
-    </div>
+    </Comp>
   )
 }
 
