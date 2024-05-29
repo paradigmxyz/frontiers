@@ -8,7 +8,7 @@ export function SpeakersSection() {
   return (
     <Section className="max-w-[890px] mx-auto flex items-center flex-col gap-[48px]">
       <SectionHeading id="speakers">SPEAKERS</SectionHeading>
-      <div className="flex flex-wrap justify-center gap-[30px] max-[420px]:gap-[48px]">
+      <div className="flex flex-wrap justify-center gap-[30px]">
         <Speaker
           image="/images/gk.png"
           name="Georgios Konstantopoulos"
@@ -93,10 +93,10 @@ function Speaker({
   profile: { name: string; link: string }
 }) {
   return (
-    <div className="flex flex-col gap-[16px] w-[200px] max-mobile:w-[168px] max-[320px]:w-full">
+    <div className="flex flex-col gap-[16px] w-[200px] max-mobile:w-[168px] max-[420px]:w-[128px] max-[320px]:w-full">
       <WithCursor cursor="external">
         <a href={profile.link} target="_blank" rel="noopener noreferrer">
-          <div className="w-[200px] h-[200px] max-mobile:w-[168px] max-mobile:h-[168px] max-[320px]:w-full max-[320px]:h-auto bg-darkGray relative">
+          <div className="w-[200px] h-[200px] max-mobile:w-[168px] max-mobile:h-[168px] max-[420px]:w-[128px] max-[420px]:h-[128px] max-[320px]:w-full max-[320px]:h-auto bg-darkGray relative">
             <Image
               className="object-cover w-full h-full"
               src={image}
@@ -112,7 +112,9 @@ function Speaker({
           </div>
         </a>
       </WithCursor>
-      <Text size="24">{name}</Text>
+      <Text className="max-[420px]:text-[16px]" size="24">
+        {name}
+      </Text>
       <div className="flex gap-2">
         {projects?.map((project) => (
           <ProjectTag key={project.name} {...project} />
@@ -133,7 +135,7 @@ function ProjectTag({
     <WithCursor cursor="external">
       <a href={link} target="_blank" rel="noreferrer noopener">
         <div className="w-fit px-[4px] py-[6px] bg-violet">
-          <Text fontFamily="typewriter" size="12">
+          <Text className="text-nowrap" fontFamily="typewriter" size="12">
             {name}
           </Text>
         </div>

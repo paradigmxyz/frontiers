@@ -59,7 +59,7 @@ export function HeroSection() {
           </div>
           <div className="h-[20px]" />
           <div className="z-[1] flex mx-auto max-w-[325px] w-full gap-[32px] mobile:hidden">
-            <div>
+            <div className="flex-1">
               <Text asChild fontFamily="typewriter" size="11">
                 <p>
                   A two-day event focused on high-performance, bleeding edge
@@ -67,7 +67,7 @@ export function HeroSection() {
                 </p>
               </Text>
             </div>
-            <div>
+            <div className="flex-1">
               <Text fontFamily="typewriter" size="11">
                 By open source engineers, for open source engineers.
               </Text>
