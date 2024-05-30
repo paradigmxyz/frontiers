@@ -36,7 +36,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en">
       <body>
         <WithCursor cursor="box">
-          <div className="selection:bg-paradigmGreen selection:text-black">
+          <div className="selection:bg-paradigmGreen selection:text-black overflow-x-hidden">
             <Providers>
               <TopNav />
               <main className="py-[100px] px-[24px] min-h-screen mx-auto max-w-screen-desktop">

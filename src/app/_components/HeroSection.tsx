@@ -18,7 +18,7 @@ export function HeroSection() {
 
   return (
     <div ref={ref}>
-      <Section className="min-h-[500px] max-mobile:min-h-[650px]">
+      <Section className="min-h-[550px] max-mobile:min-h-[650px]">
         <div className="relative flex flex-col gap-[32px] max-mobile:gap-[16px]">
           {/* Title */}
           <div className="flex items-center flex-col z-[1] mix-blend-exclusion">
