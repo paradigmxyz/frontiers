@@ -1,34 +1,40 @@
 import type { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
 import './styles.css'
+import { getFrameMetadata } from 'frog/next'
 import { WithCursor } from '../ui/WithCursor'
 import { Providers } from './_components/Providers'
 import { TopNav } from './_components/TopNav'
 
-export const metadata: Metadata = {
-  title: 'Frontiers',
-  description:
-    'A two-day event focused on high-performance, bleeding edge crypto infrastructure.',
-  icons: [{ rel: 'icon', url: '/images/favicon.png' }],
-  twitter: {
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-      },
-    ],
-  },
-  openGraph: {
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-      },
-    ],
-    type: 'website',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  const url = process.env.VERCEL_URL || 'http://localhost:3000'
+  const frameMetadata = await getFrameMetadata(`${url}/api`)
+  return {
+    title: 'Frontiers',
+    description:
+      'A two-day event focused on high-performance, bleeding edge crypto infrastructure.',
+    icons: [{ rel: 'icon', url: '/images/favicon.png' }],
+    twitter: {
+      images: [
+        {
+          url: '/images/og-image.png',
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    openGraph: {
+      images: [
+        {
+          url: '/images/og-image.png',
+          width: 1200,
+          height: 630,
+        },
+      ],
+      type: 'website',
+    },
+    other: frameMetadata,
+  }
 }
 
 export default function RootLayout({ children }: PropsWithChildren) {
