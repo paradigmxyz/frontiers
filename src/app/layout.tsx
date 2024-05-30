@@ -7,7 +7,8 @@ import { Providers } from './_components/Providers'
 import { TopNav } from './_components/TopNav'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const url = process.env.VERCEL_URL || 'http://localhost:3000'
+  const url =
+    process.env.VERCEL_PROJECT_PRODUCTION_URL || 'http://localhost:3000'
   const frameMetadata = await getFrameMetadata(`${url}/api`)
   return {
     title: 'Frontiers',
@@ -17,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       images: [
         {
-          url: '/images/og-image.png',
+          url: `${url}/images/og-image.png`,
           width: 1200,
           height: 630,
         },
@@ -26,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       images: [
         {
-          url: '/images/og-image.png',
+          url: `${url}/images/og-image.png`,
           width: 1200,
           height: 630,
         },
