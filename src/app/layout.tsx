@@ -7,8 +7,7 @@ import { Providers } from './_components/Providers'
 import { TopNav } from './_components/TopNav'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const url =
-    process.env.VERCEL_PROJECT_PRODUCTION_URL || 'http://localhost:3000'
+  const url = 'https://frontiers.paradigm.xyz'
   const frameMetadata = await getFrameMetadata(`${url}/api`)
   return {
     title: 'Frontiers',
