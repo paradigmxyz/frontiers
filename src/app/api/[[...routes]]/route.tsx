@@ -30,9 +30,6 @@ app.frame('/', (c) => {
       >
         Share Event
       </Button.Link>,
-      <Button.Link href="https://frontiers.paradigm.xyz">
-        frontiers.paradigm.xyz
-      </Button.Link>,
     ],
   })
 })
@@ -84,9 +81,6 @@ app.frame('/end', (c) => {
         )}`}
       >
         Share Event
-      </Button.Link>,
-      <Button.Link href="https://frontiers.paradigm.xyz">
-        frontiers.paradigm.xyz
       </Button.Link>,
     ],
   })
