@@ -10,6 +10,25 @@ export const metadata: Metadata = {
   description:
     'A two-day event focused on high-performance, bleeding edge crypto infrastructure.',
   icons: [{ rel: 'icon', url: '/images/favicon.png' }],
+  twitter: {
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  openGraph: {
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
+  },
 }
 
 export default function RootLayout({ children }: PropsWithChildren) {
