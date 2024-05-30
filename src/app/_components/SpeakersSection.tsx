@@ -63,7 +63,7 @@ export function SpeakersSection() {
           image="/images/storm.png"
           name="Storm Slivkoff"
           profile={{
-            name: '@notnotstorm',
+            name: '@cryo',
             link: 'https://twitter.com/notnotstorm',
           }}
           projects={[

@@ -20,7 +20,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <div className="selection:bg-paradigmGreen selection:text-black">
             <Providers>
               <TopNav />
-              <main className="py-[100px] px-[24px] min-h-screen mx-auto max-w-screen-desktop overflow-x-hidden">
+              <main className="py-[100px] px-[24px] min-h-screen mx-auto max-w-screen-desktop">
                 {children}
               </main>
             </Providers>

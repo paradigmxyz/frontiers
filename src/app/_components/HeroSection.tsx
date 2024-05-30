@@ -75,13 +75,13 @@ export function HeroSection() {
           </div>
 
           {/* Mountain Background + CTA (Tablet/Desktop) */}
-          <div className="absolute flex flex-col items-center top-[72px] max-tablet:top-[172px] max-mobile:hidden">
+          <div className="absolute flex flex-col desktop:-left-[10%] desktop:-right-[10%] items-center top-[72px] max-tablet:top-[172px] max-mobile:hidden">
             <Image
               draggable="false"
               src="/images/mountain.svg"
               alt="Matrix-style mountains in the background"
-              width="1196"
-              height="384"
+              width="1400"
+              height="450"
             />
 
             <div className="absolute top-[50%] right-[50%] max-tablet:top-[40%] max-[858px]:hidden">
