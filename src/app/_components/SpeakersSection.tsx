@@ -6,7 +6,7 @@ import { WithCursor } from '~/ui/WithCursor'
 
 export function SpeakersSection() {
   return (
-    <Section className="max-w-[890px] mx-auto flex items-center flex-col gap-[48px]">
+    <Section className="max-w-screen-tablet mx-auto flex items-center flex-col gap-[48px]">
       <SectionHeading id="speakers">SPEAKERS</SectionHeading>
       <div className="flex flex-wrap justify-center gap-[30px]">
         <Speaker

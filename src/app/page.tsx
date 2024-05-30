@@ -1,6 +1,7 @@
 import { Button } from '~/ui/Button'
 import { WithCursor } from '~/ui/WithCursor'
 
+import { AgendaSection } from './_components/AgendaSection'
 import { FaqsSection } from './_components/FaqsSection'
 import { Footer } from './_components/Footer'
 import { HeroSection } from './_components/HeroSection'
@@ -15,8 +16,7 @@ export default function Home() {
       <HeroSection />
       <ToTheBuildersSection />
       <PerspectiveBackground />
-      {/* <AgendaSection /> */}
-      <div className="h-[900px]" />
+      <AgendaSection />
       <SpeakersSection />
       <FaqsSection />
       <PreReadsSection />
