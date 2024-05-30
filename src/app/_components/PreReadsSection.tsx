@@ -53,7 +53,7 @@ function Article({
   return (
     <a
       href={link}
-      className="cursor-none"
+      className="mobile:cursor-none"
       target="_blank"
       rel="noreferrer noopener"
     >

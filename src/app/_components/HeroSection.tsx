@@ -147,7 +147,7 @@ export function HeroSection() {
                 </a>
               </WithCursor>
             </div>
-            <div className="absolute top-[120px] left-[100px] max-tablet:top-[80px] max-tablet:left-[40px] max-w-[300px]">
+            <div className="absolute top-[120px] left-[120px] max-tablet:top-[80px] max-tablet:left-[40px] max-w-[300px]">
               <Text asChild fontFamily="typewriter" size="12" weight="300">
                 <p>
                   A two-day event focused on high-performance, bleeding edge
@@ -176,12 +176,12 @@ export function HeroSection() {
             />
           </div>
           <div className="mobile:hidden">
-            <div className="h-[280px]" />
+            <div className="h-[280px] max-mobile:h-[200px]" />
             <div className="max-w-[350px] mx-auto w-full">
               <WithCursor cursor="pulse-crosshair">
                 <Button asChild frame className="w-full" height="60">
                   <a
-                    className="cursor-none"
+                    className="mobile:cursor-none"
                     href="https://events.paradigm.xyz/frontiersregistration"
                   >
                     Apply to attend

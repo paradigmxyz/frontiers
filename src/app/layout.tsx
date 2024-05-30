@@ -8,7 +8,11 @@ import { TopNav } from './_components/TopNav'
 
 export async function generateMetadata(): Promise<Metadata> {
   const url = 'https://frontiers.paradigm.xyz'
-  const frameMetadata = await getFrameMetadata(`${url}/api`)
+  const {
+    'og:title': _,
+    'og:image': __,
+    ...frameMetadata
+  } = await getFrameMetadata(`${url}/api`)
   return {
     title: 'Frontiers',
     description:

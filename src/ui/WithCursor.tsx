@@ -54,7 +54,7 @@ export function WithCursor({ children, cursor }: WithCursorProps) {
       isValidElement(children)
         ? cloneElement(children, {
             // @ts-expect-error
-            className: clsx('cursor-none', children.props.className),
+            className: clsx('mobile:cursor-none', children.props.className),
             onMouseEnter,
             onMouseMove,
             onMouseLeave,

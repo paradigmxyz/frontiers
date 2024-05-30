@@ -34,7 +34,9 @@ export function Footer() {
               className="max-[480px]:text-[9px]"
               fontFamily="typewriter"
             >
-              <a href="/#">PRIVACY POLICY</a>
+              <a href="https://www.paradigm.xyz/privacy-policy">
+                PRIVACY POLICY
+              </a>
             </Text>
             <Text fontFamily="typewriter">|</Text>
             <Text
@@ -42,7 +44,9 @@ export function Footer() {
               className="max-[480px]:text-[9px]"
               fontFamily="typewriter"
             >
-              <a href="/#">EVENT TERMS & CONDITIONS</a>
+              <a href="https://www.paradigm.xyz/website-terms-of-use">
+                EVENT TERMS & CONDITIONS
+              </a>
             </Text>
           </div>
           <Text className="max-[480px]:text-[9px]" fontFamily="typewriter">
