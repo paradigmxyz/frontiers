@@ -6,32 +6,48 @@ import { WithCursor } from '~/ui/WithCursor'
 export function PreReadsSection() {
   return (
     <Section className="max-w-screen-mobile mx-auto py-24 max-tablet:py-12 flex items-center flex-col gap-[48px]">
-      <SectionHeading id="pre-reads">PRE-READs</SectionHeading>
+      <SectionHeading id="pre-reads">RELEVANT MATERIAL</SectionHeading>
       <WithCursor cursor="external">
         <div className="flex flex-col bg-black border border-b-0 border-[#333333] w-full">
           <Article
-            icon={<Icon1 />}
+            title="Reth Book"
+            description="Official Reth documentation, for operating high performance Ethereum nodes."
+            link="https://reth.rs/"
+          />
+          <Article
+            title="Foundry Book"
+            description="Official Foundry documentation, for building and testing smart contracts."
+            link="https://book.getfoundry.sh/"
+          />
+          <Article
+            title="Alloy Book"
+            description="Official Alloy documentation, for interacting with nodes over JSON-RPC."
+            link="https://alloy.rs/"
+          />
+          <Article
+            title="How to raise the gas limit?"
+            description="Series on how to approach the limits of blockchain scaling"
+            link="https://www.paradigm.xyz/2024/05/how-to-raise-the-gas-limit-2"
+          />
+          <Article
+            title="Shadow Reth"
+            description="Shadow logs on Reth"
+            link="https://blog.shadow.xyz/shadow-reth/"
+          />
+          <Article
+            title="SP1 Testnet Documentation"
+            description="Deploy verifiable EVM programs on Ethereum testnets"
+            link="https://blog.succinct.xyz/sp1-testnet/"
+          />
+          <Article
+            title="Wagmi Documentation"
+            description="Documentation for building high-performance blockchain frontends."
+            link="https://wagmi.sh/"
+          />
+          <Article
             title="Reth Execution Extensions"
-            description="Published on May 3, 2024 by @gakonst"
+            description="Extending Ethereum nodes for building indexers, rollups and more."
             link="https://www.paradigm.xyz/2024/05/reth-exex"
-          />
-          <Article
-            icon={<Icon2 />}
-            title="Reth’s path to 1 gigagas per second, and beyond"
-            description="Published on April 24, 2024 by @gakonst"
-            link="https://www.paradigm.xyz/2024/04/reth-perf"
-          />
-          <Article
-            icon={<Icon3 />}
-            title="Reth AlphaNet"
-            description="Published on April 16, 2024 by @gakonst"
-            link="https://www.paradigm.xyz/2024/04/reth-alphanet"
-          />
-          <Article
-            icon={<Icon4 />}
-            title="Announcing Reth Beta"
-            description="Published on March 11, 2024 by @gakonst"
-            link="https://www.paradigm.xyz/2024/03/reth-beta"
           />
         </div>
       </WithCursor>
