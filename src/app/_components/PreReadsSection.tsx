@@ -56,12 +56,12 @@ export function PreReadsSection() {
 }
 
 function Article({
-  icon,
+  // icon,
   title,
   description,
   link,
 }: {
-  icon: ReactElement
+  // icon: ReactElement
   title: string
   description: string
   link: string
@@ -75,7 +75,6 @@ function Article({
     >
       <div className="p-[20px] border-b border-[#333333] flex justify-between items-center">
         <div className="flex items-center gap-[20px]">
-          <div>{icon}</div>
           <div className="flex flex-col gap-[16px]">
             <Text fontFamily="typewriter" size="14">
               {title}
