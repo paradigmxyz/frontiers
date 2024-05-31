@@ -7,10 +7,10 @@ const agendas = [
   {
     date: 'Friday, August 16',
     sessions: [
-      { time: '9:00AM-11:00AM', title: 'Reth Core Team Updates' },
+      { time: '9:00AM-11:30AM', title: 'Reth Core Team Updates' },
       {
         time: '11:30AM-12:30PM',
-        title: 'Reth Builders Update: ZKVM, Shadow Logs, MEV Stack, and more',
+        title: 'Reth Builders Update: OP Stack, ZKVM, Shadow Logs, MEV Stack, and more',
       },
       {
         time: '12:30PM-1:30PM',
@@ -18,7 +18,7 @@ const agendas = [
       },
       {
         time: '1:30PM-Late',
-        title: 'Hackathon',
+        title: 'Open Source Hacking',
       },
     ],
     tag: {
@@ -43,11 +43,11 @@ const agendas = [
       },
       {
         time: '1:00PM-6:00PM',
-        title: 'Network & Hack',
+        title: 'Open Source Hacking',
       },
       {
         time: '6:00PM',
-        title: 'Hackathon Ends + Optional Talks & Demos',
+        title: 'Closing, hacking ends, talks & demos',
       },
     ],
     tag: {
