@@ -18,8 +18,16 @@ export function SpeakersSection() {
           }}
           projects={[
             {
-              name: 'reth core',
+              name: 'reth',
               link: 'https://github.com/paradigmxyz/reth',
+            },
+            {
+              name: 'foundry',
+              link: 'https://github.com/foundry-rs/foundry',
+            },
+            {
+              name: 'alloy',
+              link: 'https://github.com/alloy-rs/alloy',
             },
           ]}
         />
@@ -27,17 +35,21 @@ export function SpeakersSection() {
           image="/images/matt.png"
           name="Matthias Seitz"
           profile={{
-            name: '@mattse',
-            link: 'https://twitter.com/mattse',
+            name: '@mattsse_',
+            link: 'https://twitter.com/mattsse_',
           }}
           projects={[
+            {
+              name: 'reth',
+              link: 'https://github.com/paradigmxyz/reth',
+            },
             {
               name: 'foundry',
               link: 'https://github.com/foundry-rs/foundry',
             },
             {
-              name: 'reth core',
-              link: 'https://github.com/paradigmxyz/reth',
+              name: 'alloy',
+              link: 'https://github.com/alloy-rs/alloy',
             },
           ]}
         />
@@ -63,13 +75,81 @@ export function SpeakersSection() {
           image="/images/storm.png"
           name="Storm Slivkoff"
           profile={{
-            name: '@cryo',
+            name: '@notnotstorm',
             link: 'https://twitter.com/notnotstorm',
           }}
           projects={[
             {
+              name: 'cryo',
+              link: 'https://github.com/paradigmxyz/cryo',
+            },
+            {
               name: 'flood',
               link: 'https://github.com/paradigmxyz/flood',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/uma.png"
+          name="Uma Roy"
+          profile={{
+            name: '@pumatheuma',
+            link: 'https://twitter.com/pumatheuma',
+          }}
+          projects={[
+            {
+              name: 'sp1',
+              link: 'https://github.com/succinctlabs/sp1',
+            },
+            {
+              name: 'sp1-reth',
+              link: 'https://github.com/succinctlabs/sp1-reth',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/emily.png"
+          name="Emily Hsia"
+          profile={{
+            name: '@emhsia',
+            link: 'https://twitter.com/emhsia',
+          }}
+          projects={[
+            {
+              name: 'shadow-reth',
+              link: 'https://github.com/shadow-hq/shadow-reth',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/stokes.png"
+          name="Alex Stokes"
+          profile={{
+            name: '@ralexstokes',
+            link: 'https://twitter.com/ralexstokes',
+          }}
+          projects={[
+            {
+              name: 'mev-rs',
+              link: 'https://github.com/ralexstokes/mev-rs',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/clabby.png"
+          name="Ben Clabby"
+          profile={{
+            name: '@vex_0x',
+            link: 'https://twitter.com/vex_0x',
+          }}
+          projects={[
+            {
+              name: 'kona',
+              link: 'https://github.com/ethereum-optimism/kona',
+            },
+            {
+              name: 'op-reth',
+              link: 'https://github.com/paradigmxyz/reth',
             },
           ]}
         />
