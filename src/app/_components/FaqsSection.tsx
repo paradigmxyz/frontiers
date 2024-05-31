@@ -17,23 +17,15 @@ const faqs = [
   },
   {
     title: 'How do I get selected for in-person attendance?',
-    content: 'TODO',
+    content: 'Click the "Apply to Attend" button and fill in the form!',
   },
   {
     title: 'Can I give a talk?',
-    content: 'TODO',
-  },
-  {
-    title: 'Do you cover travel?',
-    content: 'TODO',
-  },
-  {
-    title: 'Is there a hotel recommendation?',
-    content: 'TODO',
+    content: 'Yes if you are building great open source software. Just make sure to fill it in the form attendance!',
   },
   {
     title: 'Who can I contact if I have additional questions?',
-    content: 'TODO',
+    content: 'Please contact events@paradigm.xyz.',
   },
 ]
 
