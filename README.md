@@ -2,7 +2,7 @@
 
 > A two-day event focused on high-performance, bleeding edge crypto infrastructure. By open source engineers, for open source engineers.
 
-![](assets/readme.png "")
+![](assets/readme.svg "")
 
 
 ```bash
