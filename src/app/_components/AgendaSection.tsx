@@ -5,56 +5,86 @@ import { Text } from '~/ui/Text'
 
 const agendas = [
   {
-    date: 'Friday, August 16',
     sessions: [
-      { time: '9:00AM-11:30AM', title: 'Reth Core Team Updates' },
+      {
+        time: '8:30AM-9:00AM',
+        title: 'Check-in & Registration',
+      },
+      {
+        time: '9:00AM-11:30AM',
+        title: 'Reth Updates',
+        subsessions: [
+          { title: 'The Future of Reth', speaker: 'gakonst' },
+          { title: 'The Reth SDK', speaker: 'mattsse_ & rjected' },
+          { title: 'Reth Execution Extensions', speaker: 'shekhirin' },
+          { title: 'Reth to 1 Gigagas/s and Beyond', speaker: 'rkrasiuk & danipopes' },
+          { title: 'Reth Core Development', speaker: 'onbjerg' },
+        ]
+      },
       {
         time: '11:30AM-12:30PM',
-        title: 'Reth Builders Update: OP Stack, ZKVM, Shadow Logs, MEV Stack, and more',
+        title: 'Lunch Break'
       },
       {
-        time: '12:30PM-1:30PM',
-        title: 'Lunch Break',
+        time: '12:30PM-2:00PM',
+        title: 'Ecosystem Builders',
+        subsessions: [
+          { title: 'Kona: OP Stack derivation in Rust', speaker: 'vex_0x' },
+          { title: 'SP1 Reth: Reth x ZK', speaker: 'pumatheuma' },
+          { title: 'Pevm: Parallel EVM for Reth', speaker: 'sam_battenally' },
+          { title: 'Reth Benchmarking', speaker: 'BrianBland' },
+        ]
       },
       {
-        time: '1:30PM-Late',
-        title: 'Open Source Hacking',
-      },
+        time: '2:00PM-8:00PM',
+        title: 'Hacking'
+      }
     ],
     tag: {
       mobile: 'DAY 1',
-      desktop: 'DAY 1: RETH',
-    },
+      desktop: 'DAY 1: RETH'
+    }
   },
   {
-    date: 'Saturday, August 17',
     sessions: [
       {
-        time: '9:00AM-11:00AM',
-        title: 'Open Source Updates: Foundry, Alloy, Wagmi/Viem',
+        time: '9:00AM-11:30AM',
+        title: 'Tooling',
+        subsessions: [
+          { title: 'The Future of Revm', speaker: 'rakita' },
+          { title: 'Data Ecosystem Safari', speaker: 'notnotstorm' },
+          { title: 'Foundry Endgame', speaker: 'gakonst' },
+          { title: 'Alloy is ready for production', speaker: 'mattsse_' },
+          { title: 'The Future of Wagmi and crypto-frontends', speaker: 'awkweb' },
+        ]
       },
       {
-        time: '11:00AM-12:00PM',
-        title: 'Open Source Community Lightning Talks',
+        time: '11:30AM-12:30PM',
+        title: 'Lunch Break'
       },
       {
-        time: '12:00PM-1:00PM',
-        title: 'Lunch Break',
+        time: '12:30PM-1:30PM',
+        title: 'Ecosystem Builders',
+        subsessions: [
+          { title: 'Shadow Reth: Execution Extensions for Shadow Logs', speaker: 'emhsia' },
+          { title: 'RBuilder: A MEV Builder on Reth', speaker: 'bertcmiller' },
+          { title: 'MEV RS', speaker: 'ralexstokes' },
+        ]
       },
       {
-        time: '1:00PM-6:00PM',
-        title: 'Open Source Hacking',
+        time: '1:30PM-6:00PM',
+        title: 'Hacking'
       },
       {
-        time: '6:00PM',
-        title: 'Closing, hacking ends, talks & demos',
-      },
+        time: '6:00PM-7:00PM',
+        title: 'Hacking Presentations & Demos'
+      }
     ],
     tag: {
       mobile: 'DAY 2',
-      desktop: 'DAY 2: OPEN SOURCE TOOLING',
-    },
-  },
+      desktop: 'DAY 2: TOOLING'
+    }
+  }
 ]
 
 export function AgendaSection() {
@@ -62,8 +92,8 @@ export function AgendaSection() {
     <Section className="flex flex-col items-center py-40 pt-10 gap-[64px]">
       <SectionHeading id="agenda">AGENDA</SectionHeading>
       <div className="flex max-tablet:flex-col max-tablet:w-full gap-[48px]">
-        {agendas.map(({ date, sessions, tag }, i) => (
-          <Card key={date} date={date} sessions={sessions} tag={tag} />
+        {agendas.map(({ sessions, tag }, i) => (
+          <Card key={i} sessions={sessions} tag={tag} />
         ))}
       </div>
     </Section>
@@ -71,12 +101,14 @@ export function AgendaSection() {
 }
 
 function Card({
-  date,
   sessions,
   tag,
 }: {
-  date: string
-  sessions: { time: string; title: string }[]
+  sessions: {
+    time: string; 
+    title: string; 
+    subsessions?: { title: string; speaker: string }[] 
+  }[]
   tag: { mobile: string; desktop: string }
 }) {
   return (
@@ -91,21 +123,41 @@ function Card({
             <div className="max-mobile:hidden">
               <DayTag>{tag.desktop}</DayTag>
             </div>
-            <Text fontFamily="typewriter" size="28">
-              {date}
-            </Text>
           </div>
           <div className="flex flex-1 flex-col gap-[36px]">
-            {sessions.map(({ time, title }, i) => (
-              <div className="flex flex-col gap-[16px]" key={time}>
+            {sessions.map(({ time, title, subsessions }, i) => (
+              <div className="flex flex-col gap-[16px]" key={i}>
+                <Text
+                  fontFamily="typewriter"
+                  size="24"
+                >
+                  {title}
+                </Text>
                 <Text
                   className="text-[#a0a0a0]"
                   fontFamily="typewriter"
-                  size="14"
+                  size="16"
                 >
                   {time}
                 </Text>
-                <Text>{title}</Text>
+                {subsessions && (
+                  <div className="flex flex-col gap-[20px] ml-[0px]">
+                    {subsessions.map(({ title, speaker }, j) => (
+                      <div key={j} className="flex flex-col gap-[12px]">
+                        <Text size="16">{title}</Text>
+                        <div className="flex justify-between">
+                          <Text
+                            className="text-[#a0a0a0]"
+                            fontFamily="typewriter"
+                            size="12"
+                          >
+                            {speaker}
+                          </Text>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
