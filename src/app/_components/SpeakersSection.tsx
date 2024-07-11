@@ -153,6 +153,108 @@ export function SpeakersSection() {
             },
           ]}
         />
+        <Speaker
+          image="/images/onbjerg.png"
+          name="Oliver Nordbjerg"
+          profile={{
+            name: '@onbjerg',
+            link: 'https://twitter.com/onbjerg',
+          }}
+          projects={[
+            {
+              name: 'reth',
+              link: 'https://github.com/paradigmxyz/reth',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/rkrasiuk.png"
+          name="Roman Krasiuk"
+          profile={{
+            name: '@r_krasiuk',
+            link: 'https://twitter.com/r_krasiuk',
+          }}
+          projects={[
+            {
+              name: 'reth',
+              link: 'https://github.com/paradigmxyz/reth',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/shekhirin.png"
+          name="Alexey shekhirin"
+          profile={{
+            name: '@shekhirin',
+            link: 'https://twitter.com/ashekhirin',
+          }}
+          projects={[
+            {
+              name: 'reth',
+              link: 'https://github.com/paradigmxyz/reth',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/brianbland.png"
+          name="Brian Bland"
+          profile={{
+            name: '@brianbland',
+            link: 'https://github.com/brianbland',
+          }}
+          projects={[
+            {
+              name: 'base',
+              link: 'https://github.com/base-org',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/rakita.png"
+          name="Dragan Rakita"
+          profile={{
+            name: '@rakitadragan',
+            link: 'https://twitter.com/rakitadragan',
+          }}
+          projects={[
+            {
+              name: 'reth',
+              link: 'https://github.com/paradigmxyz/reth',
+            },
+            {
+              name: 'revm',
+              link: 'https://github.com/bluealloy/revm',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/bert.png"
+          name="Robert Miller"
+          profile={{
+            name: '@bertcmiller',
+            link: 'https://twitter.com/bertcmiller',
+          }}
+          projects={[
+            {
+              name: 'rbuilder',
+              link: 'https://github.com/flashbots/rbuilder',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/sam_battenally.png"
+          name="Sam Battenally"
+          profile={{
+            name: '@sam_battenally',
+            link: 'https://twitter.com/sam_battenallyn',
+          }}
+          projects={[
+            {
+              name: 'pevm',
+              link: 'https://github.com/risechain/pevm',
+            },
+          ]}
+        />
       </div>
       <Text className="text-darkGray italic" size="24">
         More speakers to be announced...

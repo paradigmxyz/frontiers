@@ -93,7 +93,7 @@ export function AgendaSection() {
       <SectionHeading id="agenda">AGENDA</SectionHeading>
       <div className="flex max-tablet:flex-col max-tablet:w-full gap-[48px]">
         {agendas.map(({ sessions, tag }, i) => (
-          <Card key={tag} sessions={sessions} tag={tag} />
+          <Card key={i} sessions={sessions} tag={tag} />
         ))}
       </div>
     </Section>
