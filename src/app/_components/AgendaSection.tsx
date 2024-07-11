@@ -77,7 +77,7 @@ const agendas = [
       },
       {
         time: '6:00PM-7:00PM',
-        title: 'Optional talks & demos'
+        title: 'Hacking Presentations & Demos'
       }
     ],
     tag: {
