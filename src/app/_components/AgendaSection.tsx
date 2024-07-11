@@ -136,7 +136,7 @@ function Card({
                 <Text
                   className="text-[#a0a0a0]"
                   fontFamily="typewriter"
-                  size="22"
+                  size="16"
                 >
                   {time}
                 </Text>
