@@ -104,10 +104,10 @@ function Card({
   sessions,
   tag,
 }: {
-  sessions: { 
+  sessions: {
     time: string; 
     title: string; 
-    subsessions?: { time: string; title: string; speaker: string }[] 
+    subsessions?: { title: string; speaker: string }[] 
   }[]
   tag: { mobile: string; desktop: string }
 }) {
@@ -142,17 +142,10 @@ function Card({
                 </Text>
                 {subsessions && (
                   <div className="flex flex-col gap-[20px] ml-[0px]">
-                    {subsessions.map(({ time, title, speaker }, j) => (
+                    {subsessions.map(({ title, speaker }, j) => (
                       <div key={j} className="flex flex-col gap-[12px]">
                         <Text size="16">{title}</Text>
                         <div className="flex justify-between">
-                          {/*<Text
-                            className="text-[#a0a0a0]"
-                            fontFamily="typewriter"
-                            size="12"
-                          >
-                            {time}
-                          </Text>*/}
                           <Text
                             className="text-[#a0a0a0]"
                             fontFamily="typewriter"
