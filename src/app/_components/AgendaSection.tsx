@@ -92,8 +92,8 @@ export function AgendaSection() {
     <Section className="flex flex-col items-center py-40 pt-10 gap-[64px]">
       <SectionHeading id="agenda">AGENDA</SectionHeading>
       <div className="flex max-tablet:flex-col max-tablet:w-full gap-[48px]">
-        {agendas.map(({ date, sessions, tag }, i) => (
-          <Card key={date} date={date} sessions={sessions} tag={tag} />
+        {agendas.map(({ sessions, tag }, i) => (
+          <Card key={tag} sessions={sessions} tag={tag} />
         ))}
       </div>
     </Section>
@@ -101,11 +101,9 @@ export function AgendaSection() {
 }
 
 function Card({
-  date,
   sessions,
   tag,
 }: {
-  date: string
   sessions: { 
     time: string; 
     title: string; 
