@@ -51,11 +51,11 @@ const agendas = [
         time: '9:00AM-11:30AM',
         title: 'Tooling',
         subsessions: [
-          { title: 'The Future of Revm', speaker: 'rakita' },
+          { title: 'Revm Endgame', speaker: 'rakita' },
           { title: 'Data Ecosystem Safari', speaker: 'notnotstorm' },
           { title: 'Foundry Endgame', speaker: 'gakonst' },
           { title: 'Alloy is ready for production', speaker: 'mattsse_' },
-          { title: 'The Future of Wagmi and crypto-frontends', speaker: 'awkweb' },
+          { title: 'Wevm and the future of Wagmi, Viem and beyond', speaker: 'awkweb' },
         ]
       },
       {
