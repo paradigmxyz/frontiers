@@ -29,7 +29,7 @@ const agendas = [
         time: '12:30PM-2:00PM',
         title: 'Ecosystem Builders',
         subsessions: [
-          { title: 'Kona: OP Stack derivation in Rust', speaker: 'vex_0x' },
+          { title: 'Kona: no_std OP Stack state transition and derivation', speaker: 'vex_0x' },
           { title: 'SP1 Reth: Reth x ZK', speaker: 'pumatheuma' },
           { title: 'Pevm: Parallel EVM for Reth', speaker: 'sam_battenally' },
           { title: 'Reth Benchmarking', speaker: 'BrianBland' },
