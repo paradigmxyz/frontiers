@@ -55,7 +55,7 @@ const agendas = [
           { title: 'Data Ecosystem Safari', speaker: 'notnotstorm' },
           { title: 'Foundry Endgame', speaker: 'gakonst' },
           { title: 'Alloy is ready for production', speaker: 'mattsse_' },
-          { title: 'Wevm and the future of Wagmi, Viem and beyond', speaker: 'awkweb' },
+          { title: 'Modern JS for Ethereum', speaker: 'awkweb' },
         ]
       },
       {
