@@ -21,7 +21,8 @@ const faqs = [
   },
   {
     title: 'Can I give a talk?',
-    content: 'Yes if you are building great open source software. Just make sure to fill it in the form attendance!',
+    content:
+      'Yes if you are building great open source software. Just make sure to fill it in the form attendance!',
   },
   {
     title: 'Who can I contact if I have additional questions?',

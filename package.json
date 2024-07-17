@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check app ui --apply-unsafe"
+    "lint": "biome check src --apply-unsafe"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",

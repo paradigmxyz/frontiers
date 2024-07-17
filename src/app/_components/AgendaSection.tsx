@@ -17,33 +17,39 @@ const agendas = [
           { title: 'The Future of Reth', speaker: 'gakonst' },
           { title: 'The Reth SDK', speaker: 'mattsse_ & rjected' },
           { title: 'Reth Execution Extensions', speaker: 'shekhirin' },
-          { title: 'Reth to 1 Gigagas/s and Beyond', speaker: 'rkrasiuk & danipopes' },
+          {
+            title: 'Reth to 1 Gigagas/s and Beyond',
+            speaker: 'rkrasiuk & danipopes',
+          },
           { title: 'Reth Core Development', speaker: 'onbjerg' },
-        ]
+        ],
       },
       {
         time: '11:30AM-12:30PM',
-        title: 'Lunch Break'
+        title: 'Lunch Break',
       },
       {
         time: '12:30PM-2:00PM',
         title: 'Ecosystem Builders',
         subsessions: [
-          { title: 'Kona: no_std OP Stack state transition and derivation', speaker: 'vex_0x' },
+          {
+            title: 'Kona: no_std OP Stack state transition and derivation',
+            speaker: 'vex_0x',
+          },
           { title: 'SP1 Reth: Reth x ZK', speaker: 'pumatheuma' },
           { title: 'Pevm: Parallel EVM for Reth', speaker: 'sam_battenally' },
           { title: 'Reth Benchmarking', speaker: 'BrianBland' },
-        ]
+        ],
       },
       {
         time: '2:00PM-8:00PM',
-        title: 'Hacking'
-      }
+        title: 'Hacking',
+      },
     ],
     tag: {
       mobile: 'DAY 1',
-      desktop: 'DAY 1: RETH'
-    }
+      desktop: 'DAY 1: RETH',
+    },
   },
   {
     sessions: [
@@ -56,35 +62,38 @@ const agendas = [
           { title: 'Foundry Endgame', speaker: 'gakonst' },
           { title: 'Alloy is ready for production', speaker: 'mattsse_' },
           { title: 'Modern JS for Ethereum', speaker: 'awkweb' },
-        ]
+        ],
       },
       {
         time: '11:30AM-12:30PM',
-        title: 'Lunch Break'
+        title: 'Lunch Break',
       },
       {
         time: '12:30PM-1:30PM',
         title: 'Ecosystem Builders',
         subsessions: [
-          { title: 'Shadow Reth: Execution Extensions for Shadow Logs', speaker: 'emhsia' },
+          {
+            title: 'Shadow Reth: Execution Extensions for Shadow Logs',
+            speaker: 'emhsia',
+          },
           { title: 'RBuilder: A MEV Builder on Reth', speaker: 'bertcmiller' },
           { title: 'MEV RS', speaker: 'ralexstokes' },
-        ]
+        ],
       },
       {
         time: '1:30PM-6:00PM',
-        title: 'Hacking'
+        title: 'Hacking',
       },
       {
         time: '6:00PM-7:00PM',
-        title: 'Hacking Presentations & Demos'
-      }
+        title: 'Hacking Presentations & Demos',
+      },
     ],
     tag: {
       mobile: 'DAY 2',
-      desktop: 'DAY 2: TOOLING'
-    }
-  }
+      desktop: 'DAY 2: TOOLING',
+    },
+  },
 ]
 
 export function AgendaSection() {
@@ -105,9 +114,9 @@ function Card({
   tag,
 }: {
   sessions: {
-    time: string; 
-    title: string; 
-    subsessions?: { title: string; speaker: string }[] 
+    time: string
+    title: string
+    subsessions?: { title: string; speaker: string }[]
   }[]
   tag: { mobile: string; desktop: string }
 }) {
@@ -127,10 +136,7 @@ function Card({
           <div className="flex flex-1 flex-col gap-[36px]">
             {sessions.map(({ time, title, subsessions }, i) => (
               <div className="flex flex-col gap-[16px]" key={i}>
-                <Text
-                  fontFamily="typewriter"
-                  size="24"
-                >
+                <Text fontFamily="typewriter" size="24">
                   {title}
                 </Text>
                 <Text
@@ -141,19 +147,19 @@ function Card({
                   {time}
                 </Text>
                 {subsessions && (
-                  <div className="flex flex-col gap-[20px] ml-[0px]">
+                  <div className="flex flex-col gap-[20px] border-l border-[#333333] pl-[12px] mt-[8px]">
                     {subsessions.map(({ title, speaker }, j) => (
-                      <div key={j} className="flex flex-col gap-[12px]">
-                        <Text size="16">{title}</Text>
-                        <div className="flex justify-between">
-                          <Text
-                            className="text-[#a0a0a0]"
-                            fontFamily="typewriter"
-                            size="12"
-                          >
-                            {speaker}
-                          </Text>
-                        </div>
+                      <div key={j} className="flex flex-col gap-[8px]">
+                        <Text fontFamily="typewriter" size="12" weight="400">
+                          {title}
+                        </Text>
+                        <Text
+                          className="text-[#a0a0a0]"
+                          fontFamily="typewriter"
+                          size="11"
+                        >
+                          {speaker}
+                        </Text>
                       </div>
                     ))}
                   </div>
