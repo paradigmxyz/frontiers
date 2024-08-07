@@ -199,8 +199,8 @@ export function SpeakersSection() {
           image="/images/brianbland.png"
           name="Brian Bland"
           profile={{
-            name: '@brianbland',
-            link: 'https://github.com/brianbland',
+            name: '@brianisbland',
+            link: 'https://twitter.com/brianisbland',
           }}
           projects={[
             {
