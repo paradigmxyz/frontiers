@@ -210,29 +210,11 @@ export function SpeakersSection() {
           ]}
         />
         <Speaker
-          image="/images/rakita.png"
-          name="Dragan Rakita"
+          image="/images/ferran.png"
+          name="Ferran Borreguero"
           profile={{
-            name: '@rakitadragan',
-            link: 'https://twitter.com/rakitadragan',
-          }}
-          projects={[
-            {
-              name: 'reth',
-              link: 'https://github.com/paradigmxyz/reth',
-            },
-            {
-              name: 'revm',
-              link: 'https://github.com/bluealloy/revm',
-            },
-          ]}
-        />
-        <Speaker
-          image="/images/bert.png"
-          name="Robert Miller"
-          profile={{
-            name: '@bertcmiller',
-            link: 'https://twitter.com/bertcmiller',
+            name: '@ferranbt',
+            link: 'https://twitter.com/ferranbt',
           }}
           projects={[
             {
@@ -242,11 +224,103 @@ export function SpeakersSection() {
           ]}
         />
         <Speaker
-          image="/images/sam_battenally.png"
-          name="Sam Battenally"
+          image="/images/rjected.png"
+          name="Dan Cline"
           profile={{
-            name: '@sam_battenally',
-            link: 'https://twitter.com/sam_battenallyn',
+            name: '@rjected',
+            link: 'https://twitter.com/rjected',
+          }}
+          projects={[
+            {
+              name: 'reth',
+              link: 'https://github.com/paradigmxyz/reth',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/dani.png"
+          name="DaniPopes"
+          profile={{
+            name: '@danipopes',
+            link: 'https://twitter.com/danipopes',
+          }}
+          projects={[
+            {
+              name: 'reth',
+              link: 'https://github.com/paradigmxyz/reth',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/yash.png"
+          name="Yash Atreya"
+          profile={{
+            name: '@yashatreya',
+            link: 'https://twitter.com/yashatreya',
+          }}
+          projects={[
+            {
+              name: 'foundry',
+              link: 'https://github.com/foundry-rs/foundry',
+            },
+            {
+              name: 'alloy',
+              link: 'https://github.com/alloy-rs',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/zerosnacks.png"
+          name="Zerosnacks"
+          profile={{
+            name: '@zerosnacks',
+            link: 'https://twitter.com/zerosnacks',
+          }}
+          projects={[
+            {
+              name: 'foundry',
+              link: 'https://github.com/foundry-rs/foundry',
+            },
+            {
+              name: 'alloy',
+              link: 'https://github.com/alloy-rs',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/ludwig.png"
+          name="0xvanbeethoven"
+          profile={{
+            name: '@0xvanbeethoven',
+            link: 'https://twitter.com/0xvanbeethoven',
+          }}
+          projects={[
+            {
+              name: 'brontes',
+              link: 'https://github.com/SorellaLabs/brontes',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/willsmith.png"
+          name="Will Smith"
+          profile={{
+            name: 'Will Smith',
+            link: 'https://github.com/69WillSmith',
+          }}
+          projects={[
+            {
+              name: 'brontes',
+              link: 'https://github.com/SorellaLabs/brontes',
+            },
+          ]}
+        />
+        <Speaker
+          image="/images/hai.png"
+          name="Hai Nguyen"
+          profile={{
+            name: '@hai_rise',
+            link: 'https://twitter.com/hai_rise',
           }}
           projects={[
             {
@@ -256,9 +330,6 @@ export function SpeakersSection() {
           ]}
         />
       </div>
-      <Text className="text-darkGray italic" size="24">
-        More speakers to be announced...
-      </Text>
     </Section>
   )
 }
