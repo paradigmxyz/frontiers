@@ -22,7 +22,7 @@ const faqs = [
   {
     title: 'Can I give a talk?',
     content:
-      'Yes if you are building great open source software. Just make sure to fill it in the form attendance!',
+      'Frontiers is this week! Thank you for applying, and we\'d love to have you next year!',
   },
   {
     title: 'Who can I contact if I have additional questions?',
