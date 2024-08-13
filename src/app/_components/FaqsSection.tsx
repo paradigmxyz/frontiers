@@ -9,7 +9,7 @@ import { Text } from '~/ui/Text'
 const faqs = [
   {
     title: 'Is the event in-person or online as well?',
-    content: 'The event will be held in-person in San Francisco.',
+    content: 'The event will be held in-person in San Francisco, but we will also have a livestream for it!',
   },
   {
     title: 'How much does an in-person ticket cost?',
