@@ -29,7 +29,7 @@ const agendas = [
         title: 'Lunch Break',
       },
       {
-        time: '12:30PM-2:00PM',
+        time: '12:30PM-1:30PM',
         title: 'Ecosystem Builders',
         subsessions: [
           {
@@ -37,12 +37,11 @@ const agendas = [
             speaker: 'vex_0x',
           },
           { title: 'SP1 Reth: Reth x ZK', speaker: 'pumatheuma' },
-          { title: 'Pevm: Parallel EVM for Reth', speaker: 'sam_battenally' },
-          { title: 'Reth Benchmarking', speaker: 'BrianBland' },
+          { title: 'Pevm: Parallel EVM for Reth', speaker: 'hai_rise' },
         ],
       },
       {
-        time: '2:00PM-8:00PM',
+        time: '1:30PM-8:00PM',
         title: 'Hacking',
       },
     ],
@@ -57,11 +56,11 @@ const agendas = [
         time: '9:00AM-11:30AM',
         title: 'Tooling',
         subsessions: [
-          { title: 'Revm Endgame', speaker: 'rakita' },
           { title: 'Data Ecosystem Safari', speaker: 'notnotstorm' },
-          { title: 'Foundry Endgame', speaker: 'gakonst' },
-          { title: 'Alloy is ready for production', speaker: 'mattsse_' },
+          { title: 'Foundry Endgame', speaker: 'zerosnacks' },
+          { title: 'Alloy is ready for production', speaker: 'yashatreya' },
           { title: 'Modern JS for Ethereum', speaker: 'awkweb' },
+          { title: 'Reth Benchmarking', speaker: 'BrianBland' },
         ],
       },
       {
@@ -69,19 +68,20 @@ const agendas = [
         title: 'Lunch Break',
       },
       {
-        time: '12:30PM-1:30PM',
+        time: '12:30PM-2:00PM',
         title: 'Ecosystem Builders',
         subsessions: [
           {
             title: 'Shadow Reth: Execution Extensions for Shadow Logs',
             speaker: 'emhsia',
           },
-          { title: 'RBuilder: A MEV Builder on Reth', speaker: 'bertcmiller' },
+          { title: 'RBuilder: A MEV Builder on Reth', speaker: 'ferranbt' },
           { title: 'MEV RS', speaker: 'ralexstokes' },
+          { title: 'Brontes: How Chasing MEV Led to a General Purpose Blockchain Analytics Engine', speaker: '0xvanbeethoven & Will Smith' },
         ],
       },
       {
-        time: '1:30PM-6:00PM',
+        time: '2:00PM-6:00PM',
         title: 'Hacking',
       },
       {
