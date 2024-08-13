@@ -70,7 +70,7 @@ export function TopNav() {
               <WithCursor cursor="pulse-crosshair">
                 <Button asChild>
                   <a href="https://events.paradigm.xyz/frontiersregistration">
-                    Apply to attend
+                    Livestream (Soon!)
                   </a>
                 </Button>
               </WithCursor>
@@ -124,7 +124,7 @@ export function TopNav() {
             </Text>
             <Button asChild className="w-full">
               <a href="https://events.paradigm.xyz/frontiersregistration">
-                Apply to attend
+                Livestream (Soon!)
               </a>
             </Button>
           </nav>

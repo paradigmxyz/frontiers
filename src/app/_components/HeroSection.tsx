@@ -159,7 +159,7 @@ export function HeroSection() {
             <WithCursor cursor="pulse-crosshair">
               <Button asChild frame className="w-[50%] mt-[-36px]" height="60">
                 <a href="https://events.paradigm.xyz/frontiersregistration">
-                  Apply to attend
+                  Livestream (Soon!)
                 </a>
               </Button>
             </WithCursor>
@@ -184,7 +184,7 @@ export function HeroSection() {
                     className="mobile:cursor-none"
                     href="https://events.paradigm.xyz/frontiersregistration"
                   >
-                    Apply to attend
+                    Livestream (Soon!)
                   </a>
                 </Button>
               </WithCursor>

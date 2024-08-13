@@ -20,7 +20,7 @@ app.frame('/', (c) => {
     image: '/images/frames/1.png',
     intents: [
       <Button.Link href="https://events.paradigm.xyz/frontiersregistration">
-        Apply to attend
+        Livestream (Soon!)
       </Button.Link>,
       <Button action="/descriptions">Next →</Button>,
       <Button.Link
@@ -73,7 +73,7 @@ app.frame('/end', (c) => {
         ← Back
       </Button>,
       <Button.Link href="https://events.paradigm.xyz/frontiersregistration">
-        Apply to attend
+        Livestream (Soon!)
       </Button.Link>,
       <Button.Link
         href={`https://warpcast.com/~/compose?text=${encodeURIComponent(

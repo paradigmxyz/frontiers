@@ -24,7 +24,7 @@ export default function Home() {
         <WithCursor cursor="pulse-crosshair">
           <Button asChild frame className="w-full" height="60">
             <a href="https://events.paradigm.xyz/frontiersregistration">
-              Apply to attend
+              Livestream (Soon!)
             </a>
           </Button>
         </WithCursor>

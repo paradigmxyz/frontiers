@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     title: 'How do I get selected for in-person attendance?',
-    content: 'Click the "Apply to Attend" button and fill in the form!',
+    content: 'Applications are now closed for attendance! Thanks for applying!',
   },
   {
     title: 'Can I give a talk?',
