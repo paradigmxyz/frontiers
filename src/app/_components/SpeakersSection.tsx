@@ -306,7 +306,7 @@ export function SpeakersSection() {
           name="Will Smith"
           profile={{
             name: 'Will Smith',
-            link: 'https://github.com/69WillSmith',
+            link: 'https://twitter.com/69WillSmith',
           }}
           projects={[
             {
