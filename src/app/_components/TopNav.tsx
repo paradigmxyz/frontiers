@@ -69,8 +69,8 @@ export function TopNav() {
             <div className="-mr-[18px] max-mobile:hidden">
               <WithCursor cursor="pulse-crosshair">
                 <Button asChild>
-                  <a href="https://events.paradigm.xyz/frontiersregistration">
-                    Livestream (Soon!)
+                  <a href="https://www.youtube.com/watch?v=1xQTHCjcWVk">
+                    Livestream
                   </a>
                 </Button>
               </WithCursor>
