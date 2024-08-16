@@ -182,9 +182,9 @@ export function HeroSection() {
                 <Button asChild frame className="w-full" height="60">
                   <a
                     className="mobile:cursor-none"
-                    href="https://events.paradigm.xyz/frontiersregistration"
+                    href="https://www.youtube.com/watch?v=1xQTHCjcWVk"
                   >
-                    Livestream (Soon!)
+                    Livestream 
                   </a>
                 </Button>
               </WithCursor>

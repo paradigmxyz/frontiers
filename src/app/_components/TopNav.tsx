@@ -123,8 +123,8 @@ export function TopNav() {
               </Dialog.Close>
             </Text>
             <Button asChild className="w-full">
-              <a href="https://events.paradigm.xyz/frontiersregistration">
-                Livestream (Soon!)
+              <a href="https://www.youtube.com/watch?v=1xQTHCjcWVk">
+                Livestream 
               </a>
             </Button>
           </nav>
