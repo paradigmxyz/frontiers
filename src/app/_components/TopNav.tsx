@@ -69,7 +69,7 @@ export function TopNav() {
             <div className="-mr-[18px] max-mobile:hidden">
               <WithCursor cursor="pulse-crosshair">
                 <Button asChild>
-                  <a href="https://www.youtube.com/watch?v=1xQTHCjcWVk">
+                  <a href="https://www.youtube.com/live/ta7yY51RK2Q">
                     Livestream
                   </a>
                 </Button>
@@ -123,7 +123,7 @@ export function TopNav() {
               </Dialog.Close>
             </Text>
             <Button asChild className="w-full">
-              <a href="https://www.youtube.com/watch?v=1xQTHCjcWVk">
+              <a href="https://www.youtube.com/live/ta7yY51RK2Q">
                 Livestream 
               </a>
             </Button>

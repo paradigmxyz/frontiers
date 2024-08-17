@@ -19,7 +19,7 @@ app.frame('/', (c) => {
   return c.res({
     image: '/images/frames/1.png',
     intents: [
-      <Button.Link href="https://www.youtube.com/watch?v=1xQTHCjcWVk">
+      <Button.Link href="https://www.youtube.com/live/ta7yY51RK2Q">
         Livestream 
       </Button.Link>,
       <Button action="/descriptions">Next →</Button>,
@@ -72,7 +72,7 @@ app.frame('/end', (c) => {
       <Button action="/descriptions" value="back">
         ← Back
       </Button>,
-      <Button.Link href="https://www.youtube.com/watch?v=1xQTHCjcWVk">
+      <Button.Link href="https://www.youtube.com/live/ta7yY51RK2Q">
         Livestream 
       </Button.Link>,
       <Button.Link

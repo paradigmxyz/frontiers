@@ -23,7 +23,7 @@ export default function Home() {
       <div className="max-w-screen-mobile mx-auto">
         <WithCursor cursor="pulse-crosshair">
           <Button asChild frame className="w-full" height="60">
-            <a href="https://www.youtube.com/watch?v=1xQTHCjcWVk">
+            <a href="https://www.youtube.com/live/ta7yY51RK2Q">
               Livestream 
             </a>
           </Button>

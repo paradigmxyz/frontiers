@@ -158,7 +158,7 @@ export function HeroSection() {
             </div>
             <WithCursor cursor="pulse-crosshair">
               <Button asChild frame className="w-[50%] mt-[-36px]" height="60">
-                <a href="https://www.youtube.com/watch?v=1xQTHCjcWVk">
+                <a href="https://www.youtube.com/live/ta7yY51RK2Q">
                   Livestream
                 </a>
               </Button>
@@ -182,7 +182,7 @@ export function HeroSection() {
                 <Button asChild frame className="w-full" height="60">
                   <a
                     className="mobile:cursor-none"
-                    href="https://www.youtube.com/watch?v=1xQTHCjcWVk"
+                    href="https://www.youtube.com/live/ta7yY51RK2Q"
                   >
                     Livestream 
                   </a>
