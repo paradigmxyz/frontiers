@@ -77,9 +77,9 @@ export function FaqsSection() {
                 <Text
                   asChild
                   fontFamily="default"
-                  size="18"
+                  size="20"
                   weight="400"
-                  className="text-white"
+                  className="text-white pb-2"
                 >
                   <p>{faq.question}</p>
                 </Text>
@@ -87,7 +87,7 @@ export function FaqsSection() {
 
               {/* Answer Column (Left-aligned) */}
               <div>
-                <Text fontFamily="default" size="16" className="text-white/50">
+                <Text fontFamily="default" size="18" className="text-white/50">
                   {faq.answer}
                 </Text>
               </div>

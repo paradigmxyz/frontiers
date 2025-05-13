@@ -20,10 +20,10 @@ export default function Home() {
       <SpeakersSection />
       <FaqsSection />
       <OpenSourceSection />
-      <div className="max-w-screen-mobile mx-auto">
+      <div className="max-w-screen-mobile max-w-[940px] mx-auto">
         <WithCursor cursor="pulse-crosshair">
-          <Button asChild frame className="w-full" height="60">
-            <a href="https://www.youtube.com/live/ta7yY51RK2Q">Livestream</a>
+          <Button asChild frame className="w-[80%] mx-auto" height="60">
+            <a href="https://form.typeform.com/to/EBlW7QFt">Register Now</a>
           </Button>
         </WithCursor>
       </div>

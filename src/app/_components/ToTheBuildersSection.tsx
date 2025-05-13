@@ -12,7 +12,7 @@ export function ToTheBuildersSection() {
     <Section className="flex flex-col pb-24 max-tablet:pb-20 max-mobile:pb-16 pt-0 mt-0 w-full mx-auto">
       <div className="flex flex-row max-tablet:flex-col items-center gap-16 max-w-[1200px] mx-auto">
         {/* Left Column: Crypto is in its application era */}
-        <div className="flex-1 flex flex-col gap-8 max-w-[500px]">
+        <div className="flex-1 flex flex-col gap-8 max-w-[500px] max-mobile:px-4">
           <div>
             <div className="text-5xl font-serif leading-tight">
               <h2>
@@ -22,8 +22,8 @@ export function ToTheBuildersSection() {
             </div>
           </div>
 
-          <div className="text-[16px] max-mobile:text-[15px] flex flex-col gap-[32px] max-mobile:gap-[16px]">
-            <Text asChild>
+          <div className="flex flex-col gap-[32px] max-mobile:gap-[16px] max-mobile:mt-2">
+            <Text asChild size={"18"}>
               <p>
                 For the past six years, Paradigm has been developing open source
                 software meant to support developers in their day-to- day work.
@@ -32,7 +32,7 @@ export function ToTheBuildersSection() {
                 the highest level frontend abstractions.
               </p>
             </Text>
-            <Text asChild>
+            <Text asChild size={"18"} className="mt-4">
               <p>
                 As we aim to advance the frontiers of full stack software in
                 crypto, we also aspire to grow a community of thousands of open
@@ -43,7 +43,7 @@ export function ToTheBuildersSection() {
             </Text>
           </div>
 
-          <div className="flex flex-row max-mobile:flex-col gap-6 mt-4 w-full">
+          <div className="flex flex-row max-mobile:flex-col gap-6 mt-4 w-full max-mobile:mt-2">
             {features.map((feature) => (
               <div
                 className="flex flex-row gap-4 items-center flex-1"

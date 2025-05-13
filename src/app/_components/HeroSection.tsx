@@ -35,9 +35,9 @@ export function HeroSection() {
   return (
     <div ref={ref} className="relative h-screen w-screen">
       {/* Hero Section Navigation */}
-      <nav className="absolute top-0 left-0 w-full flex justify-center pt-10 z-20">
-        <ul className="flex items-center gap-10">
-          <li className="flex items-center gap-2 opacity-60">
+      <nav className="absolute top-0 left-0 w-full flex justify-center pt-8 sm:pt-10 md:pt-14 z-20">
+        <ul className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 md:gap-16 px-4 sm:px-6 md:px-10 py-2 sm:py-3 md:py-4">
+          <li className="flex items-center gap-2 opacity-60 mb-2 sm:mb-0">
             <Text fontFamily="typewriter" size="14">
               STREAM
             </Text>
@@ -45,24 +45,30 @@ export function HeroSection() {
               SOON
             </span>
           </li>
-          <li className="text-xl text-white font-typewriter">&middot;</li>
-          <li>
+          <li className="text-xl text-white font-typewriter hidden sm:block">
+            &middot;
+          </li>
+          <li className="mb-2 sm:mb-0">
             <Text asChild fontFamily="typewriter" size="14">
               <a href="#agenda" className="hover:underline">
                 SCHEDULE
               </a>
             </Text>
           </li>
-          <li className="text-xl text-white font-typewriter">&middot;</li>
-          <li>
+          <li className="text-xl text-white font-typewriter hidden sm:block">
+            &middot;
+          </li>
+          <li className="mb-2 sm:mb-0">
             <Text asChild fontFamily="typewriter" size="14">
               <a href="#speakers" className="hover:underline">
                 SPEAKERS
               </a>
             </Text>
           </li>
-          <li className="text-xl text-white font-typewriter">&middot;</li>
-          <li>
+          <li className="text-xl text-white font-typewriter hidden sm:block">
+            &middot;
+          </li>
+          <li className="mb-2 sm:mb-0">
             <Text asChild fontFamily="typewriter" size="14">
               <a href="#faqs" className="hover:underline">
                 FAQ
@@ -107,7 +113,7 @@ export function HeroSection() {
           {/* Subtitle */}
           <div className="mt-2">
             <Text
-              className="text-center text-gray-300 text-xl font-serif"
+              className="text-center text-gray-300 text-xl max-w-sm sm:max-w-none font-serif"
               asChild
               size="20"
             >
@@ -118,13 +124,13 @@ export function HeroSection() {
             </Text>
           </div>
           {/* Buttons */}
-          <div className="flex flex-row gap-6 mt-4">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 w-full px-4 max-w-[500px]">
             <WithCursor cursor="pulse-crosshair">
               <Button
                 asChild
                 frame
                 color="paradigmGreen"
-                className="min-w-[240px] px-10"
+                className="w-full sm:min-w-[240px] px-6 sm:px-10"
                 height="60"
               >
                 <a href="#register">GET FREE TICKET</a>
@@ -135,7 +141,7 @@ export function HeroSection() {
                 asChild
                 frame
                 color="white"
-                className="min-w-[240px] px-10"
+                className="w-full sm:min-w-[240px] px-6 sm:px-10"
                 height="60"
               >
                 <a
@@ -150,21 +156,48 @@ export function HeroSection() {
           </div>
           {/* Date and Location */}
           <div className="mt-6">
-            <Text
-              fontFamily="typewriter"
-              className="text-[15px] tracking-widest text-white/80"
-            >
-              AUGUST 6-8, 2025 &nbsp; &bull; &nbsp;{" "}
-              <a
-                href="https://maps.google.com/?q=The+Midway+SF+900+Marin+Street+San+Francisco"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-b border-dotted border-white/80 hover:text-white"
+            {/* Mobile version - stacked with line separator */}
+            <div className="flex flex-col items-center sm:hidden">
+              <Text
+                fontFamily="typewriter"
+                className="text-[15px] tracking-widest text-white/80 pb-4 border-b border-white/20 mb-4"
               >
-                THE MIDWAY SF
-              </a>{" "}
-              & ONLINE
-            </Text>
+                AUGUST 6-8, 2025
+              </Text>
+              <Text
+                fontFamily="typewriter"
+                className="text-[15px] tracking-widest text-white/80"
+              >
+                <a
+                  href="https://maps.google.com/?q=The+Midway+SF+900+Marin+Street+San+Francisco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b border-dotted border-white/80 hover:text-white"
+                >
+                  THE MIDWAY SF
+                </a>{" "}
+                & ONLINE
+              </Text>
+            </div>
+
+            {/* Desktop version - horizontal with dot separators */}
+            <div className="hidden sm:block text-center">
+              <Text
+                fontFamily="typewriter"
+                className="text-[15px] tracking-widest text-white/80"
+              >
+                AUGUST 6-8, 2025 &nbsp;&nbsp;&bull;&nbsp;&nbsp;{" "}
+                <a
+                  href="https://maps.google.com/?q=The+Midway+SF+900+Marin+Street+San+Francisco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b border-dotted border-white/80 hover:text-white"
+                >
+                  THE MIDWAY SF
+                </a>{" "}
+                & ONLINE
+              </Text>
+            </div>
           </div>
         </div>
       </Section>
