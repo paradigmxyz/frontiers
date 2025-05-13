@@ -2,12 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes subtle-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
 @layer base {
   :root {
     color-scheme: dark;
   }
 
-  html, body {
+  html,
+  body {
     background-color: black;
     color: white;
   }
@@ -17,45 +28,54 @@
     scrollbar-width: thin;
     scrollbar-gutter: stable;
   }
-  
+
   @media screen and (min-width: 720px) {
-    a, button {
+    a,
+    button {
       cursor: none;
     }
   }
 
   @font-face {
-    font-family: 'Atlas Typewriter';
+    font-family: "Atlas Typewriter";
     font-weight: 300;
     font-style: normal;
-    src: url('/fonts/AtlasTypewriter-Light-Web.woff2') format('woff2'), url('/fonts/AtlasTypewriter-Light-Web.woff') format('woff');
+    src: url("/fonts/AtlasTypewriter-Light-Web.woff2") format("woff2"),
+      url("/fonts/AtlasTypewriter-Light-Web.woff") format("woff");
   }
 
   @font-face {
-    font-family: 'Atlas Typewriter';
+    font-family: "Atlas Typewriter";
     font-weight: 400;
     font-style: normal;
-    src: url('/fonts/AtlasTypewriter-Regular-Web.woff2') format('woff2'), url('/fonts/AtlasTypewriter-Regular-Web.woff') format('woff');
+    src: url("/fonts/AtlasTypewriter-Regular-Web.woff2") format("woff2"),
+      url("/fonts/AtlasTypewriter-Regular-Web.woff") format("woff");
   }
 
   @font-face {
-    font-family: 'Martina Plantijn';
+    font-family: "Martina Plantijn";
     font-weight: 300;
     font-style: normal;
-    src: url('/fonts/martina-plantijn-light.woff2') format('woff2');
+    src: url("/fonts/martina-plantijn-light.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Martina Plantijn';
+    font-family: "Martina Plantijn";
     font-weight: 400;
     font-style: normal;
-    src: url('/fonts/martina-plantijn-regular.woff2') format('woff2');
+    src: url("/fonts/martina-plantijn-regular.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Martina Plantijn';
+    font-family: "Martina Plantijn";
     font-weight: 500;
     font-style: normal;
-    src: url('/fonts/martina-plantijn-medium.woff2') format('woff2');
+    src: url("/fonts/martina-plantijn-medium.woff2") format("woff2");
+  }
+}
+
+@layer utilities {
+  .animate-subtle-pulse {
+    animation: subtle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }

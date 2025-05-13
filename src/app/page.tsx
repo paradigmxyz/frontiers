@@ -1,14 +1,14 @@
-import { Button } from '~/ui/Button'
-import { WithCursor } from '~/ui/WithCursor'
+import { Button } from "~/ui/Button";
+import { WithCursor } from "~/ui/WithCursor";
 
-import { AgendaSection } from './_components/AgendaSection'
-import { FaqsSection } from './_components/FaqsSection'
-import { Footer } from './_components/Footer'
-import { HeroSection } from './_components/HeroSection'
-import { PerspectiveBackground } from './_components/PerspectiveBackground'
-import { PreReadsSection } from './_components/PreReadsSection'
-import { SpeakersSection } from './_components/SpeakersSection'
-import { ToTheBuildersSection } from './_components/ToTheBuildersSection'
+import { AgendaSection } from "./_components/AgendaSection";
+import { FaqsSection } from "./_components/FaqsSection";
+import { Footer } from "./_components/Footer";
+import { HeroSection } from "./_components/HeroSection";
+import { PerspectiveBackground } from "./_components/PerspectiveBackground";
+import { OpenSourceSection } from "./_components/OpenSourceSection";
+import { SpeakersSection } from "./_components/SpeakersSection";
+import { ToTheBuildersSection } from "./_components/ToTheBuildersSection";
 
 export default function Home() {
   return (
@@ -19,18 +19,16 @@ export default function Home() {
       <AgendaSection />
       <SpeakersSection />
       <FaqsSection />
-      <PreReadsSection />
+      <OpenSourceSection />
       <div className="max-w-screen-mobile mx-auto">
         <WithCursor cursor="pulse-crosshair">
           <Button asChild frame className="w-full" height="60">
-            <a href="https://www.youtube.com/live/ta7yY51RK2Q">
-              Livestream 
-            </a>
+            <a href="https://www.youtube.com/live/ta7yY51RK2Q">Livestream</a>
           </Button>
         </WithCursor>
       </div>
       <div className="h-[300px] max-mobile:h-[100px]" />
       <Footer />
     </div>
-  )
+  );
 }

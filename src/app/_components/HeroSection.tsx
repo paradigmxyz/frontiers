@@ -1,26 +1,96 @@
-'use client'
+"use client";
 
-import clsx from 'clsx'
-import Image from 'next/image'
-import { type ReactElement, useContext, useEffect } from 'react'
-import { useInView } from 'react-intersection-observer'
+import clsx from "clsx";
+import Image from "next/image";
+import { type ReactElement, useContext, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
-import { Button } from '~/ui/Button'
-import { Section } from '~/ui/Section'
-import { Text } from '~/ui/Text'
-import { WithCursor } from '~/ui/WithCursor'
-import { TopNavContext } from './TopNav'
+import { Button } from "~/ui/Button";
+import { Section } from "~/ui/Section";
+import { Text } from "~/ui/Text";
+import { WithCursor } from "~/ui/WithCursor";
+import { TopNavContext } from "./TopNav";
 
 export function HeroSection() {
-  const { ref, inView } = useInView({ initialInView: true, threshold: 0 })
-  const { setShow } = useContext(TopNavContext)
-  useEffect(() => setShow(!inView), [inView, setShow])
+  const { ref, inView } = useInView({ initialInView: true, threshold: 0 });
+  const { setShow } = useContext(TopNavContext);
+  useEffect(() => setShow(!inView), [inView, setShow]);
+
+  // State and effect for scroll indicator
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  useEffect(() => {
+    const scrollThreshold = 50;
+    const handleScroll = () => {
+      if (window.scrollY > scrollThreshold) {
+        setShowScrollIndicator(false);
+      } else {
+        setShowScrollIndicator(true);
+      }
+    };
+    handleScroll(); // Check on mount
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div ref={ref}>
-      <Section className="min-h-[550px] max-mobile:min-h-[650px]">
-        <div className="relative flex flex-col gap-[32px] max-mobile:gap-[16px]">
-          {/* Title */}
+    <div ref={ref} className="relative h-screen w-screen">
+      {/* Hero Section Navigation */}
+      <nav className="absolute top-0 left-0 w-full flex justify-center pt-10 z-20">
+        <ul className="flex items-center gap-10">
+          <li className="flex items-center gap-2 opacity-60">
+            <Text fontFamily="typewriter" size="14">
+              STREAM
+            </Text>
+            <span className="bg-[#444] text-white text-xs px-2 py-0.5 rounded font-typewriter">
+              SOON
+            </span>
+          </li>
+          <li className="text-xl text-white font-typewriter">&middot;</li>
+          <li>
+            <Text asChild fontFamily="typewriter" size="14">
+              <a href="#agenda" className="hover:underline">
+                SCHEDULE
+              </a>
+            </Text>
+          </li>
+          <li className="text-xl text-white font-typewriter">&middot;</li>
+          <li>
+            <Text asChild fontFamily="typewriter" size="14">
+              <a href="#speakers" className="hover:underline">
+                SPEAKERS
+              </a>
+            </Text>
+          </li>
+          <li className="text-xl text-white font-typewriter">&middot;</li>
+          <li>
+            <Text asChild fontFamily="typewriter" size="14">
+              <a href="#faqs" className="hover:underline">
+                FAQ
+              </a>
+            </Text>
+          </li>
+        </ul>
+      </nav>
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Image
+          src="/images/bg.png"
+          alt="Background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      {/* Gradient overlay - fades the bottom of the hero image to black */}
+      <div
+        className="absolute inset-0 w-full h-full z-[9] pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.9) 85%, #000000 100%)",
+        }}
+      ></div>
+      <Section className="relative h-full z-10 flex items-center justify-center pt-16 w-full">
+        <div className="flex flex-col items-center justify-center gap-6 w-full mt-12">
+          {/* Title and ByParadigm */}
           <div className="flex items-center flex-col z-[1] mix-blend-exclusion">
             <div className="inline-flex justify-center w-fit relative">
               <div className="absolute top-[-32px] right-[-8px] max-mobile:top-[-16px] max-mobile:right-[-40px] max-[400px]:hidden">
@@ -34,166 +104,85 @@ export function HeroSection() {
               </Text>
             </div>
           </div>
-
-          {/* Tagline (Tablet/Desktop) */}
-          <div className="z-[1] relative flex justify-center gap-[12px] text-center max-mobile:hidden">
-            <Text size="24" weight="300">
-              August 16-17, 2024
-            </Text>
-            <Text size="16" weight="300">
-              •
-            </Text>
-            <Text size="24" weight="300">
-              San Francisco, CA
+          {/* Subtitle */}
+          <div className="mt-2">
+            <Text
+              className="text-center text-gray-300 text-xl font-serif"
+              asChild
+              size="20"
+            >
+              <p>
+                Paradigm's event & hackathon for app and infrastructure
+                developers.
+              </p>
             </Text>
           </div>
-
-          {/* Tagline (Mobile) */}
-          <div className="z-[1] flex justify-between mx-auto max-w-[325px] w-full gap-[32px] mobile:hidden">
-            <div>
-              <Text weight="300">August 16-17, 2024</Text>
-            </div>
-            <div>
-              <Text weight="300">San Francisco, CA</Text>
-            </div>
-          </div>
-          <div className="h-[20px]" />
-          <div className="z-[1] flex mx-auto max-w-[325px] w-full gap-[32px] mobile:hidden">
-            <div className="flex-1">
-              <Text asChild fontFamily="typewriter" size="11">
-                <p>
-                  A two-day event focused on high-performance, bleeding edge
-                  crypto infrastructure.
-                </p>
-              </Text>
-            </div>
-            <div className="flex-1">
-              <Text fontFamily="typewriter" size="11">
-                By open source engineers, for open source engineers.
-              </Text>
-            </div>
-          </div>
-
-          {/* Mountain Background + CTA (Tablet/Desktop) */}
-          <div className="absolute flex flex-col desktop:-left-[10%] desktop:-right-[10%] items-center top-[72px] max-tablet:top-[172px] max-mobile:hidden">
-            <Image
-              draggable="false"
-              src="/images/mountain.svg"
-              alt="Matrix-style mountains in the background"
-              width="1400"
-              height="450"
-            />
-
-            <div className="absolute top-[50%] right-[50%] max-tablet:top-[40%] max-[858px]:hidden">
-              <WithCursor cursor="external">
-                <a
-                  href="https://github.com/alloy-rs/alloy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ProjectFlag
-                    anchor="right"
-                    image={
-                      <Image
-                        alt="Alloy"
-                        src="/images/alloy.svg"
-                        height="40"
-                        width="40"
-                      />
-                    }
-                  />
-                </a>
-              </WithCursor>
-            </div>
-            <div className="absolute top-[33%] right-[38%] max-tablet:top-[20%] max-[858px]:hidden">
-              <WithCursor cursor="external">
-                <a
-                  href="https://github.com/paradigmxyz/reth"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ProjectFlag
-                    anchor="top"
-                    image={
-                      <Image
-                        alt="Reth"
-                        src="/images/reth.png"
-                        height="40"
-                        width="40"
-                      />
-                    }
-                  />
-                </a>
-              </WithCursor>
-            </div>
-            <div className="absolute top-[55%] right-[30%] max-tablet:top-[45%] max-[858px]:hidden">
-              <WithCursor cursor="external">
-                <a
-                  href="https://github.com/foundry-rs/foundry"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ProjectFlag
-                    anchor="bottom"
-                    image={
-                      <Image
-                        alt="Reth"
-                        src="/images/foundry.svg"
-                        height="40"
-                        width="40"
-                      />
-                    }
-                  />
-                </a>
-              </WithCursor>
-            </div>
-            <div className="absolute top-[120px] left-[120px] max-tablet:top-[80px] max-tablet:left-[40px] max-w-[300px]">
-              <Text asChild fontFamily="typewriter" size="12" weight="300">
-                <p>
-                  A two-day event focused on high-performance, bleeding edge
-                  crypto infrastructure. By open source engineers, for open
-                  source engineers.
-                </p>
-              </Text>
-            </div>
+          {/* Buttons */}
+          <div className="flex flex-row gap-6 mt-4">
             <WithCursor cursor="pulse-crosshair">
-              <Button asChild frame className="w-[50%] mt-[-36px]" height="60">
-                <a href="https://www.youtube.com/live/ta7yY51RK2Q">
-                  Livestream
+              <Button
+                asChild
+                frame
+                color="paradigmGreen"
+                className="min-w-[240px] px-10"
+                height="60"
+              >
+                <a href="#register">GET FREE TICKET</a>
+              </Button>
+            </WithCursor>
+            <WithCursor cursor="pulse-crosshair">
+              <Button
+                asChild
+                frame
+                color="white"
+                className="min-w-[240px] px-10"
+                height="60"
+              >
+                <a
+                  href="https://x.com/paradigm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  FOLLOW ON X
                 </a>
               </Button>
             </WithCursor>
           </div>
-
-          {/* Mountain Background + CTA (Mobile) */}
-          <div className="absolute flex flex-col items-center w-max top-[180px] left-[-450px] max-[520px]:left-[-550px] mobile:hidden">
-            <Image
-              src="/images/mountain.svg"
-              draggable="false"
-              alt="Matrix-style mountains in the background"
-              width="1500"
-              height="500"
-            />
-          </div>
-          <div className="mobile:hidden">
-            <div className="h-[280px] max-mobile:h-[200px]" />
-            <div className="max-w-[350px] mx-auto w-full">
-              <WithCursor cursor="pulse-crosshair">
-                <Button asChild frame className="w-full" height="60">
-                  <a
-                    className="mobile:cursor-none"
-                    href="https://www.youtube.com/live/ta7yY51RK2Q"
-                  >
-                    Livestream 
-                  </a>
-                </Button>
-              </WithCursor>
-            </div>
+          {/* Date and Location */}
+          <div className="mt-6">
+            <Text
+              fontFamily="typewriter"
+              className="text-[15px] tracking-widest text-white/80"
+            >
+              AUGUST 6-8, 2025 &nbsp; &bull; &nbsp;{" "}
+              <a
+                href="https://maps.google.com/?q=The+Midway+SF+900+Marin+Street+San+Francisco"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-b border-dotted border-white/80 hover:text-white"
+              >
+                THE MIDWAY SF
+              </a>{" "}
+              & ONLINE
+            </Text>
           </div>
         </div>
       </Section>
+
+      {/* SCROLL TO LEARN MORE TEXT */}
+      {showScrollIndicator && (
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 pointer-events-none">
+          <Text
+            fontFamily="typewriter"
+            size="12"
+            className="text-white animate-subtle-pulse tracking-wider uppercase"
+          >
+            SCROLL TO LEARN MORE
+          </Text>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 function ByParadigm() {
@@ -214,21 +203,24 @@ function ByParadigm() {
         height="60"
       />
     </div>
-  )
+  );
 }
 
 function ProjectFlag({
   anchor,
   image,
-}: { anchor: 'top' | 'left' | 'right' | 'bottom'; image: ReactElement }) {
+}: {
+  anchor: "top" | "left" | "right" | "bottom";
+  image: ReactElement;
+}) {
   return (
     <div
       className={clsx(
-        'flex',
-        anchor === 'top' || anchor === 'bottom' ? 'flex-col' : undefined,
+        "flex",
+        anchor === "top" || anchor === "bottom" ? "flex-col" : undefined
       )}
     >
-      {(anchor === 'left' || anchor === 'top') && (
+      {(anchor === "left" || anchor === "top") && (
         <div className="bg-black flex items-center justify-center w-[16px] h-[16px]">
           <div className="bg-white w-[6px] h-[6px]" />
         </div>
@@ -236,11 +228,11 @@ function ProjectFlag({
       <div className="bg-black flex items-center justify-center w-[56px] h-[56px]">
         {image}
       </div>
-      {(anchor === 'right' || anchor === 'bottom') && (
+      {(anchor === "right" || anchor === "bottom") && (
         <div className="bg-black flex items-center justify-center w-[16px] h-[16px]">
           <div className="bg-white w-[6px] h-[6px]" />
         </div>
       )}
     </div>
-  )
+  );
 }

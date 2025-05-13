@@ -1,85 +1,94 @@
-import clsx from 'clsx'
+import clsx from "clsx";
+import Image from "next/image";
 
-import { Section, SectionHeading } from '~/ui/Section'
-import { Text } from '~/ui/Text'
+import { Button } from "~/ui/Button";
+import { Section, SectionHeading } from "~/ui/Section";
+import { Text } from "~/ui/Text";
+import { WithCursor } from "~/ui/WithCursor";
+import { BadgeCard } from "./BadgeCard";
 
 export function ToTheBuildersSection() {
   return (
-    <Section className="flex flex-col py-48 max-tablet:py-24 max-mobile:py-20 w-full">
-      <div className="flex flex-col gap-[40px] max-mobile:gap-[24px] w-[55%] mx-auto max-tablet:w-[60%] max-mobile:w-full">
-        <SectionHeading id="manifesto">To the builders –</SectionHeading>
-
-        <div className="text-[16px] max-mobile:text-[15px] flex flex-col gap-[32px] max-mobile:gap-[16px]">
-          <Text asChild>
-            <p>Join us for two days dedicated to open source immersion.</p>
-          </Text>
-          <Text asChild>
-            <p>
-              For the past years, Paradigm has been developing open source
-              software meant to support developers in their day-to-day work. Our
-              projects cover a wide range, from the lowest level types and
-              encoding schemes to smart contract testing, node operations, and
-              the highest level frontend abstractions.
-            </p>
-          </Text>
-          <Text asChild>
-            <p>
-              As we aim to advance the frontiers of full stack software in
-              crypto, we also aspire to grow a community of thousands of open
-              source contributors. Together, we want to push the limits of what
-              is possible in crypto as an industry and make it more accessible
-              to new developers.
-            </p>
-          </Text>
-          <Text asChild>
-            <p>
-              This is just the beginning of an exciting journey, and we invite
-              you to be a part of it in-person at Frontiers 2024, in San
-              Francisco.
-            </p>
-          </Text>
-        </div>
-
-        <div className="flex flex-row max-mobile:flex-col gap-6 max-tablet:gap-12 max-mobile:gap-4 mt-2">
-          {features.map((feature) => (
-            <div
-              className="flex flex-row gap-4 max-tablet:flex-col max-mobile:flex-row items-center max-tablet:items-start max-mobile:items-center"
-              key={feature.name}
-            >
-              <div className="size-[71px]">{feature.content}</div>
-              <Text
-                size="14"
-                fontFamily="typewriter"
-                className={clsx(
-                  'max-w-[127px] max-mobile:max-w-[280px]',
-                  'pt-4',
-                  feature.color === 'paradigmGreen' && 'text-paradigmGreen',
-                  feature.color === 'violet' && 'text-[#F429D5]',
-                )}
-              >
-                {feature.name}
-              </Text>
+    <Section className="flex flex-col pb-24 max-tablet:pb-20 max-mobile:pb-16 pt-0 mt-0 w-full mx-auto">
+      <div className="flex flex-row max-tablet:flex-col items-center gap-16 max-w-[1200px] mx-auto">
+        {/* Left Column: Crypto is in its application era */}
+        <div className="flex-1 flex flex-col gap-8 max-w-[500px]">
+          <div>
+            <div className="text-5xl font-serif leading-tight">
+              <h2>
+                Crypto is in its{" "}
+                <span className="text-6xl italic">application era.</span>
+              </h2>
             </div>
-          ))}
+          </div>
+
+          <div className="text-[16px] max-mobile:text-[15px] flex flex-col gap-[32px] max-mobile:gap-[16px]">
+            <Text asChild>
+              <p>
+                For the past six years, Paradigm has been developing open source
+                software meant to support developers in their day-to- day work.
+                Our projects cover a wide range, from the lowest level types and
+                encoding schemes to smart contract testing, node operations, and
+                the highest level frontend abstractions.
+              </p>
+            </Text>
+            <Text asChild>
+              <p>
+                As we aim to advance the frontiers of full stack software in
+                crypto, we also aspire to grow a community of thousands of open
+                source contributors. Together, we want to push the limits of
+                what is possible in crypto as an industry and make it more
+                accessible to new developers.
+              </p>
+            </Text>
+          </div>
+
+          <div className="flex flex-row max-mobile:flex-col gap-6 mt-4 w-full">
+            {features.map((feature) => (
+              <div
+                className="flex flex-row gap-4 items-center flex-1"
+                key={feature.name}
+              >
+                <div className="size-[40px] flex-shrink-0">
+                  {feature.content}
+                </div>
+                <Text
+                  size="12"
+                  fontFamily="typewriter"
+                  className={clsx(
+                    "w-full",
+                    feature.color === "paradigmGreen" && "text-paradigmGreen",
+                    feature.color === "violet" && "text-[#F429D5]"
+                  )}
+                >
+                  {feature.name}
+                </Text>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Right Column: Badge SVG with interactive button */}
+        <BadgeCard />
       </div>
     </Section>
-  )
+  );
 }
 
 const features = [
   {
-    name: 'Paradigm Open Source stack updates',
-    color: 'paradigmGreen',
+    name: "Stack updates",
+    color: "paradigmGreen",
     content: (
       <svg
-        width="71"
-        height="74"
+        width="100%"
+        height="100%"
         viewBox="0 0 71 74"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet"
       >
-        <title>Paradigm Open Source stack updates</title>
+        <title>Stack updates</title>
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -98,17 +107,18 @@ const features = [
     ),
   },
   {
-    name: 'Live hacking & mentoring',
-    color: 'violet',
+    name: "Live hacking",
+    color: "violet",
     content: (
       <svg
-        width="71"
-        height="74"
+        width="100%"
+        height="100%"
         viewBox="0 0 71 74"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet"
       >
-        <title>Live hacking & mentoring</title>
+        <title>Live hacking</title>
         <rect
           x="10.6842"
           y="17.4286"
@@ -146,17 +156,18 @@ const features = [
     ),
   },
   {
-    name: 'Community lightning talks',
-    color: '',
+    name: "Lightning talks",
+    color: "",
     content: (
       <svg
-        width="71"
-        height="71"
+        width="100%"
+        height="100%"
         viewBox="0 0 71 71"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet"
       >
-        <title>Community lightning talks</title>
+        <title>Lightning talks</title>
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -166,4 +177,4 @@ const features = [
       </svg>
     ),
   },
-]
+];
