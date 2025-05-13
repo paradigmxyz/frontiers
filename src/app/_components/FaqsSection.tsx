@@ -11,6 +11,11 @@ interface FaqItem {
 
 const faqData: FaqItem[] = [
   {
+    question: "When and where is Frontiers?",
+    answer:
+      "Frontiers will take place August 6-8, 2025 at The Midway SF in San Francisco, with virtual attendance available for those who cannot join in person.",
+  },
+  {
     question: "What is Frontiers?",
     answer:
       "Frontiers is Paradigm's flagship event and hackathon, bringing together developers, researchers, and enthusiasts to explore and build at the cutting edge of application and infrastructure development in crypto.",
@@ -18,12 +23,12 @@ const faqData: FaqItem[] = [
   {
     question: "What is the difference between in-person & virtual attendance?",
     answer:
-      "In-person attendees will have access to the full range of talks, workshops, networking events, and the hackathon. Virtual attendees will be able to stream keynotes and select sessions online.",
+      "In-person attendees will have access to the full spectrum of talks, workshops, networking, and the IRL hackathon. Virtual attendees will be able to stream keynotes and select sessions online.",
   },
   {
     question: "When will the full list of speakers be announced?",
     answer:
-      "We are still finalizing the speaker list over the coming weeks. Please sign up for a ticket (virtual or in-person interest) to receive email updates, and check back here soon!",
+      "We are still finalizing the speaker list over the coming weeks. Please sign up for a ticket to receive email updates, and check back here soon!",
   },
   {
     question: "Do you cover travel or hotels?",

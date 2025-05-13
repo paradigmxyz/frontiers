@@ -1,24 +1,28 @@
-import type { Metadata } from 'next'
-import type { PropsWithChildren } from 'react'
-import './styles.css'
-import { getFrameMetadata } from 'frog/next'
-import { WithCursor } from '../ui/WithCursor'
-import { Providers } from './_components/Providers'
-import { TopNav } from './_components/TopNav'
+import type { Metadata } from "next";
+import type { PropsWithChildren } from "react";
+import "./styles.css";
+import { getFrameMetadata } from "frog/next";
+import { WithCursor } from "../ui/WithCursor";
+import { Providers } from "./_components/Providers";
+import { TopNav } from "./_components/TopNav";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const url = 'https://frontiers.paradigm.xyz'
+  const url = "https://frontiers.paradigm.xyz";
   const {
-    'og:title': _,
-    'og:image': __,
+    "og:title": _,
+    "og:image": __,
     ...frameMetadata
-  } = await getFrameMetadata(`${url}/api`)
+  } = await getFrameMetadata(`${url}/api`);
   return {
-    title: 'Frontiers',
+    title: "Paradigm Frontiers | August 6-8, 2025",
     description:
-      'A two-day event focused on high-performance, bleeding edge crypto infrastructure.',
-    icons: [{ rel: 'icon', url: '/images/favicon.png' }],
+      "Paradigm's annual event & hackathon for application and infrastructure developers. Join us at The Midway SF and online, August 6-8, 2025.",
+    icons: [{ rel: "icon", url: "/images/favicon.png" }],
     twitter: {
+      card: "summary_large_image",
+      title: "Paradigm Frontiers | August 6-8, 2025",
+      description:
+        "Paradigm's annual event & hackathon for application and infrastructure developers. Join us at The Midway SF and online, August 6-8, 2025.",
       images: [
         {
           url: `${url}/images/og-image.png`,
@@ -28,6 +32,9 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     openGraph: {
+      title: "Paradigm Frontiers | August 6-8, 2025",
+      description:
+        "Paradigm's annual event & hackathon for application and infrastructure developers. Join us at The Midway SF and online, August 6-8, 2025.",
       images: [
         {
           url: `${url}/images/og-image.png`,
@@ -35,10 +42,12 @@ export async function generateMetadata(): Promise<Metadata> {
           height: 630,
         },
       ],
-      type: 'website',
+      type: "website",
+      siteName: "Paradigm Frontiers",
+      locale: "en_US",
     },
     other: frameMetadata,
-  }
+  };
 }
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -49,13 +58,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <div className="selection:bg-paradigmGreen selection:text-black overflow-x-hidden">
             <Providers>
               <TopNav />
-              <main className="">
-                {children}
-              </main>
+              <main className="">{children}</main>
             </Providers>
           </div>
         </WithCursor>
       </body>
     </html>
-  )
+  );
 }

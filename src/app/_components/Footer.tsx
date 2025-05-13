@@ -69,6 +69,13 @@ export function Footer() {
               Paradigm's annual event & hackathon for application and
               infrastructure developers.
             </Text>
+
+            <Text
+              className="text-white/70 text-md sm:text-lg mt-3 font-serif"
+              fontFamily="default"
+            >
+              August 6-8, 2025 • The Midway SF and online
+            </Text>
           </div>
         </div>
       </div>
