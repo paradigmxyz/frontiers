@@ -79,7 +79,7 @@ export function HeroSection() {
       </nav>
       <div className="absolute inset-0 w-full h-full z-0">
         <Image
-          src="/images/bg.png"
+          src="/images/bg-hires.png"
           alt="Background"
           fill
           className="object-cover"
