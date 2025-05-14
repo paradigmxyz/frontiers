@@ -198,7 +198,7 @@ export function AgendaSection() {
                         event.title
                       ) : (
                         <p>
-                          <span className="font-semibold">{event.title}</span>
+                          <span className="font-medium">{event.title}</span>
                           {event.description && (
                             <span
                               className={clsx(

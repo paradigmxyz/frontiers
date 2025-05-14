@@ -36,7 +36,7 @@ export function HeroSection() {
     <div ref={ref} className="relative h-screen w-screen">
       {/* Hero Section Navigation */}
       <nav className="absolute top-0 left-0 w-full flex justify-center pt-8 sm:pt-10 md:pt-14 z-20">
-        <ul className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 md:gap-16 px-4 sm:px-6 md:px-10 py-2 sm:py-3 md:py-4">
+        <ul className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 md:gap-16 px-4 sm:px-6 md:px-10 py-1 sm:py-2 md:py-2">
           <li className="flex items-center gap-2 opacity-60 mb-2 sm:mb-0">
             <Text fontFamily="typewriter" size="14">
               STREAM
@@ -93,44 +93,43 @@ export function HeroSection() {
           background:
             "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.9) 85%, #000000 100%)",
         }}
-      ></div>
+      />
       <Section className="relative h-full z-10 flex items-center justify-center pt-16 w-full">
-        <div className="flex flex-col items-center justify-center gap-6 w-full mt-12">
+        <div className="flex flex-col items-center justify-center gap-3 w-full mt-6 px-2 max-sm:gap-2 max-sm:mt-2">
           {/* Title and ByParadigm */}
           <div className="flex items-center flex-col z-[1] mix-blend-exclusion">
             <div className="inline-flex justify-center w-fit relative">
               <div className="absolute top-[-32px] right-[-8px] max-mobile:top-[-16px] max-mobile:right-[-40px] max-[400px]:hidden">
                 <ByParadigm />
               </div>
-              <div className="absolute min-[400px]:hidden top-[-72px] left-0">
+              <div className="absolute min-[400px]:hidden top-[-24px] right-[-8px]">
                 <ByParadigm />
               </div>
-              <Text asChild size="160" weight="500">
+              <Text asChild size="160" weight="500" className="max-sm:text-[42px] max-sm:leading-[1.1]">
                 <h1>Frontiers</h1>
               </Text>
             </div>
           </div>
           {/* Subtitle */}
-          <div className="mt-2">
+          <div className="-mt-4 mb-2">
             <Text
-              className="text-center text-gray-300 text-xl max-w-sm sm:max-w-none font-serif"
+              className="text-center text-gray-300 text-xl max-w-sm sm:max-w-none font-serif max-sm:text-base max-sm:leading-tight max-sm:px-2"
               asChild
               size="20"
             >
               <p>
-                Paradigm's event & hackathon for app and infrastructure
-                developers.
+                Paradigm's event & hackathon for app and infrastructure developers.
               </p>
             </Text>
           </div>
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 w-full px-4 max-w-[500px]">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 mt-2 w-full px-4 max-w-[350px] max-sm:px-0">
             <WithCursor cursor="pulse-crosshair">
               <Button
                 asChild
                 frame
                 color="paradigmGreen"
-                className="w-full sm:min-w-[240px] px-6 sm:px-10"
+                className="w-full sm:min-w-[240px] px-6 sm:px-10 max-sm:h-[48px] max-sm:text-base"
                 height="60"
               >
                 <a href="#register">GET FREE TICKET</a>
@@ -141,7 +140,7 @@ export function HeroSection() {
                 asChild
                 frame
                 color="white"
-                className="w-full sm:min-w-[240px] px-6 sm:px-10"
+                className="w-full sm:min-w-[240px] px-6 sm:px-10 max-sm:h-[48px] max-sm:text-base"
                 height="60"
               >
                 <a
@@ -155,60 +154,37 @@ export function HeroSection() {
             </WithCursor>
           </div>
           {/* Date and Location */}
-          <div className="mt-6">
-            {/* Mobile version - stacked with line separator */}
-            <div className="flex flex-col items-center sm:hidden">
+          <div className="mt-3 max-sm:mt-2 w-full">
+            {/* Mobile version - single line, no wrap */}
+            <div className="flex flex-col items-center sm:hidden w-full">
               <Text
                 fontFamily="typewriter"
-                className="text-[15px] tracking-widest text-white/80 pb-4 border-b border-white/20 mb-4"
+                className="text-[15px] tracking-widest text-white/80 pb-2 border-b border-white/20 mb-2 max-sm:text-[13px] max-sm:pb-1 max-sm:mb-1 max-sm:tracking-normal max-sm:leading-tight"
               >
-                AUGUST 6-8, 2025
-              </Text>
-              <Text
-                fontFamily="typewriter"
-                className="text-[15px] tracking-widest text-white/80"
-              >
-                <a
-                  href="https://maps.google.com/?q=The+Midway+SF+900+Marin+Street+San+Francisco"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-b border-dotted border-white/80 hover:text-white"
-                >
-                  THE MIDWAY SF
-                </a>{" "}
-                & ONLINE
+                <span className="whitespace-nowrap">AUGUST 6-8, 2025 &nbsp;•&nbsp; SF & ONLINE</span>
               </Text>
             </div>
-
             {/* Desktop version - horizontal with dot separators */}
             <div className="hidden sm:block text-center">
               <Text
                 fontFamily="typewriter"
                 className="text-[15px] tracking-widest text-white/80"
               >
-                AUGUST 6-8, 2025 &nbsp;&nbsp;&bull;&nbsp;&nbsp;{" "}
-                <a
-                  href="https://maps.google.com/?q=The+Midway+SF+900+Marin+Street+San+Francisco"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-b border-dotted border-white/80 hover:text-white"
-                >
-                  THE MIDWAY SF
-                </a>{" "}
+                AUGUST 6-8, 2025 &nbsp;&nbsp;&bull;&nbsp;&nbsp;{' '}
+                SF
                 & ONLINE
               </Text>
             </div>
           </div>
         </div>
       </Section>
-
       {/* SCROLL TO LEARN MORE TEXT */}
       {showScrollIndicator && (
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 pointer-events-none">
           <Text
             fontFamily="typewriter"
             size="12"
-            className="text-white animate-subtle-pulse tracking-wider uppercase"
+            className="text-white animate-subtle-pulse tracking-wider uppercase whitespace-nowrap max-sm:text-[11px]"
           >
             SCROLL TO LEARN MORE
           </Text>

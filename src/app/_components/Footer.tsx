@@ -2,33 +2,39 @@ import Image from "next/image";
 
 import { Text } from "~/ui/Text";
 
+function ByParadigm() {
+  return (
+    <div className="flex justify-center">
+      <Text
+        className="flex justify-center items-center max-mobile:text-[9px] max-[400px]:text-[12px]"
+        size="12"
+        fontFamily="typewriter"
+      >
+        BY
+      </Text>
+      <Image
+        alt="Paradigm Logo"
+        className="h-[60px] ml-[-8px] max-mobile:h-[32px] max-mobile:ml-[-30px] max-[400px]:h-[50px] max-[400px]:ml-[-16px]"
+        src="/images/paradigm-transparent.svg"
+        width="153"
+        height="60"
+      />
+    </div>
+  )
+}
+
 function FooterLogo() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex items-center flex-col z-[1] mix-blend-exclusion">
       <div className="inline-flex justify-center w-fit relative">
-        <div className="absolute top-[-36px] right-[-12px] max-mobile:top-[-24px] max-mobile:right-[-8px] max-[400px]:top-[-16px] max-[400px]:right-[-6px]">
-          <div className="flex justify-center">
-            <Text
-              className="flex justify-center items-center text-[12px] max-mobile:text-[9px] max-[400px]:text-[8px]"
-              fontFamily="typewriter"
-            >
-              BY
-            </Text>
-            <Image
-              alt="Paradigm Logo"
-              className="h-[60px] ml-[-8px] max-mobile:h-[40px] max-mobile:ml-[-6px] max-[400px]:h-[30px] max-[400px]:ml-[-4px]"
-              src="/images/paradigm-transparent.svg"
-              width="153"
-              height="60"
-            />
-          </div>
+        <div className="absolute top-[-32px] right-[-8px] max-mobile:top-[-16px] max-mobile:right-[-40px] max-[400px]:hidden">
+          <ByParadigm />
         </div>
-        <Text
-          size="160"
-          weight="500"
-          className="text-white text-center max-mobile:text-[80px] max-[400px]:text-[60px]"
-        >
-          Frontiers
+        <div className="absolute min-[400px]:hidden top-[-24px] right-[-8px]">
+          <ByParadigm />
+        </div>
+        <Text asChild size="160" weight="500" className="max-sm:text-[42px] max-sm:leading-[1.1]">
+          <h1>Frontiers</h1>
         </Text>
       </div>
     </div>
@@ -44,7 +50,7 @@ export function Footer() {
         className="relative object-cover w-full z-0"
         src="/images/world.svg"
         width="1209"
-        height="657"
+        height="300"
       />
 
       {/* Gradient Overlay - fades the top of the background image */}
@@ -57,26 +63,9 @@ export function Footer() {
       />
 
       {/* Main Content - Logo and Description */}
-      <div className="absolute top-0 left-0 right-0 z-[2] pt-20 sm:pt-28">
+      <div className="absolute top-0 left-0 right-0 z-[2] pt-12 sm:pt-12">
         <div className="flex flex-col items-center px-4 sm:px-8">
           <FooterLogo />
-
-          <div className="mt-6 max-w-2xl mx-auto text-center">
-            <Text
-              className="text-white/80 text-lg sm:text-xl font-serif"
-              fontFamily="default"
-            >
-              Paradigm's annual event & hackathon for application and
-              infrastructure developers.
-            </Text>
-
-            <Text
-              className="text-white/70 text-md sm:text-lg mt-3 font-serif"
-              fontFamily="default"
-            >
-              August 6-8, 2025 • The Midway SF and online
-            </Text>
-          </div>
         </div>
       </div>
 
