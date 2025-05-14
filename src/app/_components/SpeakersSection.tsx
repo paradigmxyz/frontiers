@@ -38,7 +38,7 @@ const speakerData: SpeakerProfile[] = [
   },
   {
     name: "Storm Slivkoff",
-    affiliation: "Paradigm & Ithaca",
+    affiliation: "Paradigm",
     imageSrc: "/images/storm.png",
     twitterUrl: "https://twitter.com/notnotstorm",
     githubUrl: "https://github.com/sslivkoff",
@@ -129,7 +129,7 @@ function SpeakerCard({
         className={clsx(
           "w-28 h-28 rounded-full overflow-hidden mb-4 relative",
           isPlaceholderImage &&
-            "bg-neutral-800 flex items-center justify-center"
+          "bg-neutral-800 flex items-center justify-center"
         )}
       >
         <Image src={imageSrc} alt={name} layout="fill" objectFit="cover" />
