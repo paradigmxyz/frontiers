@@ -21,22 +21,21 @@ const agendaData: AgendaDay[] = [
   {
     day: "WEDNESDAY, AUGUST 6",
     events: [
-      { time: "06:00", title: "Check in begins" },
       {
-        time: "08:00",
+        time: "18:00",
+        title: "Welcome to Frontiers!",
+        description: "Check in begins.",
+      },
+      {
+        time: "19:00",
         title: "Opening Keynote by Tomasz K. Stańczak",
         description: "Ethereum Foundation",
         detailsItalic: true,
       },
       {
-        time: "08:00",
-        title: "Hacking begins",
-        description: "Snacks, beverages, and music ensue.",
-      },
-      {
-        time: "08:00 – 12:00",
-        title: "Night shift begins.",
-        description: "Hack as long as you want!",
+        time: "19:30 - 22:00",
+        title: "Evening socializing & hacking.",
+        description: "Code, snacks, beverages, and music.",
       },
     ],
   },

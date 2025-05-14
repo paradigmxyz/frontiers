@@ -14,31 +14,34 @@ export function ToTheBuildersSection() {
         {/* Left Column: Crypto is in its application era */}
         <div className="flex-1 flex flex-col gap-8 max-w-[500px] max-mobile:px-4">
           <div>
-            <div className="text-5xl font-serif leading-tight">
-              <h2>
-                Crypto is in its{" "}
-                <span className="text-6xl italic">application era.</span>
-              </h2>
+            <div className="text-3xl font-serif leading-tight">
+              The (Crypto) World Is Changing.
             </div>
           </div>
 
           <div className="flex flex-col gap-[32px] max-mobile:gap-[16px] max-mobile:mt-2">
             <Text asChild size={"18"}>
               <p>
-                For the past six years, Paradigm has been developing open source
-                software meant to support developers in their day-to- day work.
-                Our projects cover a wide range, from the lowest level types and
-                encoding schemes to smart contract testing, node operations, and
-                the highest level frontend abstractions.
+                The world is changing faster than we can comprehend. Crypto enables small teams to have
+                outsized impact through open source, shared financial infrastructure. Stablecoins have
+                become the first mainstream crypto use case, and AI is multiplying developer productivity. Acceleration is the new normal.
               </p>
             </Text>
-            <Text asChild size={"18"} className="mt-4">
+            <Text asChild size={"18"}>
               <p>
-                As we aim to advance the frontiers of full stack software in
-                crypto, we also aspire to grow a community of thousands of open
-                source contributors. Together, we want to push the limits of
-                what is possible in crypto as an industry and make it more
-                accessible to new developers.
+                Frontiers is our intense two-day conference & hackathon, where developers learn and build the next generation of crypto applications and infrastructure.
+                Our team will be on-site to meet, and advise builders on their projects.
+              </p>
+            </Text>
+            <Text asChild size={"18"}>
+              <p>
+                At Paradigm, we believe the best way to understand and shape this future is to build it in the trenches
+                with the developer community, and we have been doing just that for the past six years with our wide suite of <a href="#projects" className="underline">open source software</a> and <a href="https://www.paradigm.xyz/writing?page=1&s=0&sort=newest&tags=research" className="underline">research</a>.
+              </p>
+            </Text>
+            <Text asChild size={"18"}>
+              <p>
+                Looking forward to seeing you, at the frontier.
               </p>
             </Text>
           </div>
@@ -77,7 +80,7 @@ export function ToTheBuildersSection() {
 
 const features = [
   {
-    name: "Stack updates",
+    name: "Open Source updates",
     color: "paradigmGreen",
     content: (
       <svg
@@ -107,7 +110,7 @@ const features = [
     ),
   },
   {
-    name: "Live hacking",
+    name: "Hacking & Rewards",
     color: "violet",
     content: (
       <svg
@@ -156,7 +159,7 @@ const features = [
     ),
   },
   {
-    name: "Lightning talks",
+    name: "Frontier Applications",
     color: "",
     content: (
       <svg

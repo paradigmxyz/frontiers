@@ -75,6 +75,16 @@ export function HeroSection() {
               </a>
             </Text>
           </li>
+          <li className="text-xl text-white font-typewriter hidden sm:block">
+            &middot;
+          </li>
+          <li className="mb-2 sm:mb-0">
+            <Text asChild fontFamily="typewriter" size="14">
+              <a href="#projects" className="hover:underline">
+                OPEN SOURCE
+              </a>
+            </Text>
+          </li>
         </ul>
       </nav>
       <div className="absolute inset-0 w-full h-full z-0">
@@ -118,7 +128,7 @@ export function HeroSection() {
               size="20"
             >
               <p>
-                Paradigm's event & hackathon for app and infrastructure developers.
+                Paradigm's annual open source conference for application and infrastructure developers.
               </p>
             </Text>
           </div>
@@ -132,7 +142,7 @@ export function HeroSection() {
                 className="w-full sm:min-w-[240px] px-6 sm:px-10 max-sm:h-[48px] max-sm:text-base"
                 height="60"
               >
-                <a href="#register">GET FREE TICKET</a>
+                <a href="#register">APPLY NOW</a>
               </Button>
             </WithCursor>
             <WithCursor cursor="pulse-crosshair">
@@ -161,7 +171,7 @@ export function HeroSection() {
                 fontFamily="typewriter"
                 className="text-[15px] tracking-widest text-white/80 pb-2 border-b border-white/20 mb-2 max-sm:text-[13px] max-sm:pb-1 max-sm:mb-1 max-sm:tracking-normal max-sm:leading-tight"
               >
-                <span className="whitespace-nowrap">AUGUST 6-8, 2025 &nbsp;•&nbsp; SF & ONLINE</span>
+                <span className="whitespace-nowrap">AUGUST 6-8, 2025 &nbsp;•&nbsp; SAN FRANCISCO & ONLINE</span>
               </Text>
             </div>
             {/* Desktop version - horizontal with dot separators */}
@@ -171,7 +181,7 @@ export function HeroSection() {
                 className="text-[15px] tracking-widest text-white/80"
               >
                 AUGUST 6-8, 2025 &nbsp;&nbsp;&bull;&nbsp;&nbsp;{' '}
-                SF
+                SAN FRANCISCO
                 & ONLINE
               </Text>
             </div>

@@ -28,6 +28,7 @@ const speakerData: SpeakerProfile[] = [
     affiliation: "Ethereum Foundation",
     imageSrc: "/images/tomasz.jpg",
     githubUrl: "https://github.com/tkstanczak",
+    twitterUrl: "https://x.com/tkstanczak",
   },
   {
     name: "Matthias Seitz",

@@ -119,6 +119,11 @@ export function TopNav() {
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
               <Dialog.Close asChild>
+                <a href="#projects">OPEN SOURCE</a>
+              </Dialog.Close>
+            </Text>
+            <Text asChild fontFamily="typewriter" size="24">
+              <Dialog.Close asChild>
                 <a href="#pre-reads">PRE-READs</a>
               </Dialog.Close>
             </Text>

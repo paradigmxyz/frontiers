@@ -16,13 +16,13 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Paradigm Frontiers | August 6-8, 2025",
     description:
-      "Paradigm's annual event & hackathon for application and infrastructure developers. Join us at The Midway SF and online, August 6-8, 2025.",
+      "Paradigm's annual open source conference and hackathon, bringing together developers, researchers, and enthusiasts to explore and build at the cutting edge of crypto.",
     icons: [{ rel: "icon", url: "/images/favicon.png" }],
     twitter: {
       card: "summary_large_image",
       title: "Paradigm Frontiers | August 6-8, 2025",
       description:
-        "Paradigm's annual event & hackathon for application and infrastructure developers. Join us at The Midway SF and online, August 6-8, 2025.",
+        "Paradigm's annual open source conference and hackathon, bringing together developers, researchers, and enthusiasts to explore and build at the cutting edge of crypto.",
       images: [
         {
           url: `${url}/images/og-image.png`,
@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Paradigm Frontiers | August 6-8, 2025",
       description:
-        "Paradigm's annual event & hackathon for application and infrastructure developers. Join us at The Midway SF and online, August 6-8, 2025.",
+        "Paradigm's annual open source conference and hackathon, bringing together developers, researchers, and enthusiasts to explore and build at the cutting edge of crypto.",
       images: [
         {
           url: `${url}/images/og-image.png`,

@@ -13,12 +13,12 @@ const faqData: FaqItem[] = [
   {
     question: "When and where is Frontiers?",
     answer:
-      "Frontiers will take place August 6-8, 2025 at The Midway SF in San Francisco, with virtual attendance available for those who cannot join in person.",
+      "Frontiers will take place August 6-8, 2025 at in San Francisco, with virtual attendance available for those who cannot join in person.",
   },
   {
     question: "What is Frontiers?",
     answer:
-      "Frontiers is Paradigm's flagship event and hackathon, bringing together developers, researchers, and enthusiasts to explore and build at the cutting edge of application and infrastructure development in crypto.",
+      "Frontiers is Paradigm's annual open source conference and hackathon, bringing together developers, researchers, and enthusiasts to explore and build at the cutting edge of application and infrastructure development in crypto.",
   },
   {
     question: "What is the difference between in-person & virtual attendance?",
