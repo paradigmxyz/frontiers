@@ -34,7 +34,7 @@ const projectsData: ProjectData[] = [
   {
     name: "reth",
     description:
-      "Blazing fast, portable and modular toolkit for Ethereum application development.",
+      "Modular, contributor-friendly and fast implementation of the Ethereum protocol, in Rust.",
     logoSrc: "/images/logos/reth.png",
     githubUrl: "https://github.com/paradigmxyz/reth",
     repo: "paradigmxyz/reth",
@@ -42,7 +42,7 @@ const projectsData: ProjectData[] = [
   {
     name: "foundry",
     description:
-      "Blazing fast, portable and modular toolkit for Ethereum application development.",
+      "Blazing fast, portable, modular toolkit for Ethereum application development in Rust.",
     logoSrc: "/images/logos/foundry.png",
     githubUrl: "https://github.com/foundry-rs/foundry",
     repo: "foundry-rs/foundry",
@@ -57,7 +57,7 @@ const projectsData: ProjectData[] = [
   {
     name: "wagmi",
     description:
-      "Blazing fast, portable and modular toolkit for Ethereum application development.",
+      "Reactive primitives for Ethereum.",
     logoSrc: "/images/logos/wagmi.png",
     githubUrl: "https://github.com/wevm/wagmi",
     repo: "wevm/wagmi",
@@ -65,7 +65,7 @@ const projectsData: ProjectData[] = [
   {
     name: "viem",
     description:
-      "Blazing fast, portable and modular toolkit for Ethereum application development.",
+      "TypeScript Interface for Ethereum.",
     logoSrc: "/images/logos/viem.png",
     githubUrl: "https://github.com/wevm/viem",
     repo: "wevm/viem",
@@ -73,14 +73,14 @@ const projectsData: ProjectData[] = [
   {
     name: "alloy",
     description:
-      "Blazing fast, portable and modular toolkit for Ethereum application development.",
+      "Performant, well-tested & documented libraries for interacting with Ethereum.",
     logoSrc: "/images/logos/alloy.png",
     githubUrl: "https://github.com/alloy-rs",
     repo: "alloy-rs/alloy",
   },
   {
     name: "cryo",
-    description: "Fast extraction of blockchain data.",
+    description: "Extract blockchain data to parquet, CSV, JSON, and more.",
     logoSrc: "/images/logos/cryo.png",
     githubUrl: "https://github.com/paradigmxyz/cryo",
     repo: "paradigmxyz/cryo",
@@ -88,7 +88,7 @@ const projectsData: ProjectData[] = [
   {
     name: "revm",
     description:
-      "Blazing fast, portable and modular toolkit for Ethereum application development.",
+      "Rust implementation of the Ethereum Virtual Machine.",
     logoSrc: "/images/logos/revm.png",
     githubUrl: "https://github.com/bluealloy/revm",
     repo: "bluealloy/revm",
