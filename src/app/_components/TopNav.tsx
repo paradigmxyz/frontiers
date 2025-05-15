@@ -69,7 +69,7 @@ export function TopNav() {
             <div className="-mr-[18px] max-mobile:hidden">
               <WithCursor cursor="pulse-crosshair">
                 <Button asChild>
-                  <a href="https://events.paradigm.xyz/frontiers2025">
+                  <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">
                     APPLY NOW
                   </a>
                 </Button>
@@ -128,7 +128,7 @@ export function TopNav() {
               </Dialog.Close>
             </Text>
             <Button asChild className="w-full">
-              <a href="https://events.paradigm.xyz/frontiers2025">APPLY NOW</a>
+              <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">APPLY NOW</a>
             </Button>
           </nav>
         </Dialog.Content>

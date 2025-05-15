@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Section, SectionHeading } from "~/ui/Section";
 import { Text } from "~/ui/Text";
 import { WithCursor } from "~/ui/WithCursor";
@@ -106,7 +106,9 @@ const StarIcon = () => (
     viewBox="0 0 16 16"
     fill="currentColor"
     className="w-4 h-4 text-white/50"
+    aria-hidden="true"
   >
+    <title>Star icon</title>
     <path d="M8 1.75a.75.75 0 01.651.404l1.688 3.418 3.773.548a.75.75 0 01.416 1.285l-2.73 2.661.644 3.758a.75.75 0 01-1.088.791L8 12.327l-3.366 1.768a.75.75 0 01-1.088-.79l.644-3.759L1.472 7.405a.75.75 0 01.416-1.285l3.773-.548L7.35 2.154A.75.75 0 018 1.75z" />
   </svg>
 );
@@ -117,7 +119,9 @@ const UsersIcon = () => (
     viewBox="0 0 20 20"
     fill="currentColor"
     className="size-4"
+    aria-hidden="true"
   >
+    <title>Users icon</title>
     <path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM1.49 15.326a.78.78 0 0 1-.358-.442 3 3 0 0 1 4.308-3.516 6.484 6.484 0 0 0-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 0 1-2.07-.655ZM16.44 15.98a4.97 4.97 0 0 0 2.07-.654.78.78 0 0 0 .357-.442 3 3 0 0 0-4.308-3.517 6.484 6.484 0 0 1 1.907 3.96 2.32 2.32 0 0 1-.026.654ZM18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM5.304 16.19a.844.844 0 0 1-.277-.71 5 5 0 0 1 9.947 0 .843.843 0 0 1-.277.71A6.975 6.975 0 0 1 10 18a6.974 6.974 0 0 1-4.696-1.81Z" />
   </svg>
 );
@@ -277,7 +281,7 @@ export function OpenSourceSection() {
   );
 
   // Function to try fetching GitHub stats with rate limiting protection
-  const fetchGitHubStatsWithCache = async () => {
+  const fetchGitHubStatsWithCache = useCallback(async () => {
     try {
       // Immediately load cached values
       const cachedProjects = projectsData.map((project) => {
@@ -302,7 +306,7 @@ export function OpenSourceSection() {
         if (!lastFetch) return true;
 
         const dayInMs = 24 * 60 * 60 * 1000;
-        return Date.now() - parseInt(lastFetch) > dayInMs;
+        return Date.now() - Number.parseInt(lastFetch) > dayInMs;
       };
 
       // Skip API calls if we shouldn't fetch fresh data
@@ -336,7 +340,7 @@ export function OpenSourceSection() {
               if (linkHeader) {
                 const match = linkHeader.match(/&page=(\d+)>; rel="last"/);
                 if (match) {
-                  contributorsCount = parseInt(match[1], 10);
+                  contributorsCount = Number.parseInt(match[1], 10);
                 }
               } else {
                 // If no Link header, there's only one page of contributors
@@ -381,11 +385,11 @@ export function OpenSourceSection() {
     } catch (error) {
       console.error("Error fetching GitHub stats:", error);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchGitHubStatsWithCache();
-  }, []);
+  }, [fetchGitHubStatsWithCache]);
 
   return (
     <Section className="py-12 sm:py-20 md:py-28 w-full bg-black">

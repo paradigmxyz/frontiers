@@ -23,7 +23,7 @@ export default function Home() {
       <div className="max-w-screen-mobile max-w-[940px] mx-auto">
         <WithCursor cursor="pulse-crosshair">
           <Button asChild frame className="w-auto mx-6" height="60">
-            <a href="https://events.paradigm.xyz/frontiers2025">APPLY NOW</a>
+            <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">APPLY NOW</a>
           </Button>
         </WithCursor>
       </div>

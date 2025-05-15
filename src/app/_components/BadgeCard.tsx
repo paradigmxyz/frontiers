@@ -22,7 +22,7 @@ export function BadgeCard() {
               color="paradigmGreen"
               height="50"
               className="w-[90%]"
-              onClick={() => window.open("https://events.paradigm.xyz/frontiers2025", "_self")}
+              onClick={() => window.open("https://7dr10b0z31d.typeform.com/Frontiers2025", "_self")}
               data-typeform-link="true"
             >
               APPLY NOW!

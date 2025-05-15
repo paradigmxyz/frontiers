@@ -101,7 +101,13 @@ function SpeakerCard({
           "bg-neutral-800 flex items-center justify-center"
         )}
       >
-        <Image src={imageSrc} alt={name} layout="fill" objectFit="cover" />
+        <Image
+          src={imageSrc}
+          alt={name}
+          fill
+          sizes="(max-width: 640px) 5rem, 10rem"
+          className="object-cover"
+        />
         {isPlaceholderImage && (
           <Text size="11" fontFamily="typewriter" className="text-neutral-500">
             PHOTO

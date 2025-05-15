@@ -181,7 +181,7 @@ export function HeroSection() {
                 className="w-full sm:min-w-[240px] px-6 sm:px-10 max-sm:h-[48px] max-sm:text-base"
                 height="60"
               >
-                <a href="https://events.paradigm.xyz/frontiers2025">APPLY NOW</a>
+                <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">APPLY NOW</a>
               </Button>
             </WithCursor>
             <WithCursor cursor="pulse-crosshair">
