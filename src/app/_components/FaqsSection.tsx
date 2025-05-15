@@ -51,7 +51,7 @@ export function FaqsSection() {
           className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12"
           weight="400"
         >
-          Our frequently asked questions
+          Frequently asked
         </SectionHeading>
 
         <div className="px-5 sm:px-8 lg:px-10">

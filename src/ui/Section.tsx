@@ -23,7 +23,7 @@ export function SectionHeading({
 >) {
   return (
     <>
-      <div className="absolute -mt-[120px]" id={id} />
+      <div className="absolute -mt-[130px]" id={id} />
       <Text
         fontFamily={fontFamily}
         size={size}

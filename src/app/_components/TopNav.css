@@ -9,3 +9,24 @@
     transform: translateY(0);
   }
 }
+
+/* Remove focus outlines and blue highlight on mobile */
+[data-radix-dialog-close]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix link styling in mobile nav */
+[data-radix-dialog-close] a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix mobile nav list styling */
+[role="dialog"] nav {
+  width: 100%;
+  list-style: none;
+}

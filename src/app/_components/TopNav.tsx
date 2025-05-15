@@ -98,33 +98,33 @@ export function TopNav() {
         <Dialog.Content className="bg-black p-[32px] bg-opacity-90 border border-white border-opacity-20 animate-[0.1s_nav-enter_ease] rounded-[40px]">
           <nav className="flex flex-col items-center gap-8">
             <Text asChild fontFamily="typewriter" size="24">
-              <Dialog.Close asChild>
-                <a href="#manifesto">MANIFESTO</a>
+              <Dialog.Close asChild className="focus:outline-none">
+                <a href="#to-our-builders" className="no-underline text-white hover:opacity-80">MANIFESTO</a>
               </Dialog.Close>
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
-              <Dialog.Close asChild>
-                <a href="#agenda">AGENDA</a>
+              <Dialog.Close asChild className="focus:outline-none">
+                <a href="#agenda" className="no-underline text-white hover:opacity-80">AGENDA</a>
               </Dialog.Close>
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
-              <Dialog.Close asChild>
-                <a href="#speakers">SPEAKERS</a>
+              <Dialog.Close asChild className="focus:outline-none">
+                <a href="#speakers" className="no-underline text-white hover:opacity-80">SPEAKERS</a>
               </Dialog.Close>
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
-              <Dialog.Close asChild>
-                <a href="#faqs">FAQs</a>
+              <Dialog.Close asChild className="focus:outline-none">
+                <a href="#faqs" className="no-underline text-white hover:opacity-80">FAQs</a>
               </Dialog.Close>
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
-              <Dialog.Close asChild>
-                <a href="#projects">OPEN SOURCE</a>
+              <Dialog.Close asChild className="focus:outline-none">
+                <a href="#projects" className="no-underline text-white hover:opacity-80">OPEN SOURCE</a>
               </Dialog.Close>
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
-              <Dialog.Close asChild>
-                <a href="#pre-reads">PRE-READs</a>
+              <Dialog.Close asChild className="focus:outline-none">
+                <a href="#pre-reads" className="no-underline text-white hover:opacity-80">PRE-READs</a>
               </Dialog.Close>
             </Text>
             <Button asChild className="w-full">

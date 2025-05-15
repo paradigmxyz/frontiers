@@ -136,7 +136,7 @@ export function AgendaSection() {
           className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12 sm:mb-16"
           weight="400"
         >
-          Our agenda
+          Agenda
         </SectionHeading>
 
         {/* Main agenda content area */}

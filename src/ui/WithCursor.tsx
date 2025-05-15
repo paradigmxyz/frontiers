@@ -19,7 +19,7 @@ import "./WithCursor.css";
 
 const CursorContext = createContext<
   [active: boolean, setActive: (_: boolean) => void]
->([false, () => {}]);
+>([false, () => { }]);
 
 type WithCursorProps = PropsWithChildren<{
   cursor: "box" | "pulse-crosshair" | "external";
@@ -53,12 +53,12 @@ export function WithCursor({ children, cursor }: WithCursorProps) {
     () =>
       isValidElement(children)
         ? cloneElement(children, {
-            // @ts-expect-error
-            className: clsx("cursor-none", children.props.className),
-            onMouseEnter,
-            onMouseMove,
-            onMouseLeave,
-          })
+          // @ts-expect-error
+          className: clsx("cursor-none", children.props.className),
+          onMouseEnter,
+          onMouseMove,
+          onMouseLeave,
+        })
         : null,
     [children, onMouseEnter, onMouseMove, onMouseLeave]
   );
@@ -92,13 +92,52 @@ function Cursor({
   y: number;
 }) {
   if (x === 0 && y === 0) return null;
+
+  // Check if this is a mobile device rather than just a small viewport
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+  useEffect(() => {
+    // Check if this is a mobile device using user agent
+    const checkMobile = () => {
+      if (typeof window === 'undefined' || !window.navigator) return false;
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+    };
+
+    setIsMobileDevice(checkMobile());
+  }, []);
+
+  // Check if cursor is outside viewport or on edge of small screens
+  const isOutOfBounds = () => {
+    if (typeof window === 'undefined') return false;
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // For very small viewports, use a smaller buffer
+    const bufferSize = Math.min(
+      Math.max(10, Math.min(viewportWidth, viewportHeight) * 0.05), // 5% of viewport with 10px minimum
+      20 // Maximum buffer of 20px
+    );
+
+    return (
+      x <= bufferSize ||
+      y <= bufferSize ||
+      x >= viewportWidth - bufferSize ||
+      y >= viewportHeight - bufferSize
+    );
+  };
+
+  // Don't show cursor on mobile devices
+  if (isMobileDevice) return null;
+
   return (
     <div
-      className="fixed bg-white mix-blend-exclusion pointer-events-none cursor-none z-[9999] max-mobile:hidden"
+      className="fixed bg-white mix-blend-exclusion pointer-events-none cursor-none z-[9999]"
       style={{
         left: `${x}px`,
         top: `${y}px`,
-        visibility: active ? "visible" : "hidden",
+        visibility: active && !isOutOfBounds() ? "visible" : "hidden",
       }}
     >
       {children}
