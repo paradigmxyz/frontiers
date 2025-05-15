@@ -11,18 +11,18 @@ export function ToOurBuildersSection() {
   return (
     <Section className="flex flex-col pb-24 max-tablet:pb-20 max-mobile:pb-16 pt-0 mt-0 w-full mx-auto">
       <div className="max-w-[940px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <SectionHeading
-          id="to-our-builders"
-          fontFamily="default"
-          className="!text-6xl sm:!text-7xl text-left mb-12 sm:mb-16"
-          weight="400"
-        >
-          To our <span className="italic">builders</span>
-        </SectionHeading>
         <div className="flex flex-row max-tablet:flex-col items-center gap-16 max-w-[1200px] mx-auto">
           {/* Left Column: Crypto is in its application era */}
           <div className="flex-1 flex flex-col gap-8 max-w-[500px] max-mobile:px-4">
-            <div className="flex flex-col gap-[32px] max-mobile:gap-[16px] max-mobile:mt-2">
+            <div className="flex flex-col gap-[32px] max-mobile:gap-[28px] max-mobile:mt-2">
+              <SectionHeading
+                id="to-our-builders"
+                fontFamily="default"
+                className="!text-6xl sm:!text-7xl text-left sm:mb-16"
+                weight="400"
+              >
+                To our builders
+              </SectionHeading>
               <Text asChild size={"18"}>
                 <p>
                   The (crypto) world is changing faster than we can comprehend.
@@ -88,7 +88,7 @@ export function ToOurBuildersSection() {
 
 const features = [
   {
-    name: "Open Source updates",
+    name: "Open Source Updates",
     color: "paradigmGreen",
     content: (
       <svg
@@ -167,7 +167,7 @@ const features = [
     ),
   },
   {
-    name: "Frontier Applications",
+    name: "Cutting Edge Applications",
     color: "",
     content: (
       <svg

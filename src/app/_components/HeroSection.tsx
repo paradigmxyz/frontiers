@@ -32,6 +32,36 @@ export function HeroSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle smooth scrolling for anchor links
+  useEffect(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a');
+
+      const href = anchor?.getAttribute('href');
+      if (anchor && href?.startsWith('#')) {
+        e.preventDefault();
+
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+          const offset = window.innerHeight * 0.3; // 30% of viewport height
+          window.scrollTo({
+            top: targetPosition - offset,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    // Add event listener to the document for all anchor clicks
+    document.addEventListener('click', handleAnchorClick);
+
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+    };
+  }, []);
+
   return (
     <div ref={ref} className="relative h-screen w-screen">
       {/* Hero Section Navigation */}
@@ -51,7 +81,7 @@ export function HeroSection() {
           <li className="mb-2 sm:mb-0">
             <Text asChild fontFamily="typewriter" size="14">
               <a href="#to-our-builders" className="hover:underline">
-                TO OUR BUILDERS
+                ABOUT
               </a>
             </Text>
           </li>
@@ -91,7 +121,7 @@ export function HeroSection() {
           <li className="mb-2 sm:mb-0">
             <Text asChild fontFamily="typewriter" size="14">
               <a href="#projects" className="hover:underline">
-                OPEN SOURCE
+                OSS
               </a>
             </Text>
           </li>
@@ -116,22 +146,21 @@ export function HeroSection() {
       />
       <Section className="relative h-full z-10 flex items-center justify-center pt-16 w-full">
         <div className="flex flex-col items-center justify-center gap-3 w-full mt-6 px-2 max-sm:gap-2 max-sm:mt-2">
-          {/* Title and ByParadigm */}
-          <div className="flex items-center flex-col z-[1] mix-blend-exclusion">
-            <div className="inline-flex justify-center w-fit relative">
-              <div className="absolute top-[-32px] right-[-8px] max-mobile:top-[-16px] max-mobile:right-[-40px] max-[400px]:hidden">
-                <ByParadigm />
-              </div>
-              <div className="absolute min-[400px]:hidden top-[-24px] right-[-8px]">
-                <ByParadigm />
-              </div>
-              <Text asChild size="160" weight="500" className="max-sm:text-[42px] max-sm:leading-[1.1]">
-                <h1>Frontiers</h1>
-              </Text>
+          {/* Logo */}
+          <div className="flex items-center flex-col z-[1] mix-blend-exclusion px-4 sm:px-6 mb-8 sm:mb-6">
+            <div className="relative w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px]">
+              <Image
+                src="/images/logo-header.svg"
+                alt="Frontiers by Paradigm"
+                width={700}
+                height={200}
+                priority
+                className="w-full h-auto"
+              />
             </div>
           </div>
           {/* Subtitle */}
-          <div className="-mt-4 mb-2">
+          <div className="-mt-2 mb-2">
             <Text
               className="text-center text-gray-300 text-xl max-w-sm sm:max-w-none font-serif max-sm:text-base max-sm:leading-tight max-sm:px-2"
               asChild
@@ -174,25 +203,20 @@ export function HeroSection() {
             </WithCursor>
           </div>
           {/* Date and Location */}
-          <div className="mt-3 max-sm:mt-2 w-full">
-            {/* Mobile version - single line, no wrap */}
-            <div className="flex flex-col items-center sm:hidden w-full">
+          <div className="mt-6 sm:mt-8 w-full">
+            {/* Mobile version - with good wrapping */}
+            <div className="flex flex-col sm:flex-row items-center w-full gap-6">
               <Text
                 fontFamily="typewriter"
-                className="text-[15px] tracking-widest text-white/80 pb-2 border-b border-white/20 mb-2 max-sm:text-[13px] max-sm:pb-1 max-sm:mb-1 max-sm:tracking-normal max-sm:leading-tight"
+                className="text-[13px] tracking-wider text-white/80 text-center max-sm:leading-tight"
               >
-                <span className="whitespace-nowrap">AUGUST 6-8, 2025 &nbsp;•&nbsp; SAN FRANCISCO & ONLINE</span>
+                AUGUST 6-8, 2025
               </Text>
-            </div>
-            {/* Desktop version - horizontal with dot separators */}
-            <div className="hidden sm:block text-center">
               <Text
                 fontFamily="typewriter"
-                className="text-[15px] tracking-widest text-white/80"
+                className="text-[13px] tracking-wider text-white/80 text-center max-sm:leading-tight"
               >
-                AUGUST 6-8, 2025 &nbsp;&nbsp;&bull;&nbsp;&nbsp;{' '}
-                SAN FRANCISCO
-                & ONLINE
+                SAN FRANCISCO & ONLINE
               </Text>
             </div>
           </div>
@@ -210,27 +234,6 @@ export function HeroSection() {
           </Text>
         </div>
       )}
-    </div>
-  );
-}
-
-function ByParadigm() {
-  return (
-    <div className="flex justify-center">
-      <Text
-        className="flex justify-center items-center max-mobile:text-[9px] max-[400px]:text-[12px]"
-        size="12"
-        fontFamily="typewriter"
-      >
-        BY
-      </Text>
-      <Image
-        alt="Paradigm Logo"
-        className="h-[60px] ml-[-8px] max-mobile:h-[32px] max-mobile:ml-[-30px] max-[400px]:h-[50px] max-[400px]:ml-[-16px]"
-        src="/images/paradigm-transparent.svg"
-        width="153"
-        height="60"
-      />
     </div>
   );
 }

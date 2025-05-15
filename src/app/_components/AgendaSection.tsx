@@ -130,13 +130,13 @@ const agendaData: AgendaDay[] = [
 export function AgendaSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
-      <div id="agenda" className="max-w-[940px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="agenda" className="max-w-[940px] mx-auto w-full">
         <SectionHeading
           fontFamily="default"
-          className="!text-6xl sm:!text-7xl text-left mb-12 sm:mb-16"
+          className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12 sm:mb-16"
           weight="400"
         >
-          Our <span className="italic">agenda</span>
+          Our agenda
         </SectionHeading>
 
         {/* Main agenda content area */}
@@ -145,9 +145,7 @@ export function AgendaSection() {
             <div key={agendaDay.day} className={clsx(dayIndex > 0 && "mt-0")}>
               {/* Mobile Day Header (shown only on mobile, before first event of day) */}
               {agendaDay.events.length > 0 && (
-                <div className="tablet:hidden pt-6 pb-4 mb-2 border-b border-white/10">
-                  {" "}
-                  {/* Fainter border, more padding */}
+                <div className="tablet:hidden flex items-center py-4 mb-2 border-b border-t border-white/10 bg-white/5 px-5 sm:px-8 lg:px-10">
                   <Text
                     fontFamily="typewriter"
                     size="12"
@@ -163,12 +161,12 @@ export function AgendaSection() {
                 <div
                   key={event.title + event.time + eventIndex}
                   className={clsx(
-                    "py-5 tablet:py-8 tablet:grid tablet:grid-cols-[minmax(190px,auto)_120px_1fr] tablet:gap-x-6", // Increased py, fixed Day col width, fixed Time col width
+                    "py-6 tablet:py-10 tablet:grid tablet:grid-cols-[minmax(190px,auto)_120px_1fr] tablet:gap-x-8 px-5 sm:px-8 lg:px-10", // Increased padding
                     "border-b border-white/10" // Fainter border
                   )}
                 >
                   {/* --- COLUMN 1: Day Name (Tablet+) --- */}
-                  <div className="hidden tablet:block pt-1 pr-6">
+                  <div className="hidden tablet:block pt-1 pr-8">
                     {eventIndex === 0 && (
                       <Text
                         fontFamily="typewriter"
@@ -183,7 +181,7 @@ export function AgendaSection() {
                   {/* --- COLUMN 2: Time --- */}
                   <div
                     className={clsx(
-                      "mb-1 tablet:mb-0 tablet:pt-1 tablet:pr-6 whitespace-nowrap", // Added whitespace-nowrap
+                      "mb-4 tablet:mb-0 tablet:pt-1 tablet:pr-6 whitespace-nowrap", // Increased mobile bottom margin
                       event.isPlaceholder && "tablet:invisible"
                     )}
                   >
@@ -211,10 +209,10 @@ export function AgendaSection() {
                     <Text
                       asChild={!event.isPlaceholder} // Use asChild only if not placeholder, to allow complex children
                       fontFamily="default"
-                      size="18"
+                      size={event.isPlaceholder ? "18" : "28"}
                       weight="400"
                       className={clsx(
-                        "text-white",
+                        "text-white tablet:text-lg", // Larger text on mobile, reset on tablet+
                         event.isPlaceholder && "italic opacity-75"
                       )}
                     >
@@ -224,14 +222,24 @@ export function AgendaSection() {
                         <p>
                           <span className="font-medium">{event.title}</span>
                           {event.description && (
-                            <span
-                              className={clsx(
-                                "text-white/50 ml-2",
-                                event.detailsItalic && "italic"
-                              )}
-                            >
-                              {event.description}
-                            </span>
+                            <>
+                              <span
+                                className={clsx(
+                                  "tablet:ml-2 text-white/50 hidden tablet:inline", // Hide on mobile, show inline on tablet+
+                                  event.detailsItalic && "italic"
+                                )}
+                              >
+                                {event.description}
+                              </span>
+                              <span
+                                className={clsx(
+                                  "block tablet:hidden text-white/50 text-base mt-2", // Show as block on mobile, hide on tablet+
+                                  event.detailsItalic && "italic"
+                                )}
+                              >
+                                {event.description}
+                              </span>
+                            </>
                           )}
                         </p>
                       )}

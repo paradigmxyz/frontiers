@@ -45,21 +45,21 @@ const faqData: FaqItem[] = [
 export function FaqsSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
-      <div id="faqs" className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="faqs" className="max-w-[900px] mx-auto w-full">
         <SectionHeading
           fontFamily="default"
-          className="!text-5xl sm:!text-6xl text-left mb-12 sm:mb-16"
+          className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12"
           weight="400"
         >
-          Our <span className="italic">frequently asked questions</span>
+          Our frequently asked questions
         </SectionHeading>
 
-        <div>
+        <div className="px-5 sm:px-8 lg:px-10">
           {faqData.map((faq, index) => (
             <div
               key={index}
               className={clsx(
-                "py-6 tablet:py-8 tablet:grid tablet:grid-cols-[1fr_2fr] tablet:gap-x-12",
+                "py-8 tablet:py-10 tablet:grid tablet:grid-cols-[1fr_2fr] tablet:gap-x-14",
                 "border-b border-white/10" // Fainter border
               )}
             >

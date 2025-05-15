@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Section, SectionHeading } from "~/ui/Section";
 import { Text } from "~/ui/Text";
 import { WithCursor } from "~/ui/WithCursor";
-import { useEffect, useState } from "react";
 
 interface ProjectCardProps {
   name: string;
@@ -389,18 +389,18 @@ export function OpenSourceSection() {
 
   return (
     <Section className="py-12 sm:py-20 md:py-28 w-full bg-black">
-      <div id="projects" className="max-w-[940px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="projects" className="max-w-[940px] mx-auto w-full">
         <SectionHeading
           fontFamily="default"
-          className="!text-6xl sm:!text-7xl text-left mb-12 sm:mb-16"
+          className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12 sm:mb-16"
           weight="400"
         >
-          Our <span className="italic">open source software</span>
+          Our open source software
         </SectionHeading>
 
-        <div className="flex flex-row flex-wrap">
+        <div className="flex flex-row flex-wrap px-5 sm:px-8 lg:px-10">
           {projects.slice(0, 8).map((project) => (
-            <div key={project.name} className="w-1/2 p-3">
+            <div key={project.name} className="w-1/2 p-4">
               <ProjectCard {...project} />
             </div>
           ))}
