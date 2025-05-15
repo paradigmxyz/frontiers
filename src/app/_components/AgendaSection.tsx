@@ -27,14 +27,14 @@ const agendaData: AgendaDay[] = [
         description: "Check in begins.",
       },
       {
-        time: "19:00",
+        time: "18:30",
         title: "Opening Keynote by Tomasz K. Stańczak",
         description: "Ethereum Foundation",
         detailsItalic: true,
       },
       {
-        time: "19:30 - 22:00",
-        title: "Evening socializing & hacking.",
+        time: "19:00 - 22:00",
+        title: "Evening socializing.",
         description: "Code, snacks, beverages, and music.",
       },
     ],
@@ -43,14 +43,64 @@ const agendaData: AgendaDay[] = [
     day: "THURSDAY, AUGUST 7",
     events: [
       {
+        time: "",
+        title: "Whole day hacking & co-working.",
+        isPlaceholder: true,
+      },
+      {
         time: "08:00 – 09:00",
-        title: "Check in & hack.",
+        title: "Check in & coffee.",
         description: "Receive your badges, stickers, and more.",
       },
       {
-        time: "9:00",
+        time: "9:00 sharp",
         title: "The Application Era by Georgios Konstantopoulos",
         description: "Paradigm, Ithaca",
+        detailsItalic: true,
+      },
+      {
+        time: "9:30",
+        title: "Porto by Tom Meagher",
+        description: "Paradigm, Ithaca",
+        detailsItalic: true,
+      },
+      {
+        time: "10:00",
+        title: "Building a viral consumer app by Sofiane Larbi",
+        description: "Paradigm",
+        detailsItalic: true,
+      },
+      {
+        time: "",
+        title: "More talks to be announced soon.",
+        isPlaceholder: true,
+      },
+    ],
+  },
+  {
+    day: "FRIDAY, AUGUST 8",
+    events: [
+      {
+        time: "",
+        title: "Whole day hacking & co-working.",
+        isPlaceholder: true,
+      },
+      {
+        time: "9:00",
+        title: "The Future of Reth by Matthias Seitz",
+        description: "Paradigm, Ithaca",
+        detailsItalic: true,
+      },
+      {
+        time: "9:30",
+        title: "Foundry & Alloy 1.0",
+        description: "Ithaca",
+        detailsItalic: true,
+      },
+      {
+        time: "10:00",
+        title: "Open Source Data by Storm Slivkoff",
+        description: "Paradigm",
         detailsItalic: true,
       },
       {
@@ -59,37 +109,17 @@ const agendaData: AgendaDay[] = [
         isPlaceholder: true,
       },
       {
-        time: "08:00 – 09:00", // As per image, though seems like a clash
-        title: "Lunch.",
-        description: "Catered, delicious meals to power your hacking.",
-      },
-      {
-        time: "",
-        title: "More talks to be announced soon.",
-        isPlaceholder: true,
-      },
-      {
-        time: "4:00 – 11:59",
-        title: "Hacking continues.",
-        description: "We're excited to see what you build.",
-      },
-    ],
-  },
-  {
-    day: "FRIDAY, AUGUST 8",
-    events: [
-      {
-        time: "9:00",
+        time: "15:00",
         title: "Finalize your projects.",
         description: "You will have a chance to present!",
       },
       {
-        time: "12:00",
+        time: "16:00",
         title: "Presentations & awards.",
         description: "We have gifts for top teams.",
       },
       {
-        time: "3:00",
+        time: "18:00",
         title: "Event ends.",
         description: "Spend the rest of the day in beautiful San Francisco.",
       },
@@ -168,8 +198,8 @@ export function AgendaSection() {
                       className={clsx(
                         "text-white",
                         event.isPlaceholder &&
-                          !event.time &&
-                          "hidden tablet:inline"
+                        !event.time &&
+                        "hidden tablet:inline"
                       )}
                     >
                       {event.time}

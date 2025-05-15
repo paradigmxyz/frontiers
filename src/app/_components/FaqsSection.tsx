@@ -11,34 +11,24 @@ interface FaqItem {
 
 const faqData: FaqItem[] = [
   {
-    question: "When and where is Frontiers?",
-    answer:
-      "Frontiers will take place August 6-8, 2025 at in San Francisco, with virtual attendance available for those who cannot join in person.",
-  },
-  {
     question: "What is Frontiers?",
     answer:
       "Frontiers is Paradigm's annual open source conference and hackathon, bringing together developers, researchers, and enthusiasts to explore and build at the cutting edge of application and infrastructure development in crypto.",
   },
   {
-    question: "What is the difference between in-person & virtual attendance?",
+    question: "When and where is Frontiers?",
     answer:
-      "In-person attendees will have access to the full spectrum of talks, workshops, networking, and the IRL hackathon. Virtual attendees will be able to stream keynotes and select sessions online.",
+      "Frontiers will take place August 6-8, 2025 at in San Francisco, with virtual attendance available for those who cannot join in person via livestream.",
   },
   {
     question: "When will the full list of speakers be announced?",
     answer:
-      "We are still finalizing the speaker list over the coming weeks. Please sign up for a ticket to receive email updates, and check back here soon!",
+      "We will be updating the website with more speakers over the coming weeks. Stay tuned by either following Paradigm on X, or apply for attendance and you will be receiving email updates!",
   },
   {
     question: "Do you cover travel or hotels?",
     answer:
       "Unfortunately, we are unable to cover travel or hotel expenses for attendees. We recommend booking accommodations early.",
-  },
-  {
-    question: "Is there a hotel recommendation?",
-    answer:
-      "While we don't have official hotel blocks, we will provide a list of nearby hotels closer to the event date. San Francisco offers a wide range of options to suit various budgets.",
   },
   {
     question: "Who can I contact with questions?",
