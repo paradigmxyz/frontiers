@@ -19,9 +19,7 @@ app.frame("/", (c) => {
   return c.res({
     image: "/images/frames/1.png",
     intents: [
-      <Button.Link href="https://form.typeform.com/to/EBlW7QFt">
-        Register Now
-      </Button.Link>,
+      <Button.Link href="https://events.paradigm.xyz/frontiers2025">APPLY NOW</Button.Link>,
       <Button action="/descriptions">Next →</Button>,
       <Button.Link
         href={`https://warpcast.com/~/compose?text=${encodeURIComponent(
@@ -72,9 +70,7 @@ app.frame("/end", (c) => {
       <Button action="/descriptions" value="back">
         ← Back
       </Button>,
-      <Button.Link href="https://form.typeform.com/to/EBlW7QFt">
-        Register Now
-      </Button.Link>,
+      <Button.Link href="https://events.paradigm.xyz/frontiers2025">APPLY NOW</Button.Link>,
       <Button.Link
         href={`https://warpcast.com/~/compose?text=${encodeURIComponent(
           "Come to Frontiers! https://frontiers.paradigm.xyz"

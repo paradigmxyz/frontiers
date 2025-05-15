@@ -17,7 +17,7 @@ import "./TopNav.css";
 
 export const TopNavContext = createContext({
   show: false,
-  setShow: (_: boolean) => {},
+  setShow: (_: boolean) => { },
 });
 
 export function TopNavProvider({ children }: PropsWithChildren) {
@@ -69,8 +69,8 @@ export function TopNav() {
             <div className="-mr-[18px] max-mobile:hidden">
               <WithCursor cursor="pulse-crosshair">
                 <Button asChild>
-                  <a href="https://form.typeform.com/to/EBlW7QFt">
-                    Register Now
+                  <a href="https://events.paradigm.xyz/frontiers2025">
+                    APPLY NOW
                   </a>
                 </Button>
               </WithCursor>
@@ -128,7 +128,7 @@ export function TopNav() {
               </Dialog.Close>
             </Text>
             <Button asChild className="w-full">
-              <a href="https://form.typeform.com/to/EBlW7QFt">Register Now</a>
+              <a href="https://events.paradigm.xyz/frontiers2025">APPLY NOW</a>
             </Button>
           </nav>
         </Dialog.Content>

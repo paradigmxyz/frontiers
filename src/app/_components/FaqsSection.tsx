@@ -48,7 +48,7 @@ const faqData: FaqItem[] = [
   {
     question: "Can I sponsor this event?",
     answer:
-      "We do not accept any sponsors for Frontiers. It is focused on substance, without advertisements or booths.",
+      "We do not accept any sponsors for Frontiers. Frontiers has a strict no booths policy.",
   },
 ];
 

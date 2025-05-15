@@ -22,10 +22,10 @@ export function BadgeCard() {
               color="paradigmGreen"
               height="50"
               className="w-[90%]"
-              onClick={() => window.open("#typeform-link-placeholder", "_self")}
+              onClick={() => window.open("https://events.paradigm.xyz/frontiers2025", "_self")}
               data-typeform-link="true"
             >
-              REGISTER TO JOIN
+              APPLY NOW!
             </Button>
           </WithCursor>
         </div>

@@ -22,8 +22,8 @@ export default function Home() {
       <OpenSourceSection />
       <div className="max-w-screen-mobile max-w-[940px] mx-auto">
         <WithCursor cursor="pulse-crosshair">
-          <Button asChild frame className="w-[80%] mx-auto" height="60">
-            <a href="https://form.typeform.com/to/EBlW7QFt">Register Now</a>
+          <Button asChild frame className="w-full" height="60">
+            <a href="https://events.paradigm.xyz/frontiers2025">APPLY NOW</a>
           </Button>
         </WithCursor>
       </div>
