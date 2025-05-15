@@ -8,13 +8,13 @@ import { HeroSection } from "./_components/HeroSection";
 import { PerspectiveBackground } from "./_components/PerspectiveBackground";
 import { OpenSourceSection } from "./_components/OpenSourceSection";
 import { SpeakersSection } from "./_components/SpeakersSection";
-import { ToTheBuildersSection } from "./_components/ToTheBuildersSection";
+import { ToOurBuildersSection } from "./_components/ToOurBuildersSection";
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
-      <ToTheBuildersSection />
+      <ToOurBuildersSection />
       <PerspectiveBackground />
       <AgendaSection />
       <SpeakersSection />
