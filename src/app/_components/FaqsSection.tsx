@@ -1,97 +1,91 @@
-'use client'
+"use client";
 
-import * as Accordion from '@radix-ui/react-accordion'
-import type { ReactNode } from 'react'
+import clsx from "clsx";
+import { Section, SectionHeading } from "~/ui/Section";
+import { Text } from "~/ui/Text";
 
-import { Section, SectionHeading } from '~/ui/Section'
-import { Text } from '~/ui/Text'
+interface FaqItem {
+  question: string;
+  answer: React.ReactNode; // Allow for JSX in answers if needed, e.g. for links
+}
 
-const faqs = [
+const faqData: FaqItem[] = [
   {
-    title: 'Is the event in-person or online as well?',
-    content: 'The event will be held in-person in San Francisco, but we will also have a livestream for it!',
+    question: "What is Frontiers?",
+    answer:
+      "Frontiers is Paradigm's annual open source conference and hackathon, bringing together developers, researchers, and enthusiasts to explore and build at the cutting edge of application and infrastructure development in crypto.",
   },
   {
-    title: 'How much does an in-person ticket cost?',
-    content: 'The event is free upon acceptance.',
+    question: "When and where is Frontiers?",
+    answer:
+      "Frontiers will take place August 6-8, 2025 at in San Francisco, with virtual attendance available for those who cannot join in person via livestream.",
   },
   {
-    title: 'How do I get selected for in-person attendance?',
-    content: 'Applications are now closed for attendance! Thanks for applying!',
+    question: "When will the full list of speakers be announced?",
+    answer:
+      "We will be updating the website with more speakers over the coming weeks. Stay tuned by either following Paradigm on X, or apply for attendance and you will be receiving email updates!",
   },
   {
-    title: 'Can I give a talk?',
-    content:
-      'Frontiers is this week! Thank you for applying, and we\'d love to have you next year!',
+    question: "Do you cover travel or hotels?",
+    answer:
+      "Unfortunately, we are unable to cover travel or hotel expenses for attendees. We recommend booking accommodations early.",
   },
   {
-    title: 'Who can I contact if I have additional questions?',
-    content: 'Please contact events@paradigm.xyz.',
+    question: "Who can I contact with questions?",
+    answer:
+      "For any further questions, please feel free to reach out to our events team at events@paradigm.xyz.",
   },
-]
+  {
+    question: "Can I sponsor this event?",
+    answer:
+      "We do not accept any sponsors for Frontiers. Frontiers has a strict no booths policy.",
+  },
+];
 
 export function FaqsSection() {
   return (
-    <Section className="max-w-screen-mobile mx-auto py-40 max-tablet:py-24 flex items-center flex-col gap-[48px]">
-      <SectionHeading id="faqs">FAQs</SectionHeading>
-      <Accordion.Root className="bg-black w-full" type="multiple">
-        {faqs.map((faq, index) => (
-          <AccordionItem
-            key={faq.title}
-            title={faq.title}
-            content={faq.content}
-            value={index.toString()}
-          />
-        ))}
-      </Accordion.Root>
-    </Section>
-  )
-}
+    <Section className="py-20 sm:py-28 w-full bg-black">
+      <div id="faqs" className="max-w-[900px] mx-auto w-full">
+        <SectionHeading
+          fontFamily="default"
+          className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12"
+          weight="400"
+        >
+          Our frequently asked questions
+        </SectionHeading>
 
-function AccordionItem({
-  content,
-  title,
-  value,
-}: {
-  content: ReactNode
-  title: ReactNode
-  value: string
-}) {
-  return (
-    <Accordion.Item
-      className="border-b border-white border-opacity-20 overflow-hidden"
-      value={value}
-    >
-      <Accordion.Trigger className="w-full text-left py-[36px] flex items-center justify-between gap-[24px] transition-all [&[data-state=open]>svg]:rotate-45">
-        <Text fontFamily="typewriter" size="28">
-          {title}
-        </Text>
-        <PlusIcon />
-      </Accordion.Trigger>
-      <Accordion.Content className="transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-        <div className="pb-[36px]">
-          <Text size="16">{content}</Text>
+        <div className="px-5 sm:px-8 lg:px-10">
+          {faqData.map((faq, index) => (
+            <div
+              key={index}
+              className={clsx(
+                "py-8 tablet:py-10 tablet:grid tablet:grid-cols-[1fr_2fr] tablet:gap-x-14",
+                "border-b border-white/10" // Fainter border
+              )}
+            >
+              {/* Question Column (Right-aligned on Tablet+) */}
+              <div className="mb-2 tablet:mb-0 tablet:text-right">
+                <Text
+                  asChild
+                  fontFamily="default"
+                  size="20"
+                  weight="400"
+                  className="text-white pb-2"
+                >
+                  <p>{faq.question}</p>
+                </Text>
+              </div>
+
+              {/* Answer Column (Left-aligned) */}
+              <div>
+                <Text fontFamily="default" size="18" className="text-white/50">
+                  {faq.answer}
+                </Text>
+              </div>
+            </div>
+          ))}
         </div>
-      </Accordion.Content>
-    </Accordion.Item>
-  )
-}
-
-function PlusIcon() {
-  return (
-    <svg
-      className="min-w-[24px] transition-all ease-in-out duration-[50ms]"
-      aria-hidden="true"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M13.2002 2.39995C13.2002 1.73721 12.6629 1.19995 12.0002 1.19995C11.3375 1.19995 10.8002 1.73721 10.8002 2.39995V7.99995C10.8002 9.54635 9.54659 10.8 8.0002 10.8H2.40019C1.73745 10.8 1.2002 11.3372 1.2002 12C1.2002 12.6627 1.73745 13.2 2.4002 13.2H8.0002C9.54659 13.2 10.8002 14.4536 10.8002 16V21.6C10.8002 22.2627 11.3375 22.7999 12.0002 22.7999C12.6629 22.7999 13.2002 22.2627 13.2002 21.5999V15.9999C13.2002 14.4536 14.4538 13.2 16.0002 13.2H21.6002C22.2629 13.2 22.8002 12.6627 22.8002 12C22.8002 11.3372 22.2629 10.8 21.6002 10.8H16.0002C14.4538 10.8 13.2002 9.54635 13.2002 7.99995V2.39995Z"
-        fill="white"
-      />
-    </svg>
-  )
+      </div>
+    </Section>
+  );
 }

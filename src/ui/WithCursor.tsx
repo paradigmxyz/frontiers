@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import * as Portal from '@radix-ui/react-portal'
-import clsx from 'clsx'
+import * as Portal from "@radix-ui/react-portal";
+import clsx from "clsx";
 import {
   type PropsWithChildren,
   type ReactNode,
@@ -13,71 +13,71 @@ import {
   useEffect,
   useMemo,
   useState,
-} from 'react'
+} from "react";
 
-import './WithCursor.css'
+import "./WithCursor.css";
 
 const CursorContext = createContext<
   [active: boolean, setActive: (_: boolean) => void]
->([false, () => {}])
+>([false, () => {}]);
 
 type WithCursorProps = PropsWithChildren<{
-  cursor: 'box' | 'pulse-crosshair' | 'external'
-}>
+  cursor: "box" | "pulse-crosshair" | "external";
+}>;
 
 export function WithCursor({ children, cursor }: WithCursorProps) {
-  const [active, setActive] = useState(true)
-  const [mounted, setMounted] = useState(false)
-  const [x, setX] = useState(0)
-  const [y, setY] = useState(0)
+  const [active, setActive] = useState(true);
+  const [mounted, setMounted] = useState(false);
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
 
-  const [parentActive, setParentActive] = useContext(CursorContext)
+  const [parentActive, setParentActive] = useContext(CursorContext);
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => setMounted(true), []);
 
   const onMouseEnter = useCallback(
     () => setParentActive(false),
-    [setParentActive],
-  )
+    [setParentActive]
+  );
   const onMouseMove = useCallback((event: MouseEvent) => {
-    setX(event.clientX)
-    setY(event.clientY)
-  }, [])
+    setX(event.clientX);
+    setY(event.clientY);
+  }, []);
   const onMouseLeave = useCallback(() => {
-    setParentActive(true)
-    setX(0)
-    setY(0)
-  }, [setParentActive])
+    setParentActive(true);
+    setX(0);
+    setY(0);
+  }, [setParentActive]);
 
   const child = useMemo(
     () =>
       isValidElement(children)
         ? cloneElement(children, {
             // @ts-expect-error
-            className: clsx('mobile:cursor-none', children.props.className),
+            className: clsx("cursor-none", children.props.className),
             onMouseEnter,
             onMouseMove,
             onMouseLeave,
           })
         : null,
-    [children, onMouseEnter, onMouseMove, onMouseLeave],
-  )
+    [children, onMouseEnter, onMouseMove, onMouseLeave]
+  );
 
-  if (!isValidElement(children)) return null
+  if (!isValidElement(children)) return null;
   return (
     <CursorContext.Provider value={[active, setActive]}>
       {mounted && (
         <Portal.Root>
           <Cursor active={active && !parentActive} x={x} y={y}>
-            {cursor === 'box' && <Box />}
-            {cursor === 'pulse-crosshair' && <PulseCrosshair />}
-            {cursor === 'external' && <External />}
+            {cursor === "box" && <Box />}
+            {cursor === "pulse-crosshair" && <PulseCrosshair />}
+            {cursor === "external" && <External />}
           </Cursor>
         </Portal.Root>
       )}
       {child}
     </CursorContext.Provider>
-  )
+  );
 }
 
 function Cursor({
@@ -85,24 +85,29 @@ function Cursor({
   children,
   x,
   y,
-}: { active: boolean; children: ReactNode; x: number; y: number }) {
-  if (x === 0 && y === 0) return null
+}: {
+  active: boolean;
+  children: ReactNode;
+  x: number;
+  y: number;
+}) {
+  if (x === 0 && y === 0) return null;
   return (
     <div
       className="fixed bg-white mix-blend-exclusion pointer-events-none cursor-none z-[9999] max-mobile:hidden"
       style={{
         left: `${x}px`,
         top: `${y}px`,
-        visibility: active ? 'visible' : 'hidden',
+        visibility: active ? "visible" : "hidden",
       }}
     >
       {children}
     </div>
-  )
+  );
 }
 
 function Box() {
-  return <div className="w-[18px] h-[18px] mix-blend-exclusion" />
+  return <div className="w-[18px] h-[18px] mix-blend-exclusion" />;
 }
 
 function PulseCrosshair() {
@@ -124,7 +129,7 @@ function PulseCrosshair() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            style={{ mixBlendMode: 'exclusion' }}
+            style={{ mixBlendMode: "exclusion" }}
             clipPath="url(#clip0_415_3609)"
           >
             <path
@@ -145,7 +150,7 @@ function PulseCrosshair() {
         </svg>
       </div>
     </>
-  )
+  );
 }
 
 function External() {
@@ -163,5 +168,5 @@ function External() {
         fill="black"
       />
     </svg>
-  )
+  );
 }

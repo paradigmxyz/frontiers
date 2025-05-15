@@ -1,0 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add scroll margin for anchor links */
+#to-our-builders,
+#agenda,
+#speakers,
+#faqs,
+#projects {
+  scroll-margin-top: 30vh;
+}

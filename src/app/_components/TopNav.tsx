@@ -1,38 +1,38 @@
-'use client'
+"use client";
 
-import * as Dialog from '@radix-ui/react-dialog'
-import Image from 'next/image'
+import * as Dialog from "@radix-ui/react-dialog";
+import Image from "next/image";
 import {
   type PropsWithChildren,
   createContext,
   useContext,
   useState,
-} from 'react'
+} from "react";
 
-import { Button } from '~/ui/Button'
-import { Text } from '~/ui/Text'
-import { WithCursor } from '~/ui/WithCursor'
+import { Button } from "~/ui/Button";
+import { Text } from "~/ui/Text";
+import { WithCursor } from "~/ui/WithCursor";
 
-import './TopNav.css'
+import "./TopNav.css";
 
 export const TopNavContext = createContext({
   show: false,
-  setShow: (_: boolean) => {},
-})
+  setShow: (_: boolean) => { },
+});
 
 export function TopNavProvider({ children }: PropsWithChildren) {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
   return (
     <TopNavContext.Provider value={{ show, setShow }}>
       {children}
     </TopNavContext.Provider>
-  )
+  );
 }
 
 export function TopNav() {
-  const { show } = useContext(TopNavContext)
+  const { show } = useContext(TopNavContext);
 
-  if (!show) return null
+  if (!show) return null;
   return (
     <Dialog.Root>
       <div className="fixed flex flex-col gap-4 top-0 z-50 p-[20px] animate-[0.3s_nav-enter_ease] w-full">
@@ -69,8 +69,8 @@ export function TopNav() {
             <div className="-mr-[18px] max-mobile:hidden">
               <WithCursor cursor="pulse-crosshair">
                 <Button asChild>
-                  <a href="https://www.youtube.com/live/ta7yY51RK2Q">
-                    Livestream
+                  <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">
+                    APPLY NOW
                   </a>
                 </Button>
               </WithCursor>
@@ -119,17 +119,20 @@ export function TopNav() {
             </Text>
             <Text asChild fontFamily="typewriter" size="24">
               <Dialog.Close asChild>
+                <a href="#projects">OPEN SOURCE</a>
+              </Dialog.Close>
+            </Text>
+            <Text asChild fontFamily="typewriter" size="24">
+              <Dialog.Close asChild>
                 <a href="#pre-reads">PRE-READs</a>
               </Dialog.Close>
             </Text>
             <Button asChild className="w-full">
-              <a href="https://www.youtube.com/live/ta7yY51RK2Q">
-                Livestream 
-              </a>
+              <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">APPLY NOW</a>
             </Button>
           </nav>
         </Dialog.Content>
       </div>
     </Dialog.Root>
-  )
+  );
 }

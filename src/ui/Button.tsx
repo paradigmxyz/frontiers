@@ -1,60 +1,84 @@
-'use client'
+"use client";
 
-import { Slot, Slottable } from '@radix-ui/react-slot'
-import { type VariantProps, cva } from 'cva'
-import type { ComponentProps } from 'react'
+import { Slot, Slottable } from "@radix-ui/react-slot";
+import { type VariantProps, cva } from "cva";
+import type { ComponentProps } from "react";
 
 const buttonVariants = cva(
   [
-    'bg-paradigmGreen',
-    'flex',
-    'justify-center',
-    'items-center',
-    'text-black',
-    'px-[24px]',
-    'rounded-[400px]',
-    'font-typewriter',
-    'font-300',
-    'relative',
-    'uppercase',
+    "flex",
+    "justify-center",
+    "items-center",
+    "text-black",
+    "px-[24px]",
+    "rounded-[400px]",
+    "font-typewriter",
+    "font-300",
+    "relative",
+    "uppercase",
+    "text-sm",
+    "transition-all",
+    "duration-200",
+    "ease-in-out",
   ],
   {
     variants: {
       height: {
-        '50': ['h-[50px]', 'text-[16px]'],
-        '60': ['h-[60px]', 'text-[18px]'],
+        "40": ["h-[40px]", "text-[14px]"],
+        "45": ["h-[45px]", "text-[15px]"],
+        "50": ["h-[50px]", "text-[16px]"],
+        "60": ["h-[60px]", "text-[18px]"],
+      },
+      color: {
+        paradigmGreen: [
+          "bg-black",
+          "text-paradigmGreen",
+          "border-paradigmGreen",
+          "border-[1px]",
+          "hover:bg-paradigmGreen",
+          "hover:text-black",
+        ],
+        white: [
+          "bg-black",
+          "text-white",
+          "border-white",
+          "border-[1px]",
+          "hover:bg-white",
+          "hover:text-black",
+        ],
       },
     },
-  },
-)
-
-type ButtonProps = ComponentProps<'button'> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean | undefined
-    frame?: boolean | undefined
   }
+);
+
+type ButtonProps = ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean | undefined;
+    frame?: boolean | undefined;
+  };
 
 export function Button({
   asChild,
   children,
   className,
   frame = false,
-  height = '50',
-  type = 'button',
+  height = "50",
+  type = "button",
+  color = "paradigmGreen",
   ...props
 }: ButtonProps) {
-  const Comp = asChild ? Slot : 'button'
+  const Comp = asChild ? Slot : "button";
   return (
     <Comp
       {...props}
-      className={buttonVariants({ className, height })}
+      className={buttonVariants({ className, height, color })}
       type={type}
     >
       {frame && <TopLeftCorner />}
       <Slottable>{children}</Slottable>
       {frame && <BottomRightCorner />}
     </Comp>
-  )
+  );
 }
 
 function TopLeftCorner() {
@@ -73,7 +97,7 @@ function TopLeftCorner() {
         fill="currentColor"
       />
     </svg>
-  )
+  );
 }
 
 function BottomRightCorner() {
@@ -92,5 +116,5 @@ function BottomRightCorner() {
         fill="currentColor"
       />
     </svg>
-  )
+  );
 }

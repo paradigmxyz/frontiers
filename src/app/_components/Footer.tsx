@@ -1,47 +1,71 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Text } from '~/ui/Text'
+import { Text } from "~/ui/Text";
+
+function FooterLogo() {
+  return (
+    <div className="flex items-center flex-col z-[1] mix-blend-exclusion px-4 sm:px-6 mb-8 sm:mb-6">
+      <div className="relative w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px]">
+        <Image
+          src="/images/logo-header.svg"
+          alt="Frontiers by Paradigm"
+          width={700}
+          height={200}
+          priority
+          className="w-full h-auto"
+        />
+      </div>
+    </div>
+  );
+}
 
 export function Footer() {
   return (
-    <footer className="absolute left-0 right-0 z-[1]">
+    <footer className="relative w-full max-h-[500px]">
+      {/* Background Image */}
       <Image
         alt="Earth background"
-        className="object-fill w-full"
+        className="relative object-cover w-full h-[400px] z-0"
         src="/images/world.svg"
         width="1209"
-        height="657"
+        height="200"
       />
-      <div className="absolute top-[50%] max-tablet:top-[40%] max-[480px]:top-[30%] left-[50%] -translate-x-1/2 -translate-y-1/2">
-        <div className="flex flex-col items-center gap-2 max-[480px]:gap-1">
-          <Image
-            alt="Paradigm logo"
-            src="/images/paradigm-transparent.svg"
-            className="w-[200px] max-mobile:w-[120px] max-[480px]:w-[100px]"
-            width="200"
-            height="78"
-          />
-          <Text className="max-[480px]:text-[48px]" size="160" weight="500">
-            Frontiers
-          </Text>
+
+      {/* Gradient Overlay - fades the top of the background image */}
+      <div
+        className="absolute inset-0 w-full h-full z-[1] pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.9) 80%, #000000 100%)",
+        }}
+      />
+
+      {/* Main Content - Logo and Description */}
+      <div className="absolute top-0 left-0 right-0 z-[2] pb-12">
+        <div className="flex flex-col items-center px-4 sm:px-8">
+          <FooterLogo />
         </div>
       </div>
-      <div className="absolute bottom-8 left-[50%] -translate-x-1/2 w-full">
-        <div className="flex flex-col items-center gap-4">
-          <div className="flex items-center gap-4 max-[480px]:gap-1">
+
+      {/* Footer Links & Copyright */}
+      <div className="absolute bottom-4 left-0 right-0 z-[2]">
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex items-center gap-4 max-[480px]:gap-2">
             <Text
               asChild
-              className="max-[480px]:text-[9px]"
+              className="text-white/70 hover:text-white text-xs max-[480px]:text-xs"
               fontFamily="typewriter"
             >
               <a href="https://www.paradigm.xyz/privacy-policy">
                 PRIVACY POLICY
               </a>
             </Text>
-            <Text fontFamily="typewriter">|</Text>
+            <Text fontFamily="typewriter" className="text-white/50">
+              |
+            </Text>
             <Text
               asChild
-              className="max-[480px]:text-[9px]"
+              className="text-white/70 hover:text-white text-xs max-[480px]:text-xs"
               fontFamily="typewriter"
             >
               <a href="https://www.paradigm.xyz/website-terms-of-use">
@@ -49,11 +73,8 @@ export function Footer() {
               </a>
             </Text>
           </div>
-          <Text className="max-[480px]:text-[9px]" fontFamily="typewriter">
-            © 2024 PARADIGM. ALL RIGHTS RESERVED.
-          </Text>
         </div>
       </div>
     </footer>
-  )
+  );
 }
