@@ -46,17 +46,13 @@ export function FaqsSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
       <div id="faqs" className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="tablet:grid tablet:grid-cols-[1fr_2fr] tablet:gap-x-12 mb-12 sm:mb-16">
-          <div className="tablet:col-start-2">
-            <SectionHeading
-              fontFamily="default"
-              className="!text-5xl sm:!text-6xl text-left"
-              weight="400"
-            >
-              Frequently <span className="italic">asked</span>
-            </SectionHeading>
-          </div>
-        </div>
+        <SectionHeading
+          fontFamily="default"
+          className="!text-5xl sm:!text-6xl text-left mb-12 sm:mb-16"
+          weight="400"
+        >
+          Our <span className="italic">frequently asked questions</span>
+        </SectionHeading>
 
         <div>
           {faqData.map((faq, index) => (

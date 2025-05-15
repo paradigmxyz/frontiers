@@ -131,18 +131,13 @@ export function AgendaSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
       <div id="agenda" className="max-w-[940px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title - aligned with the third column of the agenda items */}
-        <div className="tablet:grid tablet:grid-cols-[minmax(190px,auto)_120px_1fr] tablet:gap-x-6 mb-12 sm:mb-16">
-          <div className="tablet:col-start-3">
-            <SectionHeading
-              fontFamily="default" // Serif font
-              className="!text-6xl sm:!text-7xl text-left" // Ensure left alignment
-              weight="400" // Match other serif titles if needed
-            >
-              Our <span className="italic">agenda</span>
-            </SectionHeading>
-          </div>
-        </div>
+        <SectionHeading
+          fontFamily="default"
+          className="!text-6xl sm:!text-7xl text-left mb-12 sm:mb-16"
+          weight="400"
+        >
+          Our <span className="italic">agenda</span>
+        </SectionHeading>
 
         {/* Main agenda content area */}
         <div>

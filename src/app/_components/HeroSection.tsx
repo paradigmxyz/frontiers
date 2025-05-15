@@ -50,8 +50,18 @@ export function HeroSection() {
           </li>
           <li className="mb-2 sm:mb-0">
             <Text asChild fontFamily="typewriter" size="14">
+              <a href="#manifesto" className="hover:underline">
+                TO THE BUILDERS
+              </a>
+            </Text>
+          </li>
+          <li className="text-xl text-white font-typewriter hidden sm:block">
+            &middot;
+          </li>
+          <li className="mb-2 sm:mb-0">
+            <Text asChild fontFamily="typewriter" size="14">
               <a href="#agenda" className="hover:underline">
-                SCHEDULE
+                AGENDA
               </a>
             </Text>
           </li>

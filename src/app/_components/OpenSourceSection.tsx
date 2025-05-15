@@ -392,18 +392,11 @@ export function OpenSourceSection() {
       <div id="projects" className="max-w-[940px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           fontFamily="default"
-          className="!text-4xl sm:!text-6xl md:!text-7xl text-center mb-5 sm:mb-8 px-2"
+          className="!text-6xl sm:!text-7xl text-left mb-12 sm:mb-16"
           weight="400"
         >
-          Start hacking <span className="italic">today</span>
+          Our <span className="italic">open source software</span>
         </SectionHeading>
-        <Text
-          size="18"
-          fontFamily="default"
-          className="text-center text-white/70 mb-10 sm:mb-16 md:mb-20 mx-auto px-2"
-        >
-          Find our open source products & libraries below as you start building.
-        </Text>
 
         <div className="flex flex-row flex-wrap">
           {projects.slice(0, 8).map((project) => (
