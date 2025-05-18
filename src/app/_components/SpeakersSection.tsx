@@ -190,7 +190,7 @@ function SpeakerCard({
 export function SpeakersSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
-      <div id="speakers" className="max-w-[940px] max-mobile:max-w-[85vw] tablet:max-w-[70vw] mx-auto w-full">
+      <div id="speakers" className="max-w-[940px] max-mobile:max-w-[85vw] tablet:max-w-[70vw] mx-auto w-full px-4">
         <SectionHeading
           fontFamily="default"
           className="!text-6xl sm:!text-7xl text-center mb-12 sm:mb-16"
