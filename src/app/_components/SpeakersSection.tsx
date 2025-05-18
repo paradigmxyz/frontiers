@@ -58,6 +58,20 @@ const speakerData: SpeakerProfile[] = [
     twitterUrl: "https://twitter.com/awkweb",
     githubUrl: "https://github.com/awkweb",
   },
+  {
+    name: "George Niculae",
+    affiliation: "Ithaca",
+    imageSrc: "/images/george.png",
+    twitterUrl: "https://x.com/gndizzy",
+    githubUrl: "https://github.com/dizzy",
+  },
+  {
+    name: "Henri Stern",
+    affiliation: "Privy",
+    imageSrc: "/images/henri.png",
+    twitterUrl: "https://x.com/henri_stern",
+    githubUrl: "https://github.com/sternhenri",
+  },
 ];
 
 const XIcon = () => (
