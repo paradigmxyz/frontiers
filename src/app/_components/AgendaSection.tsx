@@ -53,9 +53,15 @@ const agendaData: AgendaDay[] = [
         description: "Receive your badges, stickers, and more.",
       },
       {
-        time: "9:00 sharp",
+        time: "9:00",
         title: "The Application Era by Georgios Konstantopoulos",
         description: "Paradigm, Ithaca",
+        detailsItalic: true,
+      },
+      {
+        time: "9:15",
+        title: "Privy × Porto by Henri Stern",
+        description: "Privy",
         detailsItalic: true,
       },
       {
