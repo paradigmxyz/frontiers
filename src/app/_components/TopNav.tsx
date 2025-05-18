@@ -39,9 +39,9 @@ export function TopNav() {
         <div className="relative px-[32px] max-mobile:px-[20px] h-[72px] max-mobile:h-[56px]">
           <div className="bg-black border border-white border-opacity-20 absolute left-0 top-0 right-0 bottom-0 rounded-[40px] z-0" />
           <div className="relative z-[1] flex items-center justify-between w-full h-full">
-            <div className="flex max-mobile:hidden">
+            <div className="flex hidden sm:flex">
               <Text
-                className="flex justify-center items-center max-mobile:text-[9px] max-[400px]:text-[12px]"
+                className="flex justify-center items-center text-[12px]"
                 size="12"
                 fontFamily="typewriter"
               >
@@ -49,13 +49,13 @@ export function TopNav() {
               </Text>
               <Image
                 alt="Paradigm Logo"
-                className="h-[60px] ml-[-8px] max-mobile:h-[32px] max-mobile:ml-[-30px] max-[400px]:h-[50px] max-[400px]:ml-[-16px]"
+                className="h-[60px] ml-[-8px]"
                 src="/images/paradigm-transparent.svg"
                 width="153"
                 height="60"
               />
             </div>
-            <div className="flex mobile:hidden">
+            <div className="flex sm:hidden">
               <Image
                 alt="Frontiers logo"
                 src="/images/frontiers.svg"
@@ -63,10 +63,10 @@ export function TopNav() {
                 height="25"
               />
             </div>
-            <div className="absolute left-[50%] -translate-x-1/2 max-mobile:hidden">
+            <div className="absolute left-[50%] -translate-x-1/2 hidden sm:block">
               <Text size="24">Frontiers</Text>
             </div>
-            <div className="-mr-[18px] max-mobile:hidden">
+            <div className="-mr-[18px] hidden sm:block">
               <WithCursor cursor="pulse-crosshair">
                 <Button asChild>
                   <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">
@@ -75,7 +75,7 @@ export function TopNav() {
                 </Button>
               </WithCursor>
             </div>
-            <Dialog.Trigger className="mobile:hidden">
+            <Dialog.Trigger className="sm:hidden">
               <svg
                 width="24"
                 height="24"

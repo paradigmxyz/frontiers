@@ -45,26 +45,25 @@ const faqData: FaqItem[] = [
 export function FaqsSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
-      <div id="faqs" className="max-w-[900px] mx-auto w-full">
-        <SectionHeading
-          fontFamily="default"
-          className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12"
-          weight="400"
-        >
-          Frequently asked
-        </SectionHeading>
-
+      <div id="faqs" className="max-w-[900px] md:max-w-[90vw] sm:max-w-[85vw] mx-auto w-full px-4">
         <div className="px-5 sm:px-8 lg:px-10">
+          <SectionHeading
+            fontFamily="default"
+            className="!text-6xl sm:!text-7xl text-left mb-4 md:mb-4 md:ml-[37%]"
+            weight="400"
+          >
+            Frequently<br /><span className="italic">asked</span>
+          </SectionHeading>
           {faqData.map((faq, index) => (
             <div
               key={index}
               className={clsx(
-                "py-8 tablet:py-10 tablet:grid tablet:grid-cols-[1fr_2fr] tablet:gap-x-14",
+                "py-8 md:py-10 md:grid md:grid-cols-[1fr_2fr] md:gap-x-14",
                 "border-b border-white/10" // Fainter border
               )}
             >
               {/* Question Column (Right-aligned on Tablet+) */}
-              <div className="mb-2 tablet:mb-0 tablet:text-right">
+              <div className="mb-2 md:mb-0 md:text-right">
                 <Text
                   asChild
                   fontFamily="default"

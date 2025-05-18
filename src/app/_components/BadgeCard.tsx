@@ -6,7 +6,7 @@ import { WithCursor } from "~/ui/WithCursor";
 
 export function BadgeCard() {
   return (
-    <div className="w-auto max-w-[350px] relative">
+    <div className="w-auto max-w-[350px] relative mt-12 lg:mt-0">
       <div className="relative">
         <Image
           src="/images/badge.svg"

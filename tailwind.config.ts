@@ -58,9 +58,11 @@ const config: Config = {
       'accordion-up': 'accordion-up 50ms cubic-bezier(0.77, 0, 0.175, 1)',
     },
     screens: {
-      mobile: '720px',
-      tablet: '1024px',
-      desktop: '1280px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
     },
   },
 }

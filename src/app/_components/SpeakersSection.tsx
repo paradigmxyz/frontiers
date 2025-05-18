@@ -110,17 +110,16 @@ function SpeakerCard({
       {/* Photo */}
       <div
         className={clsx(
-          "w-20 h-20 sm:w-40 sm:h-40 rounded-full overflow-hidden mr-4 sm:mr-0 sm:mb-8 flex-shrink-0 relative",
-          isPlaceholderImage &&
-          "bg-neutral-800 flex items-center justify-center"
+          "w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex-shrink-0 mr-5 flex items-center justify-center",
+          isPlaceholderImage && "bg-neutral-800"
         )}
       >
         <Image
           src={imageSrc}
           alt={name}
-          fill
-          sizes="(max-width: 640px) 5rem, 10rem"
-          className="object-cover"
+          width={96}
+          height={96}
+          className="object-cover w-full h-full aspect-square"
         />
         {isPlaceholderImage && (
           <Text size="11" fontFamily="typewriter" className="text-neutral-500">
@@ -130,22 +129,22 @@ function SpeakerCard({
       </div>
 
       {/* Content */}
-      <div className="flex flex-col justify-center sm:justify-start sm:mt-4">
+      <div className="flex flex-col justify-center">
         <Text
           asChild
-          size="24"
+          size="20"
           weight="400"
           fontFamily="default"
-          className="text-white mb-4 leading-tight sm:pr-16 sm:text-[32px]"
+          className="text-white mb-2 leading-tight text-[18px] sm:text-[24px]"
         >
           <h3>
             {name}
           </h3>
         </Text>
         <Text
-          size="12"
+          size="14"
           fontFamily="typewriter"
-          className="text-white/50 uppercase tracking-wider sm:text-[16px] pb-3"
+          className="text-white/50 mb-2 sm:mb-4 uppercase text-[12px] sm:text-[13px] tracking-normal"
         >
           {affiliation}
         </Text>
@@ -191,13 +190,13 @@ function SpeakerCard({
 export function SpeakersSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
-      <div id="speakers" className="max-w-[1140px] mx-auto w-full">
+      <div id="speakers" className="max-w-[940px] max-mobile:max-w-[85vw] tablet:max-w-[70vw] mx-auto w-full">
         <SectionHeading
           fontFamily="default"
-          className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12 sm:mb-16"
+          className="!text-6xl sm:!text-7xl text-center mb-12 sm:mb-16"
           weight="400"
         >
-          Our speakers
+          Our <span className="italic">speakers</span>
         </SectionHeading>
         <div className="grid grid-cols-1 sm:grid-cols-2 tablet:grid-cols-3 gap-5 sm:gap-12 mb-12 px-5 sm:px-8 lg:px-10">
           {speakerData.map((speaker) => (

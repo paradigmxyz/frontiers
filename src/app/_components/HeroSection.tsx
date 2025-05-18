@@ -66,7 +66,7 @@ export function HeroSection() {
     <div ref={ref} className="relative h-screen w-screen">
       {/* Hero Section Navigation */}
       <nav className="absolute top-0 left-0 w-full flex justify-center pt-8 sm:pt-10 md:pt-14 z-20">
-        <ul className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 md:gap-16 px-4 sm:px-6 md:px-10 py-1 sm:py-2 md:py-2">
+        <ul className="flex flex-wrap justify-center items-center gap-5 sm:gap-8 md:gap-10 px-4 sm:px-6 md:px-10 py-1 sm:py-2 md:py-2">
           <li className="flex items-center gap-2 opacity-60 mb-2 sm:mb-0">
             <Text fontFamily="typewriter" size="14">
               STREAM
@@ -160,9 +160,9 @@ export function HeroSection() {
             </div>
           </div>
           {/* Subtitle */}
-          <div className="-mt-2 mb-2">
+          <div className="-mt-2 mb-2 w-full flex justify-center">
             <Text
-              className="text-center text-gray-300 text-xl max-w-sm sm:max-w-none font-serif max-sm:text-base max-sm:leading-tight max-sm:px-2"
+              className="text-center text-gray-300 text-xl max-w-[600px] font-serif max-sm:leading-tight max-sm:px-2"
               asChild
               size="20"
             >
@@ -172,7 +172,7 @@ export function HeroSection() {
             </Text>
           </div>
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 mt-2 w-full px-4 max-w-[350px] max-sm:px-0">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 mt-2 w-full px-4 max-w-[400px] max-sm:px-0 items-center justify-center">
             <WithCursor cursor="pulse-crosshair">
               <Button
                 asChild
@@ -204,19 +204,20 @@ export function HeroSection() {
           </div>
           {/* Date and Location */}
           <div className="mt-6 sm:mt-8 w-full">
-            {/* Mobile version - with good wrapping */}
-            <div className="flex flex-col sm:flex-row items-center w-full gap-6">
+            <div className="flex flex-row items-center w-full gap-2 justify-center">
               <Text
                 fontFamily="typewriter"
-                className="text-[13px] tracking-wider text-white/80 text-center max-sm:leading-tight"
+                className="text-sm tracking-wider text-white/80 text-center max-sm:leading-tight"
               >
                 AUGUST 6-8, 2025
               </Text>
+              <span className="hidden sm:inline text-white/50 text-base mx-2">&middot;</span>
+              <span className="inline sm:hidden text-white/50 text-base mx-1">&bull;</span>
               <Text
                 fontFamily="typewriter"
-                className="text-[13px] tracking-wider text-white/80 text-center max-sm:leading-tight"
+                className="text-sm tracking-wider text-white/80 text-center max-sm:leading-tight"
               >
-                SAN FRANCISCO & ONLINE
+                SF & ONLINE
               </Text>
             </div>
           </div>

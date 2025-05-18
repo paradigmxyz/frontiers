@@ -130,13 +130,13 @@ const agendaData: AgendaDay[] = [
 export function AgendaSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
-      <div id="agenda" className="max-w-[940px] mx-auto w-full">
+      <div id="agenda" className="max-w-[940px] md:max-w-[90vw] sm:max-w-[85vw] mx-auto w-full px-4">
         <SectionHeading
           fontFamily="default"
-          className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12 sm:mb-16"
+          className="!text-6xl sm:!text-7xl text-left px-4 mb-12 sm:mb-16 md:ml-[39%]"
           weight="400"
         >
-          Agenda
+          Our <span className="italic">agenda</span>
         </SectionHeading>
 
         {/* Main agenda content area */}
@@ -145,14 +145,27 @@ export function AgendaSection() {
             <div key={agendaDay.day} className={clsx(dayIndex > 0 && "mt-0")}>
               {/* Mobile Day Header (shown only on mobile, before first event of day) */}
               {agendaDay.events.length > 0 && (
-                <div className="tablet:hidden flex items-center py-4 mb-2 border-b border-t border-white/10 bg-white/5 px-5 sm:px-8 lg:px-10">
-                  <Text
-                    fontFamily="typewriter"
-                    size="12"
-                    className="text-white"
-                  >
-                    {agendaDay.day.toUpperCase()}
-                  </Text>
+                <div>
+                  {/* Mobile divider */}
+                  <div className="md:hidden flex items-center py-4 mb-2 border-b border-t border-white/10 bg-white/5 px-5">
+                    <Text
+                      fontFamily="typewriter"
+                      size="12"
+                      className="text-white"
+                    >
+                      {agendaDay.day.toUpperCase()}
+                    </Text>
+                  </div>
+                  {/* Desktop divider */}
+                  <div className="hidden md:flex items-center py-4 mb-2 border-b border-t border-white/10 bg-white/5 px-8">
+                    <Text
+                      fontFamily="typewriter"
+                      size="12"
+                      className="text-white"
+                    >
+                      {agendaDay.day.toUpperCase()}
+                    </Text>
+                  </div>
                 </div>
               )}
 
@@ -161,22 +174,11 @@ export function AgendaSection() {
                 <div
                   key={event.title + event.time + eventIndex}
                   className={clsx(
-                    "py-6 tablet:py-10 tablet:grid tablet:grid-cols-[minmax(190px,auto)_120px_1fr] tablet:gap-x-8 px-5 sm:px-8 lg:px-10", // Increased padding
-                    "border-b border-white/10" // Fainter border
+                    "py-4 md:py-6 px-4 sm:px-8 lg:px-10 border-b border-white/10 md:grid md:grid-cols-[minmax(190px,auto)_120px_1fr] md:gap-x-8"
                   )}
                 >
                   {/* --- COLUMN 1: Day Name (Tablet+) --- */}
-                  <div className="hidden tablet:block pt-1 pr-8">
-                    {eventIndex === 0 && (
-                      <Text
-                        fontFamily="typewriter"
-                        size="12"
-                        className="text-white"
-                      >
-                        {agendaDay.day.toUpperCase()}
-                      </Text>
-                    )}
-                  </div>
+                  <div className="hidden md:block pt-1 pr-8" />
 
                   {/* --- COLUMN 2: Time --- */}
                   <div
@@ -207,12 +209,12 @@ export function AgendaSection() {
                     )}
                   >
                     <Text
-                      asChild={!event.isPlaceholder} // Use asChild only if not placeholder, to allow complex children
+                      asChild={!event.isPlaceholder}
                       fontFamily="default"
                       size={event.isPlaceholder ? "18" : "28"}
                       weight="400"
                       className={clsx(
-                        "text-white tablet:text-lg", // Larger text on mobile, reset on tablet+
+                        "text-white tablet:text-lg",
                         event.isPlaceholder && "italic opacity-75"
                       )}
                     >
@@ -225,7 +227,7 @@ export function AgendaSection() {
                             <>
                               <span
                                 className={clsx(
-                                  "tablet:ml-2 text-white/50 hidden tablet:inline", // Hide on mobile, show inline on tablet+
+                                  "tablet:ml-2 text-white/50 hidden tablet:inline",
                                   event.detailsItalic && "italic"
                                 )}
                               >
@@ -233,7 +235,7 @@ export function AgendaSection() {
                               </span>
                               <span
                                 className={clsx(
-                                  "block tablet:hidden text-white/50 text-base mt-2", // Show as block on mobile, hide on tablet+
+                                  "block tablet:hidden text-white/50 text-base mt-2",
                                   event.detailsItalic && "italic"
                                 )}
                               >

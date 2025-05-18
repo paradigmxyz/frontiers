@@ -20,13 +20,6 @@ export default function Home() {
       <SpeakersSection />
       <FaqsSection />
       <OpenSourceSection />
-      <div className="max-w-screen-mobile max-w-[940px] mx-auto">
-        <WithCursor cursor="pulse-crosshair">
-          <Button asChild frame className="w-auto mx-6" height="60">
-            <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">APPLY NOW</a>
-          </Button>
-        </WithCursor>
-      </div>
       <div className="h-[300px] max-mobile:h-[100px]" />
       <Footer />
     </div>

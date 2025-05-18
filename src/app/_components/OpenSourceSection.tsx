@@ -192,7 +192,7 @@ function ProjectCard({
                   "Loading..."
                 ) : (
                   <>
-                    <span className="text-white font-bold">{stars}</span> stars
+                    <span className="text-white">{stars}</span> stars
                   </>
                 )}
               </Text>
@@ -204,7 +204,7 @@ function ProjectCard({
                   "Loading..."
                 ) : (
                   <>
-                    <span className="text-white font-bold">{contributors}</span>{" "}
+                    <span className="text-white">{contributors}</span>{" "}
                     contributors
                   </>
                 )}
@@ -392,19 +392,19 @@ export function OpenSourceSection() {
   }, [fetchGitHubStatsWithCache]);
 
   return (
-    <Section className="py-12 sm:py-20 md:py-28 w-full bg-black">
-      <div id="projects" className="max-w-[940px] mx-auto w-full">
+    <Section className="pt-12 w-full bg-black">
+      <div id="projects" className="max-w-[940px] md:max-w-[90vw] sm:max-w-[85vw] mx-auto w-full px-4">
         <SectionHeading
           fontFamily="default"
-          className="!text-6xl sm:!text-7xl text-left pl-5 sm:pl-8 lg:pl-10 mb-12 sm:mb-16"
+          className="!text-6xl sm:!text-7xl text-center mb-12 sm:mb-16"
           weight="400"
         >
-          Our open source software
+          Open <span className="italic">source</span>
         </SectionHeading>
 
-        <div className="flex flex-row flex-wrap px-5 sm:px-8 lg:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 tablet:grid-cols-3 gap-5 sm:gap-12 mb-12 px-5 sm:px-8 lg:px-10">
           {projects.slice(0, 8).map((project) => (
-            <div key={project.name} className="w-1/2 p-4">
+            <div key={project.name}>
               <ProjectCard {...project} />
             </div>
           ))}

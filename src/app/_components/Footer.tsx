@@ -4,7 +4,7 @@ import { Text } from "~/ui/Text";
 
 function FooterLogo() {
   return (
-    <div className="flex items-center flex-col z-[1] mix-blend-exclusion px-4 sm:px-6 mb-8 sm:mb-6">
+    <div className="flex items-center flex-col z-[1] mix-blend-exclusion px-4 sm:px-6 mb-2 sm:mb-2">
       <div className="relative w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px]">
         <Image
           src="/images/logo-header.svg"
@@ -41,7 +41,7 @@ export function Footer() {
       />
 
       {/* Main Content - Logo and Description */}
-      <div className="absolute top-0 left-0 right-0 z-[2] pb-12">
+      <div className="absolute top-0 left-0 right-0 z-[2]">
         <div className="flex flex-col items-center px-4 sm:px-8">
           <FooterLogo />
         </div>
