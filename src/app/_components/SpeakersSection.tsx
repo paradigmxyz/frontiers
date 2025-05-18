@@ -132,25 +132,29 @@ function SpeakerCard({
       <div className="flex flex-col justify-center">
         <Text
           asChild
-          size="20"
+          size="24"
           weight="400"
           fontFamily="default"
-          className="text-white mb-2 leading-tight text-[18px] sm:text-[24px]"
+          className="text-white pb-1 leading-[1.1] text-[20px] sm:text-[26px]"
         >
           <h3>
-            {name}
+            <span className="block md:hidden">{name}</span>
+            <span className="hidden md:inline">{(() => {
+              const [first, ...rest] = name.split(' ');
+              return <>{first}<br />{rest.join(' ')}</>;
+            })()}</span>
           </h3>
         </Text>
         <Text
-          size="14"
+          size="12"
           fontFamily="typewriter"
-          className="text-white/50 mb-2 sm:mb-4 uppercase text-[12px] sm:text-[13px] tracking-normal"
+          className="text-white/50 my-1 sm:my-2 uppercase text-[11px] sm:text-[12px] tracking-normal"
         >
           {affiliation}
         </Text>
 
         {/* Social Links */}
-        <div className="flex flex-row h-full items-center gap-3 justify-start">
+        <div className="flex flex-row h-full items-center gap-2 justify-start mt-2">
           {twitterUrl && (
             <WithCursor cursor="external">
               <Link
@@ -160,7 +164,7 @@ function SpeakerCard({
                 aria-label={`${name} on X`}
                 className="block"
               >
-                <div className="h-5 w-5 opacity-50 group-hover:opacity-100 transition-opacity duration-200">
+                <div className="h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 opacity-50 group-hover:opacity-100 transition-opacity duration-200">
                   <XIcon />
                 </div>
               </Link>
@@ -175,7 +179,7 @@ function SpeakerCard({
                 aria-label={`${name} on GitHub`}
                 className="block"
               >
-                <div className="h-5 w-5 opacity-50 group-hover:opacity-100 transition-opacity duration-200">
+                <div className="h-4 w-4 sm:h-4 sm:w-4 md:h-4 md:w-4 opacity-50 group-hover:opacity-100 transition-opacity duration-200">
                   <GitHubIcon />
                 </div>
               </Link>
@@ -190,7 +194,7 @@ function SpeakerCard({
 export function SpeakersSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
-      <div id="speakers" className="max-w-[940px] max-mobile:max-w-[85vw] tablet:max-w-[70vw] mx-auto w-full px-4">
+      <div id="speakers" className="max-w-[940px] md:max-w-[1100px] lg:max-w-[900px] md:max-w-[90vw] mx-auto w-full px-4">
         <SectionHeading
           fontFamily="default"
           className="!text-6xl sm:!text-7xl text-center mb-12 sm:mb-16"
@@ -198,7 +202,7 @@ export function SpeakersSection() {
         >
           Our <span className="italic">speakers</span>
         </SectionHeading>
-        <div className="grid grid-cols-1 sm:grid-cols-2 tablet:grid-cols-3 gap-5 sm:gap-12 mb-12 px-5 sm:px-8 lg:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-12 mb-12 px-5 sm:px-8 lg:px-10">
           {speakerData.map((speaker) => (
             <SpeakerCard key={speaker.name} {...speaker} />
           ))}
