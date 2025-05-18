@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "~/ui/Button";
 
 import { Text } from "~/ui/Text";
 
 function FooterLogo() {
   return (
-    <div className="flex items-center flex-col z-[1] mix-blend-exclusion px-4 sm:px-6 mb-2 sm:mb-2">
+    <div className="flex items-center flex-col z-[1] mix-blend-exclusion px-4 sm:px-6 mb-0 sm:mb-0 mt-0">
       <div className="relative w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px]">
         <Image
           src="/images/logo-header.svg"
@@ -14,6 +16,11 @@ function FooterLogo() {
           priority
           className="w-full h-auto"
         />
+      </div>
+      <div className="mt-4">
+        <Button asChild frame color="paradigmGreen" className="w-full min-w-[180px] px-6 text-base" height="50">
+          <Link href="https://7dr10b0z31d.typeform.com/Frontiers2025">APPLY NOW</Link>
+        </Button>
       </div>
     </div>
   );
