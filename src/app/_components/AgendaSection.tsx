@@ -59,21 +59,21 @@ const agendaData: AgendaDay[] = [
         detailsItalic: true,
       },
       {
-        time: "9:15",
+        time: "9:30",
         title: "Leveraging protocols to transform UX by Henri Stern",
         description: "Privy",
-        detailsItalic: true,
-      },
-      {
-        time: "9:30",
-        title: "Porto by Tom Meagher",
-        description: "Paradigm, Ithaca",
         detailsItalic: true,
       },
       {
         time: "10:00",
         title: "Building a viral consumer app by Sofiane Larbi",
         description: "Paradigm",
+        detailsItalic: true,
+      },
+      {
+        time: "10:30",
+        title: "Porto by Tom Meagher",
+        description: "Paradigm, Ithaca",
         detailsItalic: true,
       },
       {
