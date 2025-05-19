@@ -53,10 +53,10 @@ export function ToOurBuildersSection() {
               </Text>
             </div>
 
-            <div className="flex flex-row max-mobile:flex-col gap-6 mt-6 w-full max-mobile:mt-4 max-mobile:gap-6">
+            <div className="flex flex-row max-mobile:flex-col gap-8 mt-6 w-full max-mobile:mt-4 max-mobile:gap-6">
               {features.map((feature) => (
                 <div
-                  className="flex flex-col items-start text-left gap-2 mr-10"
+                  className="flex flex-row max-mobile:flex-col items-start text-left gap-3 mr-8"
                   key={feature.name}
                 >
                   <div className="size-[40px]">
@@ -66,7 +66,7 @@ export function ToOurBuildersSection() {
                     size="12"
                     fontFamily="typewriter"
                     className={clsx(
-                      "text-wrap",
+                      "text-wrap mt-0 max-mobile:mt-2",
                       feature.color === "paradigmGreen" && "text-paradigmGreen",
                       feature.color === "violet" && "text-[#F429D5]"
                     )}
