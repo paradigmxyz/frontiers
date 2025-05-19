@@ -9,44 +9,44 @@ import { BadgeCard } from "./BadgeCard";
 
 export function ToOurBuildersSection() {
   return (
-    <Section className="flex flex-col pb-12 max-mobile:pb-16 pt-0 mt-0 w-full mx-auto">
-      <div className="max-w-[940px] md:max-w-[90vw] sm:max-w-[85vw] mx-auto w-full px-4">
+    <Section className="flex flex-col pb-12 max-mobile:pb-16 pt-0 mt-0 w-full mx-auto overflow-x-hidden">
+      <div className="w-full max-w-[940px] md:max-w-[90vw] sm:max-w-[85vw] mx-auto px-4 max-mobile:px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16 max-w-[1200px] mx-auto">
           {/* Left Column: Crypto is in its application era */}
-          <div className="flex-1 flex flex-col gap-8 px-4">
+          <div className="flex-1 flex flex-col gap-8 w-full">
             <div className="flex flex-col gap-[32px] max-mobile:gap-[28px] max-mobile:mt-2">
               <SectionHeading
                 id="to-our-builders"
                 fontFamily="default"
-                className="!text-6xl sm:!text-7xl text-left mb-4 md:mb-4"
+                className="!text-6xl sm:!text-7xl text-left mb-4 md:mb-4 max-mobile:!text-5xl"
                 weight="400"
               >
                 To our <span className="italic">builders</span>
               </SectionHeading>
-              <Text asChild size={"18"}>
+              <Text asChild size={"18"} className="max-mobile:text-[16px]">
                 <p>
                   The (crypto) world is changing faster than we can comprehend.
                 </p>
               </Text>
-              <Text asChild size={"18"}>
+              <Text asChild size={"18"} className="max-mobile:text-[16px]">
                 <p>
                   Crypto enables small teams to have outsized impact through open source, shared financial infrastructure. Stablecoins have
                   become the first mainstream crypto use case, and AI is multiplying developer productivity. Acceleration is the new normal.
                 </p>
               </Text>
-              <Text asChild size={"18"}>
+              <Text asChild size={"18"} className="max-mobile:text-[16px]">
                 <p>
                   Frontiers is our intense two-day conference & hackathon, where developers learn and build the next generation of crypto applications and infrastructure.
                   Our team will be on-site to meet, and advise builders on their projects.
                 </p>
               </Text>
-              <Text asChild size={"18"}>
+              <Text asChild size={"18"} className="max-mobile:text-[16px]">
                 <p>
                   At Paradigm, we believe the best way to understand and shape this future is to build it in the trenches
                   with the developer community, and we have been doing just that for the past six years with our wide suite of <a href="#projects" className="underline">open source software</a> and <a href="https://www.paradigm.xyz/writing?page=1&s=0&sort=newest&tags=research" className="underline">research</a>.
                 </p>
               </Text>
-              <Text asChild size={"18"}>
+              <Text asChild size={"18"} className="max-mobile:text-[16px]">
                 <p>
                   Looking forward to seeing you, at the frontier.
                 </p>
@@ -56,17 +56,17 @@ export function ToOurBuildersSection() {
             <div className="flex flex-row max-mobile:flex-col gap-6 mt-4 w-full max-mobile:mt-2">
               {features.map((feature) => (
                 <div
-                  className="flex flex-row gap-4 items-center flex-1"
+                  className="flex flex-row gap-4 items-center flex-1 max-mobile:gap-3"
                   key={feature.name}
                 >
-                  <div className="size-[40px] flex-shrink-0">
+                  <div className="size-[40px] flex-shrink-0 max-mobile:size-[32px]">
                     {feature.content}
                   </div>
                   <Text
                     size="12"
                     fontFamily="typewriter"
                     className={clsx(
-                      "w-full",
+                      "w-full text-wrap max-mobile:text-[11px]",
                       feature.color === "paradigmGreen" && "text-paradigmGreen",
                       feature.color === "violet" && "text-[#F429D5]"
                     )}

@@ -55,7 +55,7 @@ export function Footer() {
       </div>
 
       {/* Footer Links & Copyright */}
-      <div className="absolute bottom-4 left-0 right-0 z-[2]">
+      <div className="absolute bottom-4 left-0 mb-8 right-0 z-[2]">
         <div className="flex flex-col items-center gap-2">
           <div className="flex items-center gap-4 max-[480px]:gap-2">
             <Text
@@ -64,7 +64,7 @@ export function Footer() {
               fontFamily="typewriter"
             >
               <a href="https://www.paradigm.xyz/privacy-policy">
-                PRIVACY POLICY
+                PRIVACY
               </a>
             </Text>
             <Text fontFamily="typewriter" className="text-white/50">
@@ -76,7 +76,7 @@ export function Footer() {
               fontFamily="typewriter"
             >
               <a href="https://www.paradigm.xyz/website-terms-of-use">
-                EVENT TERMS & CONDITIONS
+                TERMS & CONDITIONS
               </a>
             </Text>
           </div>

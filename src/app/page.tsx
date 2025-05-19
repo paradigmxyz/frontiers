@@ -20,7 +20,7 @@ export default function Home() {
       <SpeakersSection />
       <FaqsSection />
       <OpenSourceSection />
-      <div className="h-[300px] max-mobile:h-[100px]" />
+      <div className="h-[100px] max-mobile:h-[100px]" />
       <Footer />
     </div>
   );
