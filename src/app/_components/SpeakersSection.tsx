@@ -204,7 +204,9 @@ export function SpeakersSection() {
         </SectionHeading>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-12 mb-12 px-5 sm:px-8 lg:px-10">
           {speakerData.map((speaker) => (
-            <SpeakerCard key={speaker.name} {...speaker} />
+            <WithCursor key={speaker.name} cursor="box">
+              <SpeakerCard {...speaker} />
+            </WithCursor>
           ))}
         </div>
         <div className="flex items-center justify-center mt-12 px-5 sm:px-8 lg:px-10">

@@ -153,10 +153,10 @@ export function AgendaSection() {
               {agendaDay.events.length > 0 && (
                 <div>
                   {/* Mobile divider */}
-                  <div className="md:hidden flex items-center py-4 mb-2 border-b border-t border-white/10 bg-white/5 px-5">
+                  <div className="md:hidden flex items-center py-5 mb-2 border-b border-t border-white/10 bg-white/5 px-5">
                     <Text
                       fontFamily="typewriter"
-                      size="12"
+                      size="14"
                       className="text-white"
                     >
                       {agendaDay.day.toUpperCase()}
@@ -180,7 +180,8 @@ export function AgendaSection() {
                 <div
                   key={event.title + event.time + eventIndex}
                   className={clsx(
-                    "py-4 md:py-6 px-4 sm:px-8 lg:px-10 border-b border-white/10 md:grid md:grid-cols-[minmax(190px,auto)_120px_1fr] md:gap-x-8"
+                    "py-5 md:py-6 px-4 sm:px-8 lg:px-10 border-b border-white/10 md:grid md:grid-cols-[minmax(190px,auto)_120px_1fr] md:gap-x-8",
+                    event.isPlaceholder ? "flex flex-col justify-center py-8" : "mb-1"
                   )}
                 >
                   {/* --- COLUMN 1: Day Name (Tablet+) --- */}
@@ -189,13 +190,13 @@ export function AgendaSection() {
                   {/* --- COLUMN 2: Time --- */}
                   <div
                     className={clsx(
-                      "mb-4 tablet:mb-0 tablet:pt-1 tablet:pr-6 whitespace-nowrap", // Increased mobile bottom margin
+                      "mb-3 tablet:mb-0 tablet:pt-1 tablet:pr-6 whitespace-nowrap",
                       event.isPlaceholder && "tablet:invisible"
                     )}
                   >
                     <Text
                       fontFamily="typewriter"
-                      size="12"
+                      size="14"
                       className={clsx(
                         "text-white",
                         event.isPlaceholder &&
@@ -211,13 +212,14 @@ export function AgendaSection() {
                   <div
                     className={clsx(
                       "tablet:pt-1",
-                      event.isPlaceholder && "tablet:text-left"
+                      event.isPlaceholder && "tablet:text-left",
+                      !event.isPlaceholder && "flex flex-col"
                     )}
                   >
                     <Text
                       asChild={!event.isPlaceholder}
                       fontFamily="default"
-                      size={event.isPlaceholder ? "18" : "28"}
+                      size={event.isPlaceholder ? "18" : "24"}
                       weight="400"
                       className={clsx(
                         "text-white tablet:text-lg",
@@ -227,7 +229,7 @@ export function AgendaSection() {
                       {event.isPlaceholder ? (
                         event.title
                       ) : (
-                        <p>
+                        <p className="mb-0">
                           <span className="font-medium">{event.title}</span>
                           {event.description && (
                             <>
@@ -239,19 +241,23 @@ export function AgendaSection() {
                               >
                                 {event.description}
                               </span>
-                              <span
-                                className={clsx(
-                                  "block tablet:hidden text-white/50 text-base mt-2",
-                                  event.detailsItalic && "italic"
-                                )}
-                              >
-                                {event.description}
-                              </span>
                             </>
                           )}
                         </p>
                       )}
                     </Text>
+                    {!event.isPlaceholder && event.description && (
+                      <Text
+                        fontFamily="default"
+                        size="16"
+                        className={clsx(
+                          "tablet:hidden text-white/50 mt-3",
+                          event.detailsItalic && "italic"
+                        )}
+                      >
+                        {event.description}
+                      </Text>
+                    )}
                   </div>
                 </div>
               ))}

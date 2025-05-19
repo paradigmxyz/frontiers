@@ -53,20 +53,20 @@ export function ToOurBuildersSection() {
               </Text>
             </div>
 
-            <div className="flex flex-row max-mobile:flex-col gap-6 mt-4 w-full max-mobile:mt-2">
+            <div className="flex flex-row max-mobile:flex-col gap-6 mt-6 w-full max-mobile:mt-4 max-mobile:gap-6">
               {features.map((feature) => (
                 <div
-                  className="flex flex-row gap-4 items-center flex-1 max-mobile:gap-3"
+                  className="flex flex-col items-start text-left gap-2 mr-10"
                   key={feature.name}
                 >
-                  <div className="size-[40px] flex-shrink-0 max-mobile:size-[32px]">
+                  <div className="size-[40px]">
                     {feature.content}
                   </div>
                   <Text
                     size="12"
                     fontFamily="typewriter"
                     className={clsx(
-                      "w-full text-wrap max-mobile:text-[11px]",
+                      "text-wrap",
                       feature.color === "paradigmGreen" && "text-paradigmGreen",
                       feature.color === "violet" && "text-[#F429D5]"
                     )}
@@ -87,7 +87,7 @@ export function ToOurBuildersSection() {
 
 const features = [
   {
-    name: "Open Source Updates",
+    name: "OSS Updates",
     color: "paradigmGreen",
     content: (
       <svg
@@ -166,7 +166,7 @@ const features = [
     ),
   },
   {
-    name: "Cutting Edge Applications",
+    name: "Cutting Edge Apps",
     color: "",
     content: (
       <svg

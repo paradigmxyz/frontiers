@@ -66,60 +66,60 @@ export function HeroSection() {
     <div ref={ref} className="relative h-screen w-screen">
       {/* Hero Section Navigation */}
       <nav className="absolute top-0 left-0 w-full flex justify-center pt-8 sm:pt-10 md:pt-14 z-20">
-        <ul className="flex flex-wrap justify-center items-center gap-5 sm:gap-8 md:gap-10 px-4 sm:px-6 md:px-10 py-1 sm:py-2 md:py-2">
+        <ul className="flex flex-wrap justify-center items-center gap-5 sm:gap-4 md:gap-6 px-4 sm:px-3 md:px-10 py-1 sm:py-2 md:py-2">
           <li className="flex items-center gap-2 opacity-60 mb-2 sm:mb-0">
-            <Text fontFamily="typewriter" size="14">
+            <Text fontFamily="typewriter" size="14" className="sm:text-[13px] md:text-[14px]">
               STREAM
             </Text>
             <span className="bg-[#444] text-white text-xs px-2 py-0.5 rounded font-typewriter">
               SOON
             </span>
           </li>
-          <li className="text-xl text-white font-typewriter hidden sm:block">
+          <li className="text-xl sm:text-base md:text-xl text-white font-typewriter hidden sm:block">
             &middot;
           </li>
           <li className="mb-2 sm:mb-0">
-            <Text asChild fontFamily="typewriter" size="14">
+            <Text asChild fontFamily="typewriter" size="14" className="sm:text-[13px] md:text-[14px]">
               <a href="#to-our-builders" className="hover:underline">
                 ABOUT
               </a>
             </Text>
           </li>
-          <li className="text-xl text-white font-typewriter hidden sm:block">
+          <li className="text-xl sm:text-base md:text-xl text-white font-typewriter hidden sm:block">
             &middot;
           </li>
           <li className="mb-2 sm:mb-0">
-            <Text asChild fontFamily="typewriter" size="14">
+            <Text asChild fontFamily="typewriter" size="14" className="sm:text-[13px] md:text-[14px]">
               <a href="#agenda" className="hover:underline">
                 AGENDA
               </a>
             </Text>
           </li>
-          <li className="text-xl text-white font-typewriter hidden sm:block">
+          <li className="text-xl sm:text-base md:text-xl text-white font-typewriter hidden sm:block">
             &middot;
           </li>
           <li className="mb-2 sm:mb-0">
-            <Text asChild fontFamily="typewriter" size="14">
+            <Text asChild fontFamily="typewriter" size="14" className="sm:text-[13px] md:text-[14px]">
               <a href="#speakers" className="hover:underline">
                 SPEAKERS
               </a>
             </Text>
           </li>
-          <li className="text-xl text-white font-typewriter hidden sm:block">
+          <li className="text-xl sm:text-base md:text-xl text-white font-typewriter hidden sm:block">
             &middot;
           </li>
           <li className="mb-2 sm:mb-0">
-            <Text asChild fontFamily="typewriter" size="14">
+            <Text asChild fontFamily="typewriter" size="14" className="sm:text-[13px] md:text-[14px]">
               <a href="#faqs" className="hover:underline">
                 FAQ
               </a>
             </Text>
           </li>
-          <li className="text-xl text-white font-typewriter hidden sm:block">
+          <li className="text-xl sm:text-base md:text-xl text-white font-typewriter hidden sm:block">
             &middot;
           </li>
           <li className="mb-2 sm:mb-0">
-            <Text asChild fontFamily="typewriter" size="14">
+            <Text asChild fontFamily="typewriter" size="14" className="sm:text-[13px] md:text-[14px]">
               <a href="#projects" className="hover:underline">
                 OSS
               </a>
