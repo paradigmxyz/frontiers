@@ -54,13 +54,13 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "9:00",
-        title: "The Application Era by Georgios Konstantopoulos",
+        title: "The application era by Georgios Konstantopoulos",
         description: "Paradigm, Ithaca",
         detailsItalic: true,
       },
       {
         time: "9:15",
-        title: "Leveraging Protocols to transform UX by Henri Stern",
+        title: "Leveraging protocols to transform UX by Henri Stern",
         description: "Privy",
         detailsItalic: true,
       },
@@ -93,7 +93,7 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "9:00",
-        title: "The Future of Reth by Matthias Seitz",
+        title: "The future of Reth by Matthias Seitz",
         description: "Paradigm, Ithaca",
         detailsItalic: true,
       },
@@ -105,7 +105,7 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "10:00",
-        title: "Open Source Data by Storm Slivkoff",
+        title: "Sovereign data singularity by Storm Slivkoff",
         description: "Paradigm",
         detailsItalic: true,
       },
