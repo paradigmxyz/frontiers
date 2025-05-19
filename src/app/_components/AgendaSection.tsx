@@ -60,7 +60,7 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "9:15",
-        title: "Privy × Porto by Henri Stern",
+        title: "Leveraging Protocols to transform UX by Henri Stern",
         description: "Privy",
         detailsItalic: true,
       },
