@@ -10,8 +10,8 @@ import { BadgeCard } from "./BadgeCard";
 export function ToOurBuildersSection() {
   return (
     <Section className="flex flex-col pb-12 max-mobile:pb-16 pt-0 mt-0 w-full mx-auto overflow-x-hidden">
-      <div className="w-full max-w-[940px] md:max-w-[90vw] sm:max-w-[85vw] mx-auto px-4 max-mobile:px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-16 max-w-[1200px] mx-auto">
+      <div className="w-full max-w-[940px] md:max-w-[90vw] sm:max-w-[85vw] mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center gap-16 max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-10">
           {/* Left Column: Crypto is in its application era */}
           <div className="flex-1 flex flex-col gap-8 w-full">
             <div className="flex flex-col gap-[32px] max-mobile:gap-[28px] max-mobile:mt-2">
@@ -53,10 +53,10 @@ export function ToOurBuildersSection() {
               </Text>
             </div>
 
-            <div className="flex flex-row gap-8 mt-6 w-full max-sm:mt-4 max-sm:gap-6">
+            <div className="flex flex-row gap-8 mt-6 w-full max-sm:mt-4 max-sm:gap-6 max-sm:justify-center">
               {features.map((feature) => (
                 <div
-                  className="flex flex-row max-sm:flex-col items-center text-left gap-3 mr-8"
+                  className="flex flex-row max-sm:flex-col items-center text-left max-sm:items-center max-sm:text-center gap-3 mr-8 max-sm:mr-0"
                   key={feature.name}
                 >
                   <div className="size-[40px] flex-shrink-0">
@@ -66,7 +66,7 @@ export function ToOurBuildersSection() {
                     size="12"
                     fontFamily="typewriter"
                     className={clsx(
-                      "text-wrap mt-1 max-mobile:mt-2 flex items-center text-center sm:text-left",
+                      "text-wrap mt-1 max-mobile:mt-2 flex items-center",
                       feature.color === "paradigmGreen" && "text-paradigmGreen",
                       feature.color === "violet" && "text-[#F429D5]"
                     )}

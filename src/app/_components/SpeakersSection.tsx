@@ -135,7 +135,7 @@ function SpeakerCard({
           size="24"
           weight="400"
           fontFamily="default"
-          className="text-white pb-1 leading-[1.1] text-[20px] sm:text-[26px]"
+          className="text-white pb-3 leading-[1.1] text-[20px] sm:text-[26px]"
         >
           <h3>
             <span className="block md:hidden">{name}</span>
@@ -148,7 +148,7 @@ function SpeakerCard({
         <Text
           size="12"
           fontFamily="typewriter"
-          className="text-white/50 my-1 sm:my-2 uppercase text-[11px] sm:text-[12px] tracking-normal"
+          className="text-white/50 pt-1 pb-2 uppercase text-[11px] sm:text-[12px] tracking-normal"
         >
           {affiliation}
         </Text>
