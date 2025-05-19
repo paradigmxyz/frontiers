@@ -99,7 +99,7 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "9:30",
-        title: "Foundry & Alloy 1.0",
+        title: "Foundry & Alloy 1.0 by George Niculae",
         description: "Ithaca",
         detailsItalic: true,
       },
