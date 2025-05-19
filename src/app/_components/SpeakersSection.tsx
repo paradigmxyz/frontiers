@@ -18,7 +18,7 @@ interface SpeakerProfile {
 const speakerData: SpeakerProfile[] = [
   {
     name: "Georgios Konstantopoulos",
-    affiliation: "Paradigm & Ithaca",
+    affiliation: "Paradigm, Ithaca",
     imageSrc: "/images/gk.png",
     twitterUrl: "https://twitter.com/gakonst",
     githubUrl: "https://github.com/gakonst",
@@ -32,7 +32,7 @@ const speakerData: SpeakerProfile[] = [
   },
   {
     name: "Matthias Seitz",
-    affiliation: "Paradigm & Ithaca",
+    affiliation: "Paradigm, Ithaca",
     imageSrc: "/images/matt.png",
     twitterUrl: "https://twitter.com/mattsse_",
     githubUrl: "https://github.com/mattsse",
@@ -53,7 +53,7 @@ const speakerData: SpeakerProfile[] = [
   },
   {
     name: "Tom Meagher",
-    affiliation: "Paradigm & Ithaca",
+    affiliation: "Wevm, Paradigm, Ithaca",
     imageSrc: "/images/tom.png",
     twitterUrl: "https://twitter.com/awkweb",
     githubUrl: "https://github.com/awkweb",
