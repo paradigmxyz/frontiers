@@ -45,7 +45,7 @@ export function HeroSection() {
         const targetElement = document.querySelector(href);
         if (targetElement) {
           const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-          const offset = window.innerHeight * 0.3; // 30% of viewport height
+          const offset = window.innerHeight * 0.2; // 20% of viewport height
           window.scrollTo({
             top: targetPosition - offset,
             behavior: 'smooth'
