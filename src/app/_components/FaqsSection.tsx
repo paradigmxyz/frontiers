@@ -45,7 +45,7 @@ const faqData: FaqItem[] = [
 export function FaqsSection() {
   return (
     <Section className="py-20 sm:py-28 w-full bg-black">
-      <div id="faqs" className="max-w-[900px] mx-auto w-full">
+      <div id="faqs" className="max-w-[900px] mx-auto w-full px-4">
         {/* Title container with the same grid structure as FAQ items */}
         <div className="px-5 sm:px-8 lg:px-10">
           <div className="tablet:grid tablet:grid-cols-[1fr_2fr] tablet:gap-x-14 mb-6">
