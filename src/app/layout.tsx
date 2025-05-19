@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "Paradigm's annual open source conference and hackathon, bringing together developers, researchers, and enthusiasts to explore and build at the cutting edge of crypto.",
       images: [
         {
-          url: `${url}/images/og-image.png`,
+          url: `${url}/images/og.png`,
           width: 1200,
           height: 630,
         },
