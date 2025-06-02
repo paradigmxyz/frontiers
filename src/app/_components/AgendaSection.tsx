@@ -99,14 +99,32 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "9:30",
+        title: "Ethereum Acceleration with Reth by Roman Krasiuk",
+        description: "Paradigm, Ithaca",
+        detailsItalic: true,
+      },
+      {
+        time: "10:00",
         title: "Foundry & Alloy 1.0 by George Niculae",
         description: "Ithaca",
         detailsItalic: true,
       },
       {
-        time: "10:00",
+        time: "10:30",
         title: "Sovereign data singularity by Storm Slivkoff",
         description: "Paradigm",
+        detailsItalic: true,
+      },
+      {
+        time: "11:00",
+        title: "Priority Blockspace for Humans with Reth SDK by 0xKitsune",
+        description: "World",
+        detailsItalic: true,
+      },
+      {
+        time: "11:30",
+        title: "Real-time proving Ethereum with SP1 & Reth by John Guibas",
+        description: "Succinct",
         detailsItalic: true,
       },
       {

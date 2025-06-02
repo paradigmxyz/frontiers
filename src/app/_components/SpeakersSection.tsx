@@ -72,6 +72,27 @@ const speakerData: SpeakerProfile[] = [
     twitterUrl: "https://x.com/henri_stern",
     githubUrl: "https://github.com/sternhenri",
   },
+  {
+    name: "Roman Krasiuk",
+    affiliation: "Paradigm, Ithaca",
+    imageSrc: "/images/roman.png",
+    twitterUrl: "https://x.com/r_krasiuk",
+    githubUrl: "https://github.com/rkrasiuk",
+  },
+  {
+    name: "0xKitsune",
+    affiliation: "World",
+    imageSrc: "/images/kitsune.png",
+    twitterUrl: "https://x.com/0xKitsune",
+    githubUrl: "https://github.com/0xKitsune",
+  },
+  {
+    name: "John Guibas",
+    affiliation: "Succinct",
+    imageSrc: "/images/jtguibas.png",
+    twitterUrl: "https://x.com/jtguibas",
+    githubUrl: "https://github.com/jtguibas",
+  },
 ];
 
 const XIcon = () => (
