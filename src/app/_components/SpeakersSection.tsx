@@ -52,11 +52,11 @@ const speakerData: SpeakerProfile[] = [
     githubUrl: "https://github.com/sofianel5",
   },
   {
-    name: "Tom Meagher",
+    name: "awkweb",
     affiliation: "Wevm, Paradigm, Ithaca",
-    imageSrc: "/images/tom.png",
+    imageSrc: "/images/awkweb.png",
     twitterUrl: "https://twitter.com/awkweb",
-    githubUrl: "https://github.com/awkweb",
+    githubUrl: "https://github.com/tmm",
   },
   {
     name: "George Niculae",
