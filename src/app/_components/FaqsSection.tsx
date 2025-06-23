@@ -33,7 +33,7 @@ const faqData: FaqItem[] = [
   {
     question: "Who can I contact with questions?",
     answer:
-      "For any further questions, please feel free to reach out to our events team at events@paradigm.xyz.",
+      "For any further questions, please feel free to reach out to our events team at frontiers@paradigm.xyz.",
   },
   {
     question: "Can I sponsor this event?",
