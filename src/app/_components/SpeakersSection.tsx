@@ -93,6 +93,34 @@ const speakerData: SpeakerProfile[] = [
     twitterUrl: "https://x.com/jtguibas",
     githubUrl: "https://github.com/jtguibas",
   },
+  {
+    name: "Brian Bland",
+    affiliation: "Base",
+    imageSrc: "/images/brianbland.png",
+    twitterUrl: "https://x.com/brianisbland",
+    githubUrl: "https://github.com/BrianBland",
+  },
+  {
+    name: "Ansgar Dietrichs",
+    affiliation: "Ethereum Foundation",
+    imageSrc: "/images/ansgar.png",
+    twitterUrl: "https://x.com/adietrichs",
+    githubUrl: "https://github.com/adietrichs",
+  },
+  {
+    name: "Alexey Shekhirin",
+    affiliation: "Paradigm, Ithaca",
+    imageSrc: "/images/shekhirin.png",
+    twitterUrl: "https://x.com/ashekhirin",
+    githubUrl: "https://github.com/shekhirin",
+  },
+  {
+    name: "Dan Cline",
+    affiliation: "Paradigm, Ithaca",
+    imageSrc: "/images/rjected.png",
+    twitterUrl: "https://x.com/rjected",
+    githubUrl: "https://github.com/rjected",
+  },
 ];
 
 const XIcon = () => (
