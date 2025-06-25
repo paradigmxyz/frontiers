@@ -146,6 +146,24 @@ const agendaData: AgendaDay[] = [
         detailsItalic: true,
       },
       {
+        time: "13:00",
+        title: "RaptorCast: A High Performance BFT networking protocol by X",
+        description: "Category Labs",
+        detailsItalic: true,
+      },
+      {
+        time: "13:30",
+        title: "Minimmit: Fast Finality with Even Faster Blocks by Brendan Chou",
+        description: "Commonware",
+        detailsItalic: true,
+      },
+      {
+        time: "14:00",
+        title: "Malachite: A Fast and flexible BFT consensus engine by Adi Seredinschi",
+        description: "Informal Systems",
+        detailsItalic: true,
+      },
+      {
         time: "",
         title: "More talks to be announced soon.",
         isPlaceholder: true,

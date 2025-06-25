@@ -121,6 +121,20 @@ const speakerData: SpeakerProfile[] = [
     twitterUrl: "https://x.com/rjected",
     githubUrl: "https://github.com/rjected",
   },
+  {
+    name: "Brendan Chou",
+    affiliation: "Commonware",
+    imageSrc: "/images/placeholder.png",
+    twitterUrl: "https://x.com/B_Chou",
+    githubUrl: "https://github.com/BrendanChou",
+  },
+  {
+    name: "Adi Seredinschi",
+    affiliation: "Informal Systems",
+    imageSrc: "/images/placeholder.png",
+    twitterUrl: "https://x.com/AdiSeredinschi",
+    githubUrl: "https://github.com/adizere",
+  },
 ];
 
 const XIcon = () => (
