@@ -124,14 +124,14 @@ const speakerData: SpeakerProfile[] = [
   {
     name: "Brendan Chou",
     affiliation: "Commonware",
-    imageSrc: "/images/placeholder.png",
+    imageSrc: "/images/brendanchou.png",
     twitterUrl: "https://x.com/B_Chou",
     githubUrl: "https://github.com/BrendanChou",
   },
   {
     name: "Adi Seredinschi",
     affiliation: "Informal Systems",
-    imageSrc: "/images/placeholder.png",
+    imageSrc: "/images/adiseredinschi.png",
     twitterUrl: "https://x.com/AdiSeredinschi",
     githubUrl: "https://github.com/adizere",
   },
