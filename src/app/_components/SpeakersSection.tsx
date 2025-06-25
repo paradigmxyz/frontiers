@@ -122,6 +122,13 @@ const speakerData: SpeakerProfile[] = [
     githubUrl: "https://github.com/rjected",
   },
   {
+    name: "Michael Chen",
+    affiliation: "Category Labs",
+    imageSrc: "/images/michaelchen.png",
+    twitterUrl: "https://x.com/michaelyychen",
+    githubUrl: "https://github.com/michaelyychen",
+  },
+  {
     name: "Brendan Chou",
     affiliation: "Commonware",
     imageSrc: "/images/brendanchou.png",
