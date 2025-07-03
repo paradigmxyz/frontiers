@@ -28,12 +28,12 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "18:30",
-        title: "Opening Keynote by Tomasz K. Stańczak",
-        description: "Ethereum Foundation",
+        title: "Fireside chat with Tomasz K. Stańczak and Georgios Konstantopoulos",
+        description: "Ethereum Foundation & Paradigm",
         detailsItalic: true,
       },
       {
-        time: "19:00 - 22:00",
+        time: "19:00 - 21:00",
         title: "Evening socializing.",
         description: "Code, snacks, beverages, and music.",
       },
@@ -94,9 +94,9 @@ const agendaData: AgendaDay[] = [
         description: "Enjoy lunch and networking.",
       },
       {
-        time: "",
-        title: "More talks to be announced soon.",
-        isPlaceholder: true,
+        time: "13:00 – 20:00",
+        title: "Hacking & co-working.",
+        description: "Build, collaborate, and create.",
       },
     ],
   },
@@ -178,11 +178,6 @@ const agendaData: AgendaDay[] = [
         title: "Malachite: A Fast and flexible BFT consensus engine by Adi Seredinschi",
         description: "Informal Systems",
         detailsItalic: true,
-      },
-      {
-        time: "",
-        title: "More talks to be announced soon.",
-        isPlaceholder: true,
       },
       {
         time: "15:00 – 16:00",
