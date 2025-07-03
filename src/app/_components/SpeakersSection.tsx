@@ -24,6 +24,13 @@ const speakerData: SpeakerProfile[] = [
     githubUrl: "https://github.com/gakonst",
   },
   {
+    name: "Guillermo Rauch",
+    affiliation: "Vercel",
+    imageSrc: "/images/guillermo.jpg",
+    twitterUrl: "https://twitter.com/rauchg",
+    githubUrl: "https://github.com/rauchg",
+  },
+  {
     name: "Tomasz K. Stańczak",
     affiliation: "Ethereum Foundation",
     imageSrc: "/images/tomasz.jpg",
@@ -265,9 +272,46 @@ export function SpeakersSection() {
             size="24"
             className="text-center text-white/50 italic px-6"
           >
-            ...and more
+            including leaders from...
           </Text>
           <div className="flex-grow h-px bg-white/10" />
+        </div>
+
+        {/* Company Logos Grid */}
+        <div className="mt-12 px-5 sm:px-8 lg:px-10">
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-8 sm:gap-10 items-center justify-items-center">
+            {[
+              { name: "Paradigm", logo: "/images/companies/paradigm.svg", url: "https://paradigm.xyz" },
+              { name: "Ethereum Foundation", logo: "/images/companies/ethereum-foundation.svg", url: "https://ethereum.org" },
+              { name: "Base", logo: "/images/companies/base.svg", url: "https://base.org" },
+              { name: "Wevm", logo: "/images/companies/wevm.svg", url: "https://wevm.sh" },
+              { name: "Privy", logo: "/images/companies/privy.svg", url: "https://privy.io" },
+              { name: "Succinct", logo: "/images/companies/succinct.svg", url: "https://succinct.xyz" },
+              { name: "World", logo: "/images/companies/world.svg", url: "https://worldcoin.org" },
+              { name: "Vercel", logo: "/images/companies/vercel.svg", url: "https://vercel.com" },
+              { name: "Informal Systems", logo: "/images/companies/informal-systems.svg", url: "https://informal.systems" },
+              { name: "Commonware", logo: "/images/companies/commonware.svg", url: "https://commonware.xyz" },
+              { name: "Category Labs", logo: "/images/companies/category-labs.svg", url: "https://categorylabs.xyz" },
+              { name: "Ithaca", logo: "/images/companies/ithaca.svg", url: "https://ithaca.xyz" },
+            ].map((company) => (
+              <WithCursor key={company.name} cursor="external">
+                <Link
+                  href={company.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block transition-transform duration-200 hover:scale-105 opacity-60 hover:opacity-100"
+                >
+                  <Image
+                    src={company.logo}
+                    alt={`${company.name} logo`}
+                    width={100}
+                    height={60}
+                    className="h-16 w-full object-contain filter brightness-90"
+                  />
+                </Link>
+              </WithCursor>
+            ))}
+          </div>
         </div>
       </div>
     </Section>
