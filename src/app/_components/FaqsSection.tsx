@@ -27,8 +27,20 @@ const faqData: FaqItem[] = [
   },
   {
     question: "Do you cover travel or hotels?",
-    answer:
-      "Unfortunately, we are unable to cover travel or hotel expenses for attendees. We recommend booking accommodations early.",
+    answer: (
+      <>
+        Unfortunately, we are unable to cover any travel expenses for attendees. We recommend booking accommodations early though and the preferred hotel for the event is{" "}
+        <a
+          href="https://www.lumahotels.com/san-francisco"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white underline hover:opacity-80 transition-opacity"
+        >
+          Luma Hotel San Francisco
+        </a>
+        .
+      </>
+    ),
   },
   {
     question: "Who can I contact with questions?",
