@@ -147,7 +147,7 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "13:00",
-        title: "RaptorCast: A High Performance BFT networking protocol by Michael Chen",
+        title: "MonadBFT: Tail-fork Resistant Streamlined Consensus by Michael Chen",
         description: "Category Labs",
         detailsItalic: true,
       },
