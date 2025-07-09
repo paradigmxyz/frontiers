@@ -132,8 +132,8 @@ const speakerData: SpeakerProfile[] = [
     name: "Michael Chen",
     affiliation: "Category Labs",
     imageSrc: "/images/michaelchen.png",
-    twitterUrl: "https://x.com/michaelyychen",
-    githubUrl: "https://github.com/michaelyychen",
+    twitterUrl: "https://x.com/indigo4043",
+    githubUrl: "https://github.com/michael-yxchen",
   },
   {
     name: "Brendan Chou",
