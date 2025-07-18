@@ -79,7 +79,7 @@ const agendaData: AgendaDay[] = [
       {
         time: "11:00",
         title: "Porto by awkweb",
-        description: "Paradigm, Ithaca",
+        description: "Wevm, Paradigm, Ithaca",
         detailsItalic: true,
       },
       {
