@@ -305,7 +305,7 @@ export function SpeakersSection() {
               { name: "Paradigm", logo: "/images/companies/paradigm.svg", url: "https://paradigm.xyz" },
               { name: "Ethereum Foundation", logo: "/images/companies/ethereum-foundation.svg", url: "https://ethereum.org" },
               { name: "Base", logo: "/images/companies/base.svg", url: "https://base.org" },
-              { name: "Wevm", logo: "/images/companies/wevm.svg", url: "https://wevm.sh" },
+              { name: "Wevm", logo: "/images/companies/wevm.svg", url: "https://wevm.dev" },
               { name: "Privy", logo: "/images/companies/privy.svg", url: "https://privy.io" },
               { name: "Succinct", logo: "/images/companies/succinct.svg", url: "https://succinct.xyz" },
               { name: "World", logo: "/images/companies/world.svg", url: "https://worldcoin.org" },
