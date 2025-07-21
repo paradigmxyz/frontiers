@@ -221,6 +221,17 @@ export function HeroSection() {
               </Text>
             </div>
           </div>
+          <div className="pt-4 mb-2 w-full flex opacity-50 justify-center">
+            <Text
+              className="text-center text-gray-300 text-xl max-w-[600px] italic font-serif max-sm:leading-tight max-sm:px-2"
+              asChild
+              size="20"
+            >
+              <p>
+                Applications close on July 23.
+              </p>
+            </Text>
+          </div>
         </div>
       </Section>
       {/* SCROLL TO LEARN MORE TEXT */}
