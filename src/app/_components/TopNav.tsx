@@ -68,10 +68,10 @@ export function TopNav() {
             </div>
             <div className="-mr-[18px] hidden sm:block">
               <WithCursor cursor="pulse-crosshair">
-                <Button asChild>
-                  <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">
-                    APPLY NOW
-                  </a>
+                <Button asChild color="disabled">
+                  <span>
+                    APPS CLOSED
+                  </span>
                 </Button>
               </WithCursor>
             </div>
@@ -127,9 +127,6 @@ export function TopNav() {
                 <a href="#pre-reads" className="no-underline text-white hover:opacity-80">PRE-READs</a>
               </Dialog.Close>
             </Text>
-            <Button asChild className="w-full">
-              <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">APPLY NOW</a>
-            </Button>
           </nav>
         </Dialog.Content>
       </div>

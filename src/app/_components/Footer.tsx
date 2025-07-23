@@ -18,8 +18,8 @@ function FooterLogo() {
         />
       </div>
       <div className="mt-12 w-64">
-        <Button asChild frame color="paradigmGreen" className="w-full min-w-[180px] px-6 text-base" height="50">
-          <Link href="https://7dr10b0z31d.typeform.com/Frontiers2025">APPLY NOW</Link>
+        <Button asChild frame color="disabled" className="w-full min-w-[180px] px-6 text-base" height="50">
+          <span>APPS CLOSED</span>
         </Button>
       </div>
     </div>
