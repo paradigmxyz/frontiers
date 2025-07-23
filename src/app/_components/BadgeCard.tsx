@@ -16,16 +16,15 @@ export function BadgeCard() {
           className="h-auto"
           priority
         />
-        <div className="absolute bottom-[24px] inset-x-0 flex justify-center">
+        <div className="absolute bottom-[24px] bg-black mx-4 inset-x-0 flex justify-center">
           <WithCursor cursor="pulse-crosshair">
             <Button
-              color="paradigmGreen"
+              color="disabled"
               height="50"
-              className="w-[90%]"
-              onClick={() => window.open("https://7dr10b0z31d.typeform.com/Frontiers2025", "_self")}
+              className="w-[98%]"
               data-typeform-link="true"
             >
-              APPLY NOW!
+              APPS CLOSED
             </Button>
           </WithCursor>
         </div>

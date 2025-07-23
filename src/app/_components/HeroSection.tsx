@@ -177,11 +177,11 @@ export function HeroSection() {
               <Button
                 asChild
                 frame
-                color="paradigmGreen"
+                color="disabled"
                 className="w-full sm:min-w-[240px] px-6 sm:px-10 max-sm:h-[48px] max-sm:text-base"
                 height="60"
               >
-                <a href="https://7dr10b0z31d.typeform.com/Frontiers2025">APPLY NOW</a>
+                <span>APPS CLOSED</span>
               </Button>
             </WithCursor>
             <WithCursor cursor="pulse-crosshair">
@@ -220,17 +220,6 @@ export function HeroSection() {
                 SF & ONLINE
               </Text>
             </div>
-          </div>
-          <div className="pt-4 mb-2 w-full flex opacity-50 justify-center">
-            <Text
-              className="text-center text-gray-300 text-xl max-w-[600px] italic font-serif max-sm:leading-tight max-sm:px-2"
-              asChild
-              size="20"
-            >
-              <p>
-                Applications close on July 23.
-              </p>
-            </Text>
           </div>
         </div>
       </Section>

@@ -46,6 +46,16 @@ const buttonVariants = cva(
           "hover:bg-white",
           "hover:text-black",
         ],
+        disabled: [
+          "bg-black",
+          "text-white",
+          "text-center",
+          "opacity-60",
+          "border-[1px]",
+          "border-dashed",
+          "hover:bg-neutral-200",
+          "hover:not-allowed"
+        ],
       },
     },
   }
