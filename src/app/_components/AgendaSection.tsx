@@ -89,12 +89,18 @@ const agendaData: AgendaDay[] = [
         detailsItalic: true,
       },
       {
-        time: "12:00 – 13:00",
+        time: "11:30",
+        title: "Mastering Claude Code by Tobias Harrison-Noonan",
+        description: "Anthropic",
+        detailsItalic: true,
+      },
+      {
+        time: "12:30 – 13:30",
         title: "Lunch break.",
         description: "Enjoy lunch and networking.",
       },
       {
-        time: "13:00 – 20:00",
+        time: "13:30 – 20:30",
         title: "Hacking & co-working.",
         description: "Build, collaborate, and create.",
       },

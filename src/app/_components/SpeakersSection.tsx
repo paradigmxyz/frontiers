@@ -66,6 +66,13 @@ const speakerData: SpeakerProfile[] = [
     githubUrl: "https://github.com/tmm",
   },
   {
+    name: "Tobias Harrison-Noonan",
+    affiliation: "Anthropic",
+    imageSrc: "/images/tobias.jpg",
+    twitterUrl: "https://twitter.com/tobias_h_noonan",
+    githubUrl: "https://github.com/anthropics",
+  },
+  {
     name: "George Niculae",
     affiliation: "Ithaca",
     imageSrc: "/images/george.png",
