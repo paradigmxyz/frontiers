@@ -22,9 +22,9 @@ const agendaData: AgendaDay[] = [
     day: "WEDNESDAY, AUGUST 6",
     events: [
       {
-        time: "18:00",
+        time: "17:30",
         title: "Welcome to Frontiers!",
-        description: "Check in begins.",
+        description: "Check in begins. Receive your badges, stickers, and more.",
       },
       {
         time: "18:30",
@@ -140,7 +140,7 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "11:00",
-        title: "Foundry & Alloy 1.0 by George Niculae",
+        title: "Foundry & Alloy 1.0 by 0xrusowsky & DaniPopes",
         description: "Ithaca",
         detailsItalic: true,
       },
@@ -157,7 +157,7 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "13:00",
-        title: "Priority Blockspace for Humans with Reth SDK by 0xKitsune",
+        title: "Priority Blockspace for Humans & P2P Flashblocks on World Chain by Eric Woosley & Osiris",
         description: "World",
         detailsItalic: true,
       },
