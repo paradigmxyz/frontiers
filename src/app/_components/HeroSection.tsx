@@ -67,13 +67,12 @@ export function HeroSection() {
       {/* Hero Section Navigation */}
       <nav className="absolute top-0 left-0 w-full flex justify-center pt-8 sm:pt-10 md:pt-14 z-20">
         <ul className="flex flex-wrap justify-center items-center gap-5 sm:gap-4 md:gap-6 px-4 sm:px-3 md:px-10 py-1 sm:py-2 md:py-2">
-          <li className="flex items-center gap-2 opacity-60 mb-2 sm:mb-0">
-            <Text fontFamily="typewriter" size="14" className="sm:text-[13px] md:text-[14px]">
-              STREAM
+          <li className="mb-2 sm:mb-0">
+            <Text asChild fontFamily="typewriter" size="14" className="sm:text-[13px] md:text-[14px]">
+              <a href="#livestream" className="hover:underline">
+                STREAM
+              </a>
             </Text>
-            <span className="bg-[#444] text-white text-xs px-2 py-0.5 rounded font-typewriter">
-              SOON
-            </span>
           </li>
           <li className="text-xl sm:text-base md:text-xl text-white font-typewriter hidden sm:block">
             &middot;

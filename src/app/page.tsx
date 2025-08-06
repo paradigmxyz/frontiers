@@ -5,6 +5,7 @@ import { AgendaSection } from "./_components/AgendaSection";
 import { FaqsSection } from "./_components/FaqsSection";
 import { Footer } from "./_components/Footer";
 import { HeroSection } from "./_components/HeroSection";
+import { LivestreamSection } from "./_components/LivestreamSection";
 import { OpenSourceSection } from "./_components/OpenSourceSection";
 import { PerspectiveBackground } from "./_components/PerspectiveBackground";
 import { SpeakersSection } from "./_components/SpeakersSection";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
+      <LivestreamSection />
       <ToOurBuildersSection />
       <PerspectiveBackground />
       <AgendaSection />
