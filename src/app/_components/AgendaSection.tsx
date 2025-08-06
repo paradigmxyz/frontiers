@@ -205,7 +205,7 @@ export function AgendaSection() {
       <div id="agenda" className="max-w-[940px] md:max-w-[90vw] sm:max-w-[85vw] mx-auto w-full px-4">
         <SectionHeading
           fontFamily="default"
-          className="!text-6xl sm:!text-7xl text-left pl-4 sm:pl-8 mb-12 sm:mb-16 md:ml-[39%]"
+          className="!text-6xl sm:!text-7xl text-left pl-4 sm:pl-8 mb-12 sm:mb-16 md:pl-0 md:ml-[calc(190px+120px+4rem)] lg:ml-[calc(190px+120px+5rem)]"
           weight="400"
         >
           Our <span className="italic">agenda</span>

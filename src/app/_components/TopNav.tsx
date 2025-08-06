@@ -12,6 +12,7 @@ import {
 import { Button } from "~/ui/Button";
 import { Text } from "~/ui/Text";
 import { WithCursor } from "~/ui/WithCursor";
+import { ConnectModal } from "./ConnectModal";
 
 import "./TopNav.css";
 
@@ -31,6 +32,7 @@ export function TopNavProvider({ children }: PropsWithChildren) {
 
 export function TopNav() {
   const { show } = useContext(TopNavContext);
+  const [connectModalOpen, setConnectModalOpen] = useState(false);
 
   if (!show) return null;
   return (
@@ -68,10 +70,11 @@ export function TopNav() {
             </div>
             <div className="-mr-[18px] hidden sm:block">
               <WithCursor cursor="pulse-crosshair">
-                <Button asChild color="disabled">
-                  <span>
-                    APPS CLOSED
-                  </span>
+                <Button
+                  color="paradigmGreen"
+                  onClick={() => setConnectModalOpen(true)}
+                >
+                  GET ONLINE
                 </Button>
               </WithCursor>
             </div>
@@ -130,6 +133,12 @@ export function TopNav() {
           </nav>
         </Dialog.Content>
       </div>
+
+      {/* Connect Modal */}
+      <ConnectModal
+        isOpen={connectModalOpen}
+        onClose={() => setConnectModalOpen(false)}
+      />
     </Dialog.Root>
   );
 }
