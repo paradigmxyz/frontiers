@@ -158,8 +158,9 @@ export function LivestreamSection() {
             // August 8, 2025 at 8:00 PM PT (which is August 9, 2025 at 4:00 AM UTC)
             const switchTime = new Date('2025-08-09T04:00:00Z');
 
-            // TEMPORARY: Force recordings mode to show grid layout
-            setIsLiveMode(false);
+            if (now >= switchTime) {
+                setIsLiveMode(false);
+            }
         };
 
         checkMode();

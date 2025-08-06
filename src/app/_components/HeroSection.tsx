@@ -10,6 +10,7 @@ import { Section } from "~/ui/Section";
 import { Text } from "~/ui/Text";
 import { WithCursor } from "~/ui/WithCursor";
 import { TopNavContext } from "./TopNav";
+import { ConnectModal } from "./ConnectModal";
 
 export function HeroSection() {
   const { ref, inView } = useInView({ initialInView: true, threshold: 0 });
@@ -18,6 +19,7 @@ export function HeroSection() {
 
   // State and effect for scroll indicator
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const [connectModalOpen, setConnectModalOpen] = useState(false);
   useEffect(() => {
     const scrollThreshold = 50;
     const handleScroll = () => {
@@ -174,13 +176,13 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 mt-2 w-full px-4 max-w-[400px] max-sm:px-0 items-center justify-center">
             <WithCursor cursor="pulse-crosshair">
               <Button
-                asChild
                 frame
-                color="disabled"
+                color="paradigmGreen"
                 className="w-full sm:min-w-[240px] px-6 sm:px-10 max-sm:h-[48px] max-sm:text-base"
                 height="60"
+                onClick={() => setConnectModalOpen(true)}
               >
-                <span>APPS CLOSED</span>
+                CONNECT NOW
               </Button>
             </WithCursor>
             <WithCursor cursor="pulse-crosshair">
@@ -234,6 +236,12 @@ export function HeroSection() {
           </Text>
         </div>
       )}
+
+      {/* Connect Modal */}
+      <ConnectModal
+        isOpen={connectModalOpen}
+        onClose={() => setConnectModalOpen(false)}
+      />
     </div>
   );
 }
