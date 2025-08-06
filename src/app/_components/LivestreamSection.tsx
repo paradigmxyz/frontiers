@@ -18,22 +18,22 @@ interface StreamData {
 const STREAMS: StreamData[] = [
     {
         id: 1,
-        title: "DAY ONE",
-        date: "August 6",
+        title: "DAY 1",
+        date: "AUGUST 6",
         embedUrl: "https://www.youtube.com/embed/KBAR-hvqjF0?si=14QaU0XuIu0ifgIs",
         thumbnailUrl: "/images/streams/thumb-01.png",
     },
     {
         id: 2,
-        title: "DAY TWO",
-        date: "August 7",
+        title: "DAY 2",
+        date: "AUGUST 7",
         embedUrl: "https://www.youtube.com/embed/5VTVxk7qlug?si=kUHAGcYTmTU8WA9O",
         thumbnailUrl: "/images/streams/thumb-02.png",
     },
     {
         id: 3,
-        title: "DAY THREE",
-        date: "August 8",
+        title: "DAY 3",
+        date: "AUGUST 8",
         embedUrl: "https://www.youtube.com/embed/LOxkZcASH0s?si=2nHd6mnUh7LKOiWM",
         thumbnailUrl: "/images/streams/thumb-03.png",
     },
@@ -206,7 +206,7 @@ export function LivestreamSection() {
 
     return (
         <>
-            <Section className="bg-black text-white py-20 px-4 mb-48">
+            <Section className="bg-black text-white py-10 md:py-20 px-4 mb-24 md:mb-48">
                 <div className="max-w-7xl mx-auto">
                     {isLiveMode ? (
                         // Live streaming mode
@@ -253,7 +253,7 @@ export function LivestreamSection() {
                                             <div className="text-sm font-medium tracking-wider mb-1">
                                                 {stream.title}
                                             </div>
-                                            <div className="text-xs tracking-wide opacity-80">
+                                            <div className="text-xs tracking-wide opacity-50">
                                                 {stream.date}
                                             </div>
                                         </button>
@@ -282,10 +282,9 @@ export function LivestreamSection() {
                                     fontFamily="default"
                                     className="!text-6xl sm:!text-7xl text-center mb-4 md:mb-4 max-mobile:!text-5xl mx-auto"
                                     weight="400"
+                                    id="livestream"
                                 >
-                                    <h1 id="livestream">
-                                        Catch the <em className="italic">streams</em>
-                                    </h1>
+                                    Catch the <em className="italic">streams</em>
                                 </SectionHeading>
                                 <Text
                                     size="18"
@@ -316,7 +315,7 @@ export function LivestreamSection() {
                                                 <Text fontFamily="typewriter" size="16" className="text-white mb-1">
                                                     {stream.title}
                                                 </Text>
-                                                <Text fontFamily="typewriter" size="14" className="text-gray-400 opacity-50">
+                                                <Text fontFamily="typewriter" size="12" className="text-gray-400 opacity-50 uppercase">
                                                     {stream.date}
                                                 </Text>
                                             </div>
