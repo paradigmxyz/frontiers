@@ -182,7 +182,7 @@ export function HeroSection() {
                 height="60"
                 onClick={() => setConnectModalOpen(true)}
               >
-                CONNECT NOW
+                GET ONLINE
               </Button>
             </WithCursor>
             <WithCursor cursor="pulse-crosshair">

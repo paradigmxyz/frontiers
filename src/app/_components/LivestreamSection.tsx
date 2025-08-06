@@ -65,13 +65,13 @@ function Lightbox({ isOpen, currentStreamIndex, onClose, onNext, onPrev }: Light
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-in fade-in duration-300"
             onClick={onClose}
         >
             {/* Close button */}
             <button
                 onClick={onClose}
-                className="absolute top-8 right-8 z-60 text-white hover:text-gray-300 transition-colors"
+                className="absolute top-8 right-8 z-60 text-white hover:text-gray-300 transition-colors animate-in fade-in slide-in-from-top-4 duration-300 delay-150"
             >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -80,7 +80,7 @@ function Lightbox({ isOpen, currentStreamIndex, onClose, onNext, onPrev }: Light
 
             {/* Content */}
             <div
-                className="flex flex-col items-center justify-center w-full mx-8"
+                className="flex flex-col items-center justify-center w-full mx-8 animate-in zoom-in-95 fade-in duration-300 delay-100"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Video container with max-width */}
@@ -216,10 +216,9 @@ export function LivestreamSection() {
                                     fontFamily="default"
                                     className="!text-6xl sm:!text-7xl text-center mb-4 md:mb-4 max-mobile:!text-5xl mx-auto"
                                     weight="400"
+                                    id="livestream"
                                 >
-                                    <h1 id="livestream">
-                                        Watch the <em className="italic">stream</em>
-                                    </h1>
+                                    Watch the <em className="italic">stream</em>
                                 </SectionHeading>
                                 <Text
                                     size="18"

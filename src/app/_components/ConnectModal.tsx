@@ -45,13 +45,13 @@ export function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-start md:items-center justify-center bg-black/80 backdrop-blur-sm overflow-y-auto animate-in fade-in duration-300"
             onClick={onClose}
         >
             {/* Close button */}
             <button
                 onClick={onClose}
-                className="absolute top-8 right-8 z-60 text-white hover:text-gray-300 transition-colors"
+                className="absolute top-8 right-8 z-60 text-white hover:text-gray-300 transition-colors animate-in fade-in slide-in-from-top-4 duration-300 delay-150"
             >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -60,20 +60,20 @@ export function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
 
             {/* Content */}
             <div
-                className="flex flex-col items-center justify-center w-full mx-4"
+                className="flex flex-col items-center justify-center w-full mx-4 my-8 md:my-0 animate-in zoom-in-95 fade-in duration-300 delay-100"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="bg-gray-900 rounded-lg p-8 w-full max-w-4xl">
                     {/* Content Grid - Side by side on desktop */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {/* Telegram Section */}
-                        <div className="bg-gray-800 rounded-lg p-6 border border-white/10">
-                            <Text fontFamily="typewriter" size="18" className="text-white mb-6 text-center opacity-50">
+                        <div className="bg-gray-800 rounded-lg p-6 border border-white/10 bg-white/5 backdrop-blur-sm">
+                            <Text fontFamily="typewriter" size="14" className="text-white mb-6 text-center opacity-50">
                                 JOIN TELEGRAM
                             </Text>
 
                             {/* QR Code with translucent background */}
-                            <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg mb-6 flex items-center justify-center">
+                            <div className="p-6 rounded-lg mb-6 flex items-center justify-center">
                                 <img
                                     src="/images/qr.svg"
                                     alt="QR Code for Telegram"
@@ -102,7 +102,7 @@ export function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
 
                         {/* WiFi Section */}
                         <div className="bg-gray-800 rounded-lg p-6 border border-white/10 bg-white/5 backdrop-blur-sm">
-                            <Text fontFamily="typewriter" size="18" className="text-white mb-6 text-center opacity-50">
+                            <Text fontFamily="typewriter" size="14" className="text-white mb-6 text-center opacity-50">
                                 WIFI ACCESS
                             </Text>
 
