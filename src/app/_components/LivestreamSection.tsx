@@ -222,7 +222,7 @@ export function LivestreamSection() {
                                 </SectionHeading>
                                 <Text
                                     size="18"
-                                    className="text-gray-300 text-center max-w-2xl mx-auto"
+                                    className="text-gray-300 text-center max-w-2xl pt-2 mx-auto"
                                 >
                                     Stay in touch with the conference no matter where you are.
                                 </Text>
