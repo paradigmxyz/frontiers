@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
 import clsx from "clsx";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Section, SectionHeading } from "~/ui/Section";
 import { Text } from "~/ui/Text";
 import { WithCursor } from "~/ui/WithCursor";
@@ -174,11 +174,16 @@ export function LivestreamSection() {
     useEffect(() => {
         if (isLiveMode) {
             const now = new Date();
-            const startTime = new Date('2025-08-06T17:00:00-07:00'); // August 6, 5pm PT
+            const day1Start = new Date('2025-08-06T17:00:00-07:00'); // August 6, 5pm PT
+            const day2Start = new Date('2025-08-07T07:00:00-07:00'); // August 7, 7am PT
+            const day3Start = new Date('2025-08-08T07:00:00-07:00'); // August 8, 7am PT
 
-            if (now >= startTime) {
-                const daysDiff = Math.floor((now.getTime() - startTime.getTime()) / (1000 * 60 * 60 * 24));
-                setCurrentDay(Math.min(Math.max(daysDiff + 1, 1), 3));
+            if (now >= day3Start) {
+                setCurrentDay(3);
+            } else if (now >= day2Start) {
+                setCurrentDay(2);
+            } else if (now >= day1Start) {
+                setCurrentDay(1);
             }
         }
     }, [isLiveMode]);
