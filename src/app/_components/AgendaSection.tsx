@@ -115,6 +115,11 @@ const agendaData: AgendaDay[] = [
         isPlaceholder: true,
       },
       {
+        time: "08:00 – 09:00",
+        title: "Check in & coffee.",
+        description: "Get energized for the talks ahead.",
+      },
+      {
         time: "9:00",
         title: "Hyperoptimizing Reth by Alexey Shekhirin & Dan Cline",
         description: "Paradigm, Ithaca",
