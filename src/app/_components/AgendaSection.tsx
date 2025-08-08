@@ -116,8 +116,8 @@ const agendaData: AgendaDay[] = [
       },
       {
         time: "08:00 – 09:00",
-        title: "Check in & coffee.",
-        description: "Get energized for the talks ahead.",
+        title: "Coffee & breakfast",
+        description: "Get energized before talks begin.",
       },
       {
         time: "9:00",
