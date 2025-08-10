@@ -227,7 +227,7 @@ export function LivestreamSection() {
                                 </SectionHeading>
                                 <Text
                                     size="18"
-                                    className="text-gray-300 text-center max-w-2xl pt-2 mx-auto"
+                                    className="text-gray-300 text-center max-w-2xl pt-2 mx-auto max-mobile:pt-6"
                                 >
                                     Stay in touch with the conference no matter where you are.
                                 </Text>
@@ -293,14 +293,14 @@ export function LivestreamSection() {
                                 </SectionHeading>
                                 <Text
                                     size="18"
-                                    className="text-gray-300 text-center max-w-2xl mx-auto"
+                                    className="text-gray-300 text-center max-w-2xl mx-auto max-mobile:pt-4"
                                 >
                                     Watch a recap of the Frontiers livestreams using the links below.
                                 </Text>
                             </div>
 
                             {/* Grid of recordings */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto md:mx-12">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto md:mx-12 px-6 md:px-0">
                                 {STREAMS.map((stream, index) => (
                                     <WithCursor key={stream.id} cursor="pulse-crosshair">
                                         <button
