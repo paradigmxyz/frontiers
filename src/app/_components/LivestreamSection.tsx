@@ -320,7 +320,7 @@ export function LivestreamSection() {
                                                 <Text fontFamily="typewriter" size="16" className="text-white mb-1">
                                                     {stream.title}
                                                 </Text>
-                                                <Text fontFamily="typewriter" size="12" className="text-gray-400 mt-1 opacity-50 uppercase">
+                                                <Text fontFamily="typewriter" size="12" className="text-gray-400 mt-2 opacity-50 uppercase">
                                                     {stream.date}
                                                 </Text>
                                             </div>
