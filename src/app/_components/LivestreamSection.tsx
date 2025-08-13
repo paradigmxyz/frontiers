@@ -305,7 +305,7 @@ export function LivestreamSection() {
                                     <WithCursor key={stream.id} cursor="pulse-crosshair">
                                         <button
                                             onClick={() => openLightbox(index)}
-                                            className="group relative overflow-hidden rounded-lg transition-transform hover:scale-105"
+                                            className="group relative rounded-lg transition-transform hover:scale-105"
                                         >
                                             <div className="aspect-video relative">
                                                 <Image
@@ -320,7 +320,7 @@ export function LivestreamSection() {
                                                 <Text fontFamily="typewriter" size="16" className="text-white mb-1">
                                                     {stream.title}
                                                 </Text>
-                                                <Text fontFamily="typewriter" size="12" className="text-gray-400 opacity-50 uppercase">
+                                                <Text fontFamily="typewriter" size="12" className="text-gray-400 mt-1 opacity-50 uppercase">
                                                     {stream.date}
                                                 </Text>
                                             </div>
